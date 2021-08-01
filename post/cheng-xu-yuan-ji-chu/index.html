@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://SageRover.github.io/favicon.ico?v=1627845441522">
+<link rel="shortcut icon" href="https://SageRover.github.io/favicon.ico?v=1627847494598">
 <link rel="stylesheet" href="https://SageRover.github.io/styles/main.css">
 
 
@@ -30,7 +30,7 @@ ASCII            ..." />
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://SageRover.github.io">
-        <img src="https://SageRover.github.io/images/avatar.png?v=1627845441522" class="site-logo">
+        <img src="https://SageRover.github.io/images/avatar.png?v=1627847494598" class="site-logo">
         <h1 class="site-title">Sage&#39;s Blog</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -132,12 +132,12 @@ UTF-32 :使用4个字节表示所有字符。
 <p><strong>无论以什么编码在内存里显示字符，存到硬盘上都是二进制。要注意的是，存到硬盘上时是以何种编码存的，再从硬盘上读取出来时，就必须以何种编码读。</strong></p>
 <p><strong>虽然国际语言是英语，但是大家在自己的国家依然说自己的语言，不过出了国，你就得学会英语，编码也一样，虽然有了UTF-8，但是由于历史原因，各个国家依然在大量使用自己的编码，         比如中国的Windows，默认编码依然是GBK，而不是UTF-8</strong></p>
 <h2 id="编码转换过程">编码转换过程：</h2>
-<p><strong><a href="https://img2018.cnblogs.com/blog/1373275/201812/1373275-20181204102533132-966118881.png"><img src="https://img2018.cnblogs.com/blog/1373275/201812/1373275-20181204102533132-966118881.png" alt="img" loading="lazy"></a></strong></p>
+<p><strong><a href="https://img2018.cnblogs.com/blog/1373275/201812/1373275-20181204102533132-966118881.png"><img src="https://gitee.com/sagerover/figurebed/raw/master//img/20210802034357.png" alt="img" loading="lazy"></a></strong></p>
 <p>实际代码演练中，在py3上，把你的代码以utf-8编写，保存，然后再Windows上执行。</p>
 <p>so一切都很美好，到这里，我们关于编码的学习按说就可以结束了。</p>
 <p>但是，如生活一样，美好的表面下，总是隐藏着不进入人意，上面的UTF-8编码之所以能在Windows GBK的终端下显示正常，是因为到了内存里python解释器吧utf-8转成了unicode，单这只是Python3，并不是所有的编程语言在内存里默认编码都是unicode，比如万恶的Python2就不是，他的默认编码是ASCII，想写中文就必须声明文件头的coding为gbk或者UTF-8，声明之后，python2解释器仅以文件头生命的编码去解释你的代码，加载到内存后，并不会主动帮你转成Unicode，也就是说你的文件编码是UTF-8加载到内存里，你的变量字符串就也是UTF-8，这意味着什么你知道吗？</p>
 <p>意味着你以UTF-8编码的文件，在Windows是乱码。</p>
-<figure data-type="image" tabindex="1"><a href="https://img2018.cnblogs.com/blog/1373275/201812/1373275-20181204103400677-1356248793.png"><img src="https://img2018.cnblogs.com/blog/1373275/201812/1373275-20181204103400677-1356248793.png" alt="img" loading="lazy"></a></figure>
+<figure data-type="image" tabindex="1"><img src="https://gitee.com/sagerover/figurebed/raw/master//img/image-20210802031947524.png" alt="image-202108020319475246" loading="lazy"></figure>
 <p>乱是正常的，不乱才不正常，因为只有两种情况，你的Windows上显示才不会乱。</p>
 <p>1.字符串以GBK格式显示</p>
 <p>2.字符串是unicode编码</p>
@@ -147,22 +147,22 @@ UTF-32 :使用4个字节表示所有字符。
 Unicode ---&gt;  encode编码---&gt;GBK/UTF-8
 </code></pre>
 <p>decode实例：</p>
-<figure data-type="image" tabindex="2"><a href="https://img2018.cnblogs.com/blog/1373275/201812/1373275-20181204112710708-1348355890.png"><img src="https://img2018.cnblogs.com/blog/1373275/201812/1373275-20181204112710708-1348355890.png" alt="img" loading="lazy"></a></figure>
+<figure data-type="image" tabindex="2"><a href="https://img2018.cnblogs.com/blog/1373275/201812/1373275-20181204112710708-1348355890.png"><img src="https://gitee.com/sagerover/figurebed/raw/master//img/20210802034744.png" alt="img" loading="lazy"></a></figure>
 <p>encode实例：</p>
-<figure data-type="image" tabindex="3"><a href="https://img2018.cnblogs.com/blog/1373275/201812/1373275-20181204113007867-1385459295.png"><img src="https://img2018.cnblogs.com/blog/1373275/201812/1373275-20181204113007867-1385459295.png" alt="img" loading="lazy"></a></figure>
+<figure data-type="image" tabindex="3"><a href="https://img2018.cnblogs.com/blog/1373275/201812/1373275-20181204113007867-1385459295.png"><img src="https://gitee.com/sagerover/figurebed/raw/master//img/20210802035000.png" alt="img" loading="lazy"></a></figure>
 <p>记住下图规则：</p>
-<figure data-type="image" tabindex="4"><a href="https://img2018.cnblogs.com/blog/1373275/201812/1373275-20181204113300426-448572925.png"><img src="https://img2018.cnblogs.com/blog/1373275/201812/1373275-20181204113300426-448572925.png" alt="img" loading="lazy"></a></figure>
+<figure data-type="image" tabindex="4"><a href="https://img2018.cnblogs.com/blog/1373275/201812/1373275-20181204113300426-448572925.png"><img src="https://gitee.com/sagerover/figurebed/raw/master//img/1373275-20181204113300426-448572925.png" alt="img" loading="lazy"></a></figure>
 <p>一般UTF-8一个中文占三个字节，GBK一个占2个字节。</p>
 <h2 id="python-bytes类型">Python bytes类型</h2>
 <p>在python2上写字符串。</p>
-<figure data-type="image" tabindex="5"><a href="https://img2018.cnblogs.com/blog/1373275/201812/1373275-20181204113834762-701867038.png"><img src="https://img2018.cnblogs.com/blog/1373275/201812/1373275-20181204113834762-701867038.png" alt="img" loading="lazy"></a></figure>
+<figure data-type="image" tabindex="5"><a href="https://img2018.cnblogs.com/blog/1373275/201812/1373275-20181204113834762-701867038.png"><img src="https://gitee.com/sagerover/figurebed/raw/master//img/20210802035101.png" alt="img" loading="lazy"></a></figure>
 <p>虽说打印的是路飞，但是直接调用变量s.看到的却是一个个的16进制表示的二进制字节，我们怎么称呼这样的数据呢？直接叫二进制么？也可以，但相比于010101，这个数据穿在表示形式上又把2进制转成了16进制来表示，这是为什么呢？哈，为的就是让人们看起来更可读，我们称之为bytes类型，即字节类型，他把8个二进制一组称为一个byte,用16进制来表示。</p>
 <p>想告诉你一个事实，Python2里面bytes == str，其实这是一回事，除此之外，python2里面还有个单独的类型是unicode，把字符串解码后，就会变成unicode。</p>
-<figure data-type="image" tabindex="6"><a href="https://img2018.cnblogs.com/blog/1373275/201812/1373275-20181204114814699-1897337592.png"><img src="https://img2018.cnblogs.com/blog/1373275/201812/1373275-20181204114814699-1897337592.png" alt="img" loading="lazy"></a></figure>
-<figure data-type="image" tabindex="7"><a href="https://img2018.cnblogs.com/blog/1373275/201812/1373275-20181204114849432-1802759709.png"><img src="https://img2018.cnblogs.com/blog/1373275/201812/1373275-20181204114849432-1802759709.png" alt="img" loading="lazy"></a></figure>
+<figure data-type="image" tabindex="6"><a href="https://img2018.cnblogs.com/blog/1373275/201812/1373275-20181204114814699-1897337592.png"><img src="https://gitee.com/sagerover/figurebed/raw/master//img/20210802035052.png" alt="img" loading="lazy"></a></figure>
+<figure data-type="image" tabindex="7"><a href="https://img2018.cnblogs.com/blog/1373275/201812/1373275-20181204114849432-1802759709.png"><img src="https://gitee.com/sagerover/figurebed/raw/master//img/20210802035044.png" alt="img" loading="lazy"></a></figure>
 <p>python的发展越来越快，已经不能再修修补补。Python3横空出世，</p>
 <p>python3除了把字符串的编码改成了unicode，还把str和bytes做了明确的区分，str就是unicode格式的字符，bytes就是单纯的二进制了。</p>
-<figure data-type="image" tabindex="8"><a href="https://img2018.cnblogs.com/blog/1373275/201812/1373275-20181204115231532-1319874234.png"><img src="https://img2018.cnblogs.com/blog/1373275/201812/1373275-20181204115231532-1319874234.png" alt="img" loading="lazy"></a></figure>
+<figure data-type="image" tabindex="8"><img src="https://gitee.com/sagerover/figurebed/raw/master//img/20210802035017.png" alt="" loading="lazy"></figure>
 <p>python只要出现了各种编码问题，无非是哪里的编码设置错了。</p>
 <p><strong>常见编码错误的原因：</strong></p>
 <ol>

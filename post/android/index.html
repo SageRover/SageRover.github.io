@@ -5,18 +5,18 @@
   <meta charset="UTF-8" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<meta name="keywords" content="">
+<meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="温故而知新">
-<meta name="theme-color" content="">
+<meta name="theme-color" content="#000">
 <title>Android | Sage&#39;s Blog</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1627876327379">
-<link rel="stylesheet" href="/media/css/pisces.css">
+<link rel="shortcut icon" href="/favicon.ico?v=1627876493226">
+<link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
   href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
   rel="stylesheet" type="text/css">
 
-<link href="/media/hljs/styles/github.css"
+<link href="/media/hljs/styles/default.css"
   rel="stylesheet">
 
 <link rel="stylesheet" href="/styles/main.css">
@@ -49,7 +49,7 @@
   <div class="head-top-line"></div>
   <div class="header-box">
     
-<div class="pisces">
+<div class="gemini">
   <header class="header  ">
     <div class="blog-header box-shadow-wrapper bg-color " id="header">
       <div class="nav-toggle" id="nav_toggle">
@@ -68,11 +68,15 @@
           
         </div>
         
+          <p class="subtitle">精于心，简于形</p>
+        
       </div>
       <nav class="site-nav" id="site_nav">
         <ul id="nav_ul">
           
             
+            
+              
             
             <li class="nav-item ">
               
@@ -85,6 +89,8 @@
           
             
             
+              
+            
             <li class="nav-item ">
               
               
@@ -95,6 +101,8 @@
             </li>
           
             
+            
+              
             
             <li class="nav-item ">
               
@@ -107,6 +115,8 @@
           
             
             
+              
+            
             <li class="nav-item ">
               
               
@@ -117,6 +127,22 @@
             </li>
           
           
+            
+              <li class="nav-item ">
+                <a href="/friends/" target="_self">
+                  
+                    <i class="fa fa-address-book"></i> 友情链接
+                  
+                </a>
+              </li>
+            
+          
+          
+            <li id="fa_search" class="nav-item">
+              <a href="javascript:void(0);">
+                <i class="fa fa-search"></i> <span class="language" data-lan="search">搜索</span>
+              </a>
+            </li>
           
         </ul>
       </nav>
@@ -149,7 +175,7 @@
   <div class="main-continer">
     
     <div
-      class="section-layout pisces ">
+      class="section-layout gemini ">
       <div class="section-layout-wrapper">
         
 
@@ -157,7 +183,674 @@
   
     <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
       
-      <div class="sidebar-body pisces" id="sidebar_body">
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active language" data-lan="index">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item language" data-lan="preview">站点概览</span>
+          </div>
+        </div>
+      
+      <div class="sidebar-body gemini" id="sidebar_body">
+        
+          
+            <div class="post-side-meta" id="post_side_meta">
+              
+<div class="sidebar-wrapper box-shadow-wrapper bg-color">
+  <div class="sidebar-item">
+    <img class="site-author-image right-motion" src="/images/avatar.png"/>
+    <p class="site-author-name">我是谁</p>
+    
+  </div>
+  <div class="sidebar-item side-item-stat right-motion">
+    <div class="sidebar-item-box">
+      <a href="/archives/">
+        
+        <span class="site-item-stat-count">4</span>
+        <span class="site-item-stat-name language" data-lan="article">文章</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="">
+        <span class="site-item-stat-count">3</span>
+        <span class="site-item-stat-name language" data-lan="category">分类</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="/tags/">
+        <span class="site-item-stat-count">3</span>
+        <span class="site-item-stat-name language" data-lan="tag">标签</span>
+      </a>
+    </div>
+  </div>
+  
+    
+  
+  
+
+
+
+</div>
+            </div>
+            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+              <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number auto"
+    id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li><a href="https://www.cnblogs.com/tsingke/p/9007563.html">Android之四大组件、六大布局、五大存储</a>](#android之四大组件-六大布局-五大存储httpswwwcnblogscomtsingkep9007563html)</li>
+<li><a href="#1%E9%A1%B9%E7%9B%AE%E4%B8%AD%E7%9A%84%E9%87%8D%E8%A6%81%E6%96%87%E4%BB%B6">1.项目中的重要文件</a>
+<ul>
+<li><a href="#androidmanifestxml%E6%96%87%E4%BB%B6">AndroidManifest.xml文件</a></li>
+<li><a href="#mainactivityjava">MainActivity.java</a></li>
+<li><a href="#buildgradle">build.gradle</a>
+<ul>
+<li><a href="#1%E6%9C%80%E5%A4%96%E5%B1%82%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84buildgradle%E6%96%87%E4%BB%B6">1.最外层目录下的build.gradle文件</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#maven%E4%BB%93%E5%BA%93">Maven仓库</a>
+<ul>
+<li><a href="#1-maven-central-%E6%98%AF%E7%94%B1sonatypeorg%E7%BB%B4%E6%8A%A4%E7%9A%84maven%E4%BB%93%E5%BA%93">1. Maven Central 是由sonatype.org维护的Maven仓库。</a></li>
+<li><a href="#2-jcenter%E6%98%AF%E4%B8%80%E4%B8%AA%E7%94%B1-bintraycom%E7%BB%B4%E6%8A%A4%E7%9A%84maven%E4%BB%93%E5%BA%93">2. jcenter是一个由 bintray.com维护的Maven仓库。</a></li>
+<li><a href="#3%E5%85%B6%E4%BB%96%E7%9A%84%E7%BD%91%E7%BB%9C%E5%85%AC%E5%BC%80%E4%BB%93%E5%BA%93">3.其他的网络公开仓库</a>
+<ul>
+<li><a href="#maven%E4%BB%93%E5%BA%93%E5%88%97%E8%A1%A8">Maven仓库列表</a></li>
+<li><a href="#%E9%98%BF%E9%87%8C%E4%BA%91%E9%95%9C%E5%83%8F%E6%BA%90%E9%85%8D%E7%BD%AE">阿里云镜像源配置</a></li>
+</ul>
+</li>
+<li><a href="#4%E5%85%B6%E4%BB%96%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93">4.其他私有仓库</a>
+<ul>
+<li><a href="#2app%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84buildgradle%E6%96%87%E4%BB%B6">2.app目录下的build.gradle文件</a></li>
+</ul>
+</li>
+<li><a href="#r%E6%96%87%E4%BB%B6">R文件</a></li>
+</ul>
+</li>
+<li><a href="#2%E6%97%A5%E5%BF%97%E5%B7%A5%E5%85%B7logcat">2.日志工具（Logcat）</a></li>
+<li><a href="#3activity">3.Activity</a>
+<ul>
+<li><a href="#1%E5%9F%BA%E7%A1%80">1.基础</a></li>
+<li><a href="#2%E8%AE%BE%E7%BD%AE%E7%9B%91%E5%90%AC%E5%99%A8%E7%82%B9%E5%87%BB%E6%8C%89%E9%92%AE%E5%AE%9E%E7%8E%B0toast%E9%80%9A%E7%9F%A5">2.设置监听器（点击按钮实现Toast通知）</a>
+<ul>
+<li><a href="#%E8%AE%BE%E7%BD%AE%E4%B8%80%E4%B8%AA%E6%8C%89%E9%92%AE%E7%9A%84%E4%B8%8D%E5%90%8C%E7%82%B9%E5%87%BB%E8%A7%A6%E5%8F%91%E4%BA%8B%E4%BB%B6">设置一个按钮的不同点击触发事件     </a></li>
+</ul>
+</li>
+<li><a href="#3menu">3.Menu</a></li>
+<li><a href="#4%E9%94%80%E6%AF%81%E4%B8%80%E4%B8%AA%E6%B4%BB%E5%8A%A8">4.销毁一个活动</a></li>
+<li><a href="#5%E4%BD%BF%E7%94%A8intent%E6%84%8F%E5%9B%BE%E5%9C%A8%E6%B4%BB%E5%8A%A8%E4%B9%8B%E9%97%B4%E7%A9%BF%E6%A2%AD">5.使用Intent（意图）在活动之间穿梭</a></li>
+<li><a href="#6%E6%B4%BB%E5%8A%A8%E4%B9%8B%E9%97%B4%E4%BC%A0%E9%80%92%E6%95%B0%E6%8D%AE">6.活动之间传递数据</a></li>
+<li><a href="#7%E6%B4%BB%E5%8A%A8%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F">7.活动的生命周期</a>
+<ul>
+<li><a href="#1%E6%B4%BB%E5%8A%A8%E7%8A%B6%E6%80%81">1.活动状态</a></li>
+<li><a href="#2%E6%B4%BB%E5%8A%A8%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F">2.活动的生命周期</a>
+<ul>
+<li><a href="#activity%E7%B1%BB%E4%B8%AD%E5%AE%9A%E4%B9%89%E7%9A%847%E4%B8%AA%E5%9B%9E%E8%B0%83%E6%96%B9%E6%B3%95">activity类中定义的7个回调方法</a></li>
+</ul>
+</li>
+<li><a href="#3%E6%B4%BB%E5%8A%A8%E8%A2%AB%E5%9B%9E%E6%94%B6%E4%BA%86%E6%80%8E%E4%B9%88%E5%8A%9E">3.活动被回收了怎么办</a></li>
+</ul>
+</li>
+<li><a href="#8%E6%B4%BB%E5%8A%A8%E7%9A%84%E5%90%AF%E5%8A%A8%E6%A8%A1%E5%BC%8F">8.活动的启动模式</a>
+<ul>
+<li><a href="#standard">standard</a></li>
+<li><a href="#singletop">singleTop</a></li>
+<li><a href="#singletask">singleTask</a></li>
+<li><a href="#singleinstance">singleInstance</a></li>
+</ul>
+</li>
+<li><a href="#9%E6%B4%BB%E5%8A%A8%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5">9.活动最佳实践</a></li>
+</ul>
+</li>
+<li><a href="#4ui">4.UI</a>
+<ul>
+<li><a href="#actionbar%E5%92%8Ctoolbar">ActionBar和ToolBar</a></li>
+<li><a href="#imageview">ImageView</a>
+<ul>
+<li><a href="#scaletype%E5%B1%9E%E6%80%A7">ScaleType属性</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BF%AE%E6%94%B9edittext%E4%B8%8B%E5%88%92%E7%BA%BF%E9%A2%9C%E8%89%B2-%E9%9A%90%E8%97%8F%E6%A0%87%E9%A2%98%E6%A0%8F">修改EditText下划线颜色 / 隐藏标题栏 </a></li>
+<li><a href="#%E5%AF%BC%E5%85%A5svg%E5%8F%98%E6%88%90xml%E7%9A%84%E7%9F%A2%E9%87%8F%E5%9B%BE%E7%89%87">导入SVG变成XML的矢量图片</a>
+<ul>
+<li><a href="#%E4%BD%BF%E7%94%A8%E5%8E%9F%E5%9B%A0">使用原因：</a></li>
+<li><a href="#%E6%96%B9%E6%B3%95">方法</a>
+<ul>
+<li><a href="#%E4%B8%80httpsblogcsdnnetstonewang_larticledetails81516017">一：https://blog.csdn.net/stoneWang_L/article/details/81516017</a></li>
+<li><a href="#%E4%BA%8C%E4%BD%BF%E7%94%A8android-studio%E6%8F%92%E4%BB%B6svg2vectordrawable-httpswwwjianshucomp5c171cdccd61utm_campaign">二：使用Android Studio插件，<strong>SVG2VectorDrawable</strong>   https://www.jianshu.com/p/5c171cdccd61?utm_campaign</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E5%B8%A6%E6%B8%85%E9%99%A4%E5%8A%9F%E8%83%BD%E7%9A%84%E7%BC%96%E8%BE%91%E6%A1%86clearedittext">带清除功能的编辑框（ClearEditText）</a></li>
+<li><a href="#%E7%AE%80%E5%8D%95%E6%8C%89%E9%92%AE%E6%B8%90%E5%8F%98%E5%8A%A8%E7%94%BB">简单按钮渐变动画</a></li>
+<li><a href="#%E9%AA%8C%E8%AF%81%E7%A0%81%E5%AE%9E%E7%8E%B0">验证码实现</a></li>
+<li><a href="#android-edittext-%E7%A6%81%E6%AD%A2%E6%8D%A2%E8%A1%8C">Android EditText 禁止换行</a></li>
+<li><a href="#%E5%A7%8B%E7%BB%88%E4%BB%A5%E7%AB%96%E5%B1%8F%E6%98%BE%E7%A4%BA">始终以竖屏显示</a></li>
+<li><a href="#%E5%9B%9B%E5%A4%A7%E5%9B%BE%E7%89%87%E7%BC%93%E5%AD%98imageloaderpicassoglidefresco%E5%8E%9F%E7%90%86-%E7%89%B9%E6%80%A7%E5%AF%B9%E6%AF%94">四大图片缓存（Imageloader,Picasso,Glide,Fresco）原理、特性对比</a></li>
+<li><a href="#recyclerviewlistview%E7%9A%84%E5%A2%9E%E5%BC%BA%E7%89%88%E5%A4%AA%E9%BA%BB%E7%83%A6%E4%BA%86%E4%B8%8D%E7%94%A8">RecyclerView（Listview的增强版）——太麻烦了不用</a>
+<ul>
+<li><a href="#1-%E6%98%AF%E4%BB%80%E4%B9%88">1. 是什么</a></li>
+<li><a href="#2-%E9%80%82%E9%85%8D%E5%99%A8adapter%E5%92%8C-viewholder">2. 适配器Adapter和 ViewHolder</a>
+<ul>
+<li><a href="#adapter-%E7%9A%84%E7%90%86%E8%A7%A3">Adapter 的理解</a></li>
+<li><a href="#viewholder-%E7%9A%84%E7%90%86%E8%A7%A3">ViewHolder 的理解</a></li>
+<li><a href="#adapter%E7%9A%84%E5%AE%9A%E4%B9%89">Adapter的定义</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81%E5%B1%95%E7%A4%BA%E9%83%A8%E5%88%86">代码展示（部分）</a></li>
+<li><a href="#%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8Fandroid%E5%88%97%E8%A1%A8%E8%A7%86%E5%9B%BE%E6%8E%A7%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%96%B9%E5%BC%8F">适配器模式——Android列表视图控件设计方式</a></li>
+<li><a href="#android%E6%BA%90%E7%A0%81%E4%B8%AD%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-recyclerview">Android源码中的设计模式 —— RecyclerView</a></li>
+<li><a href="#recyclerview-%E4%B8%AD%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F">RecyclerView 中的设计模式</a></li>
+</ul>
+</li>
+<li><a href="#3-%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95">3. 使用方法</a>
+<ul>
+<li><a href="#1activity">1.activity</a></li>
+<li><a href="#2myrecycleradapter">2.MyRecyclerAdapter</a></li>
+</ul>
+</li>
+<li><a href="#4%E5%88%86%E5%89%B2%E7%BA%BF">4.分割线</a>
+<ul>
+<li><a href="#1%E8%87%AA%E5%B8%A6%E5%88%86%E5%89%B2%E7%BA%BF">1.自带分割线</a></li>
+<li><a href="#2%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%86%E5%89%B2%E7%BA%BF%E4%BB%A5%E4%B8%8B%E8%BF%98%E6%9C%AA%E7%9C%8B">2.自定义分割线（以下还未看）</a></li>
+</ul>
+</li>
+<li><a href="#5%E5%9B%BE%E7%89%87%E8%87%AA%E9%80%82%E5%BA%94%E9%AB%98%E5%BA%A6%E4%B8%8D%E6%8E%A8%E8%8D%90%E4%BD%BF%E7%94%A8%E8%BF%98%E6%98%AF%E5%9B%BA%E5%AE%9A%E9%AB%98%E5%BA%A6%E9%9D%A0%E8%B0%B1">5.图片自适应高度（不推荐使用，还是固定高度靠谱）</a>
+<ul>
+<li><a href="#1%E8%AE%BE%E7%BD%AEitem-%E5%B8%83%E5%B1%80%E5%AE%BD%E9%AB%98">1.设置item 布局宽高</a></li>
+<li><a href="#2onbindviewholder">2.onBindViewHolder</a></li>
+</ul>
+</li>
+<li><a href="#6%E7%82%B9%E5%87%BB%E8%A7%A6%E5%8F%91%E4%BA%8B%E4%BB%B6">6.点击触发事件</a>
+<ul>
+<li><a href="#1activity-2">1.activity</a></li>
+<li><a href="#2myrecycleradapter-2">2.MyRecyclerAdapter</a></li>
+</ul>
+</li>
+<li><a href="#7baserecyclerviewadapterhelper-%E5%BC%80%E6%BA%90%E5%BA%93">*****7.<strong>BaseRecyclerViewAdapterHelper</strong> 开源库</a>
+<ul>
+<li><a href="#1%E4%BD%BF%E7%94%A8">1.使用</a>
+<ul>
+<li><a href="#1%E6%A1%86%E6%9E%B6%E5%BC%95%E5%85%A5">1.框架引入</a></li>
+<li><a href="#2%E4%BD%BF%E7%94%A8adapter">2.使用Adapter</a></li>
+</ul>
+</li>
+<li><a href="#2%E7%82%B9%E5%87%BB%E4%BA%8B%E4%BB%B6">2.点击事件</a>
+<ul>
+<li><a href="#1-%E6%9D%A1%E7%9B%AE%E4%BA%8B%E4%BB%B6">1 条目事件</a>
+<ul>
+<li><a href="#item%E7%9A%84%E7%82%B9%E5%87%BB%E4%BA%8B%E4%BB%B6">Item的点击事件</a></li>
+<li><a href="#item%E7%9A%84%E9%95%BF%E6%8C%89%E4%BA%8B%E4%BB%B6">Item的长按事件</a></li>
+<li><a href="#item%E7%9A%84%E9%95%BF%E6%8C%89%E5%88%A0%E9%99%A4">Item的长按删除</a></li>
+<li><a href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">注意事项</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#glide">Glide</a>
+<ul>
+<li><a href="#%E4%B8%80-%E7%AE%80%E4%BB%8B">一、简介</a></li>
+<li><a href="#%E4%BA%8C-%E4%BD%BF%E7%94%A8">二、使用</a>
+<ul>
+<li><a href="#1%E5%AF%BC%E5%85%A5%E5%BA%93%E6%B7%BB%E5%8A%A0%E4%BE%9D%E8%B5%96">1.导入库（添加依赖）</a>
+<ul>
+<li><a href="#project%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84buildgradle%E6%96%87%E4%BB%B6">Project目录下的build.gradle文件</a></li>
+<li><a href="#app%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84buildgradle%E6%96%87%E4%BB%B6">APP目录下的build.gradle文件</a></li>
+</ul>
+</li>
+<li><a href="#2%E5%9C%86%E8%A7%92%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E5%AE%9E%E6%B5%8B%E5%B5%8C%E5%A5%97%E5%9C%A8recyclerview%E5%86%85%E6%B2%A1%E6%9C%89%E7%94%A8">2.圆角图片显示——实测嵌套在recyclerview内没有用</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#photoview%E7%9A%84%E4%BD%BF%E7%94%A8">PhotoView的使用</a></li>
+<li><a href="#%E5%AE%9E%E7%8E%B0%E7%82%B9%E5%87%BB%E5%9B%BE%E7%89%87%E5%A4%A7%E5%9B%BE%E6%B5%8F%E8%A7%88">实现点击图片大图浏览</a>
+<ul>
+<li><a href="#1%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0">1.自己实现</a>
+<ul>
+<li><a href="#1%E9%80%9A%E8%BF%87-intent-%E4%BC%A0%E9%80%81%E5%8F%82%E6%95%B0%E5%88%B0%E6%96%B0%E7%9A%84-activity">1.通过 Intent 传送参数到新的 Activity</a></li>
+<li><a href="#2dialog%E7%82%B9%E5%87%BB%E5%9B%BE%E7%89%87%E5%90%8E%E5%88%9B%E5%BB%BAdialog%E7%94%A8dialog%E6%89%BF%E8%BD%BD-%E5%B1%95%E7%A4%BA%E5%BD%93%E5%89%8D%E6%89%80%E7%82%B9%E5%87%BB%E7%9A%84%E5%9B%BE%E7%89%87%E5%A4%A7%E5%9B%BE">2.dialog——点击图片后创建dialog用dialog承载 展示当前所点击的图片大图</a></li>
+<li><a href="#3%E7%BC%A9%E6%94%BE-matrix">3.缩放 Matrix</a></li>
+<li><a href="#4viewpager%E7%BB%93%E5%90%88photoview">4.ViewPager结合PhotoView</a></li>
+<li><a href="#4%E4%BD%BF%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E5%9B%BE%E7%89%87%E6%B5%8F%E8%A7%88%E6%A1%86%E6%9E%B6">4.使用第三方图片浏览框架</a></li>
+</ul>
+</li>
+<li><a href="#2%E8%B6%85%E7%BA%A7%E5%BC%BA%E5%A4%A7%E7%9A%84%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93xpopup%E6%8E%A8%E8%8D%90%E4%BD%BF%E7%94%A8">2.超级强大的第三方库——XPopup（推荐使用）</a>
+<ul>
+<li><a href="#1%E6%98%BE%E7%A4%BA%E5%86%85%E9%83%A8%E8%B5%84%E6%BA%90">1.显示内部资源</a></li>
+<li><a href="#2%E6%98%BE%E7%A4%BA%E7%BD%91%E7%BB%9C%E5%9B%BE%E7%89%87">2.显示网络图片</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#5%E5%B9%BF%E6%92%AD%E6%9C%BA%E5%88%B6">5.广播机制</a></li>
+<li><a href="#6%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8">6.数据存储</a></li>
+<li><a href="#5%E5%90%8E%E7%AB%AF%E8%BF%9E%E6%8E%A5%E5%BC%80%E5%8F%91">5.后端连接开发</a>
+<ul>
+<li><a href="#%E7%A7%BB%E5%8A%A8%E6%95%B0%E6%8D%AE%E5%BA%93">移动数据库</a></li>
+</ul>
+</li>
+<li><a href="#7%E5%86%85%E5%AE%B9%E6%8F%90%E4%BE%9B%E5%99%A8">7.内容提供器</a></li>
+<li><a href="#9%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF">9.网络技术</a>
+<ul>
+<li><a href="#android%E9%80%9A%E8%BF%87php%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%9E%E7%8E%B0%E7%99%BB%E5%BD%95">Android通过PHP服务器实现登录 </a></li>
+<li><a href="#91webview%E6%8E%A7%E4%BB%B6%E7%9A%84%E7%94%A8%E6%B3%95">9.1WebView控件的用法</a></li>
+<li><a href="#92%E4%BD%BF%E7%94%A8http%E5%8D%8F%E8%AE%AE%E8%AE%BF%E9%97%AE%E7%BD%91%E7%BB%9C">9.2使用HTTP协议访问网络</a>
+<ul>
+<li><a href="#http%E8%AF%B7%E6%B1%82%E5%B7%A5%E5%85%B7">Http请求工具</a></li>
+</ul>
+</li>
+<li><a href="#1-%E5%8E%86%E5%8F%B2%E4%B8%8Ahttp%E8%AF%B7%E6%B1%82%E5%BA%93%E4%BC%98%E7%BC%BA%E7%82%B9">1. 历史上Http请求库优缺点</a>
+<ul>
+<li><a href="#1%E5%8E%9F%E7%94%9F%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1%E5%BA%93httpurlconnection">1.原生网络通信库HttpURLConnection</a></li>
+<li><a href="#2%E5%BC%80%E6%BA%90%E7%9A%84%E5%8F%97%E6%AC%A2%E8%BF%8E%E7%9A%84%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E6%A1%86%E6%9E%B6okhttpokhttp%E4%BD%BF%E7%94%A8%E5%AE%8C%E5%85%A8%E6%95%99%E7%A8%8B%E8%B6%85%E7%BA%A7%E6%8E%A8%E8%8D%90%E7%9C%8B%E8%BF%99%E4%B8%AA">2.开源的受欢迎的网络请求框架OkHttp——OkHttp使用完全教程（￥超级推荐看这个）</a></li>
+</ul>
+</li>
+<li><a href="#get-a-url">Get a URL</a></li>
+<li><a href="#post-to-a-server">Post to a Server</a><br>
+*
+<ul>
+<li><a href="#1%E4%BD%BF%E7%94%A8-2">1.使用</a></li>
+</ul>
+</li>
+<li><a href="#93%E8%A7%A3%E6%9E%90xml%E6%A0%BC%E5%BC%8F%E6%95%B0%E6%8D%AE">9.3解析XML格式数据</a></li>
+<li><a href="#94-%E8%A7%A3%E6%9E%90json%E6%A0%BC%E5%BC%8F%E6%95%B0%E6%8D%AE%E6%8E%A8%E8%8D%90">9.4 ￥解析JSON格式数据（推荐）</a>
+<ul>
+<li><a href="#1%E5%AE%98%E6%96%B9%E6%8F%90%E4%BE%9B%E7%9A%84jsonobject">1.官方提供的JSONObject</a></li>
+<li><a href="#2gson%E6%8E%A8%E8%8D%90">2.GSON（推荐）</a></li>
+</ul>
+</li>
+<li><a href="#retrofit">Retrofit</a>
+<ul>
+<li><a href="#1retrofit2%E7%9A%84%E7%AE%80%E8%BF%B0">1.Retrofit2的简述</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#10%E6%9C%8D%E5%8A%A1">10.服务</a><br>
+*
+<ul>
+<li><a href="#rxjava">RxJava</a></li>
+</ul>
+</li>
+<li><a href="#11%E4%BE%9D%E8%B5%96%E5%BA%93">11.依赖库</a>
+<ul>
+<li><a href="#%E4%BE%9D%E8%B5%96%E5%BA%93">依赖库：</a><br>
+*<br>
+*<br>
+*<br>
+* <a href="#%E6%B3%A8%E8%A7%A3%E6%A1%86%E6%9E%B6-butterknife">注解框架 butterknife</a><br>
+* <a href="#json%E8%A7%A3%E6%9E%90-gson">Json解析 Gson</a><br>
+* <a href="#%E8%A7%A3%E6%9E%90html-jsoup">解析Html jsoup</a><br>
+* <a href="#%E7%BD%91%E7%BB%9C%E6%A1%86%E6%9E%B6-retrofit-okhttp">网络框架 retrofit okhttp</a><br>
+* <a href="#%E6%89%93%E5%8D%B0%E6%97%A5%E5%BF%97%E6%A1%86%E6%9E%B6-klog">打印日志框架 klog</a><br>
+* <a href="#%E5%9B%BE%E7%89%87%E5%8A%A0%E8%BD%BD-glide">图片加载 glide</a><br>
+* <a href="#%E5%88%B7%E6%96%B0%E6%A1%86%E6%9E%B6-swipetoloadlayout">刷新框架 SwipeToLoadLayout</a><br>
+* <a href="#%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E5%BA%93-andpermission">权限管理库 AndPermission</a><br>
+* <a href="#%E6%8F%90%E7%A4%BA%E6%A1%86-material-dialogs-android-svprogresshud">提示框 material-dialogs Android-SVProgressHUD</a><br>
+* <a href="#recycleview%E5%88%86%E5%89%B2%E7%BA%BF-recyclerview-flexibledivider">RecycleView分割线 RecyclerView-FlexibleDivider</a><br>
+* <a href="#viewpager%E7%9A%84%E6%A0%87%E9%A2%98%E6%8E%A7%E4%BB%B6-smarttablayout">ViewPager的标题控件 smarttablayout</a><br>
+* <a href="#%E5%B9%BF%E5%91%8A%E8%BD%AE%E6%92%AD%E6%8E%A7%E4%BB%B6-switcherview">广告轮播控件 SwitcherView</a><br>
+* <a href="#%E6%94%B6%E8%97%8F%E6%8C%89%E9%92%AE-thumbup">收藏按钮 ThumbUp</a><br>
+* <a href="#%E6%A8%A1%E7%B3%8A%E6%8E%A7%E4%BB%B6-blurry">模糊控件 Blurry</a><br>
+* <a href="#%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E7%9B%91%E6%8E%A7-chuck">网络请求监控 chuck</a><br>
+* <a href="#%E8%A1%A8%E6%A0%BC%E6%8E%A7%E4%BB%B6-scrollablepanel">表格控件 scrollablepanel</a><br>
+* <a href="#%E5%8F%AF%E4%BB%A5%E5%B1%95%E5%BC%80%E7%9A%84%E6%96%87%E5%AD%97-expandabletextview">可以展开的文字 expandableTextView</a><br>
+* <a href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E6%97%A5%E5%8E%86%E6%8E%A7%E4%BB%B6-mncalendar">自定义日历控件 MNCalendar</a><br>
+* <a href="#%E6%97%A5%E5%BF%97%E7%9B%91%E5%90%AC-mncrashmonitor">日志监听 MNCrashMonitor</a><br>
+* <a href="#%E5%9B%BE%E7%89%87%E7%BC%A9%E6%94%BE-photoview">图片缩放 PhotoView</a><br>
+* <a href="#apk%E5%8D%87%E7%BA%A7%E5%AE%89%E8%A3%85-mnupdateapk">APK升级安装 MNUpdateAPK</a><br>
+* <a href="#%E5%A4%9C%E9%97%B4%E6%A8%A1%E5%BC%8F-mnchangeskin">夜间模式 MNChangeSkin</a><br>
+* <a href="#%E5%9B%BE%E7%89%87%E6%B5%8F%E8%A7%88-mnimagebrowser">图片浏览 MNImageBrowser</a><br>
+* <a href="#%E6%B1%89%E5%AD%97%E8%BD%AC%E6%8B%BC%E9%9F%B3-tinypinyin">汉字转拼音 TinyPinyin</a><br>
+* <a href="#%E5%BF%AB%E9%80%9F%E8%B7%B3%E8%B7%83%E5%88%86%E7%BB%84%E7%9A%84%E4%BE%A7%E8%BE%B9%E6%A0%8F%E6%8E%A7%E4%BB%B6-wavesidebar">快速跳跃分组的侧边栏控件 WaveSideBar</a><br>
+* <a href="#%E8%83%8C%E6%99%AF%E5%8F%AF%E4%BB%A5%E7%A7%BB%E5%8A%A8%E7%9A%84view-kenburnsview">背景可以移动的View KenBurnsView</a><br>
+* <a href="#%E5%9C%86%E5%BD%A2%E5%9B%BE%E7%89%87-circleimageview">圆形图片 CircleImageView</a><br>
+* <a href="#%E6%BB%9A%E8%BD%AE%E9%80%89%E6%8B%A9%E5%99%A8-android-pickerview">滚轮选择器 Android-PickerView</a><br>
+* <a href="#%E5%9B%BE%E7%89%87%E9%80%89%E6%8B%A9%E5%99%A8-pictureselector">图片选择器 PictureSelector</a></li>
+</ul>
+</li>
+<li></li>
+<li><a href="#12material-design%E8%B4%A8%E6%84%9F%E8%AE%BE%E8%AE%A1android50%E4%BB%A5%E5%90%8E">12.Material Design（<strong>质感设计</strong>）（Android5.0以后）</a>
+<ul>
+<li><a href="#toolbar">Toolbar</a></li>
+<li><a href="#rippledrawable%E6%B6%9F%E6%BC%AA%E6%95%88%E6%9E%9C_%E6%B0%B4%E6%B3%A2%E7%BA%B9%E6%B6%9F%E6%BC%AA%E8%A7%A6%E6%91%B8%E5%8F%8D%E9%A6%88">RippleDrawable涟漪效果_水波纹/涟漪——触摸反馈</a>
+<ul>
+<li><a href="#%E7%AC%AC%E4%B8%80%E7%A7%8Dmaterial%E8%87%AA%E5%B8%A6%E6%B0%B4%E6%B3%A2%E7%BA%B9%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E9%BB%98%E8%AE%A4%E7%82%B9%E5%87%BB%E6%95%88%E6%9E%9C">第一种：Material自带水波纹（最简单的默认点击效果）</a>
+<ul>
+<li><a href="#%E6%B3%A8%E6%84%8F">注意：</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC%E4%BA%8C%E7%A7%8D%E6%96%B9%E6%B3%95">第二种方法</a>
+<ul>
+<li><a href="#21-%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AA%E6%99%AE%E9%80%9A%E7%9A%84-ripple_bg_drawablexml-%E8%83%8C%E6%99%AF%E6%96%87%E4%BB%B6">2.1 添加一个普通的 ripple_bg_drawable.xml 背景文件</a></li>
+<li><a href="#22%E6%B7%BB%E5%8A%A0%E5%B8%A6%E6%B3%A2%E7%BA%B9%E6%95%88%E6%9E%9C%E7%9A%84%E8%83%8C%E6%99%AF%E6%96%87%E4%BB%B6-ripple_bgxml">2.2添加带波纹效果的背景文件 ripple_bg.xml</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#cardview%E5%8D%A1%E7%89%87%E5%BC%8F%E5%B8%83%E5%B1%80">CardView（卡片式布局）</a></li>
+</ul>
+</li>
+<li><a href="#13%E7%82%B9%E5%87%BB%E4%BA%8B%E4%BB%B6">13.点击事件</a>
+<ul>
+<li><a href="#1%E5%B1%8F%E5%B9%95%E5%8D%95%E7%82%B9%E5%A4%9A%E7%82%B9%E8%A7%A6%E6%8E%A7">1.屏幕单点/多点触控</a>
+<ul>
+<li><a href="#%E8%AE%BE%E7%BD%AE%E5%8D%95%E7%82%B9%E8%A7%A6%E6%8E%A7splitmotionevents">设置单点触控splitMotionEvents</a></li>
+<li><a href="#%E5%A4%9A%E7%82%B9%E8%A7%A6%E6%8E%A7%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3windowenablesplittouch-splitmotionevents">多点触控问题解决(windowEnableSplitTouch, splitMotionEvents)</a></li>
+</ul>
+</li>
+<li><a href="#2%E5%B1%8F%E5%B9%95%E7%82%B9%E5%87%BB%E4%BA%8B%E4%BB%B6%E7%90%86%E8%A7%A3%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%8F%8A%E5%85%B6%E7%BB%A7%E6%89%BF%E7%90%86%E8%A7%A3%E7%90%86%E8%A7%A3%E9%98%B2%E6%AD%A2recyclerview-item%E9%87%8D%E5%A4%8D%E7%82%B9%E5%87%BB">2.屏幕点击事件理解（抽象类及其继承理解理解)——防止recyclerview item重复点击)</a>
+<ul>
+<li><a href="#1%E9%87%8D%E5%86%99onitemclicklistener-%E6%9E%84%E9%80%A0%E6%8A%BD%E8%B1%A1%E7%B1%BB-onnodoubleclicklistener-%E5%AE%9E%E7%8E%B0-onitemclicklistener">1.重写OnItemClickListener ，构造抽象类 OnNoDoubleClickListener 实现 OnItemClickListener</a></li>
+<li><a href="#2%E7%82%B9%E5%87%BB%E5%AE%9E%E7%8E%B0%E7%90%86%E8%A7%A3%E6%97%B6%E6%B3%A8%E6%84%8F%E7%9C%8B%E4%B8%80%E4%B8%8B%E4%BB%A3%E7%A0%81%E5%8C%BA%E5%88%AB">2.点击实现（理解时注意看一下代码区别）</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#gradle%E5%91%BD%E4%BB%A4gradlew%E6%89%93%E5%8C%85%E7%AD%BE%E5%90%8D%E7%AD%89">gradle命令——gradlew（打包签名等）</a>
+<ul>
+<li><a href="#android-studio-gradle-%E5%91%BD%E4%BB%A4%E8%A1%8C">android studio gradle 命令行</a></li>
+<li><a href="#install-tasks">Install tasks</a></li>
+<li><a href="#build-tasks">Build tasks</a></li>
+</ul>
+</li>
+<li><a href="#context">Context</a></li>
+<li><a href="#android-studio%E5%BF%AB%E6%8D%B7%E9%94%AE">Android Studio快捷键</a>
+<ul>
+<li><a href="#%E6%B3%A8%E9%87%8A%E4%BB%A3%E7%A0%81">注释代码</a></li>
+<li><a href="#%E6%89%B9%E9%87%8F%E6%9B%BF%E6%8D%A2">批量替换</a></li>
+</ul>
+</li>
+<li><a href="#%E6%8F%92%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8">插件的使用</a>
+<ul>
+<li><a href="#1butterknife%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8">1.ButterKnife插件使用</a></li>
+<li><a href="#2simpleuml">2.simpleUML</a></li>
+</ul>
+</li>
+<li><a href="#%E6%B3%A8%E9%87%8A%E8%A7%84%E7%BA%A6%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4">注释规约（阿里巴巴）</a></li>
+<li><a href="#%E5%A6%82%E4%BD%95%E4%BB%8Egithub%E4%B8%8B%E8%BD%BD%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%BA%90%E4%BB%A3%E7%A0%81%E5%8C%85%E5%90%ABgit%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9B%B4%E6%8E%A5%E4%B8%8B%E8%BD%BDvs%E4%B8%8B%E8%BD%BD">如何从github下载项目的源代码，包含git客户端，直接下载，vs下载</a>
+<ul>
+<li><a href="#1%E7%9B%B4%E6%8E%A5%E4%B8%8B%E8%BD%BD">1.直接下载：</a></li>
+<li><a href="#2%E4%BD%BF%E7%94%A8git">2.使用git</a>
+<ul>
+<li><a href="#1git-gui-here">1.GIT GUI here</a></li>
+<li><a href="#2%E4%BD%BF%E7%94%A8git%E5%91%BD%E4%BB%A4git-bash-here%E4%BB%8Egithub%E4%B8%8Aclone%E9%A1%B9%E7%9B%AE">2.使用git命令（GIT Bash here）从github上clone项目</a></li>
+</ul>
+</li>
+<li><a href="#3github-desktop%E4%B8%8B%E8%BD%BDhttpsdesktopgithubcom">3.GitHub Desktop下载:https://desktop.github.com/</a></li>
+<li><a href="#4%E8%BD%AF%E4%BB%B6%E5%86%85%E8%87%AA%E5%B8%A6vcs%E4%B8%8B%E8%BD%BD">4.软件内自带VCS下载</a></li>
+</ul>
+</li>
+<li><a href="#android-studio%E4%BD%BF%E7%94%A8">Android Studio使用</a>
+<ul>
+<li><a href="#1%E6%89%93%E5%BC%80project-structurectrlaltshifts">1.打开Project Structure（Ctrl+Alt+Shift+S）</a></li>
+<li><a href="#2%E5%BF%AB%E9%80%9F%E6%94%B6%E8%B5%B7%E6%89%93%E5%BC%80%E4%BB%A3%E7%A0%81">2.快速收起/打开代码</a></li>
+<li><a href="#3gradle%E4%B8%8B%E8%BD%BD%E6%85%A2%E6%88%96%E8%80%85%E5%A4%B1%E8%B4%A5">3.Gradle下载慢或者失败</a></li>
+<li><a href="#4%E7%B1%BB%E7%BB%93%E6%9E%84%E6%9F%A5%E7%9C%8B%E5%B7%A5%E5%85%B7structure%E8%AF%A6%E8%A7%A3">4.类结构查看工具Structure详解</a>
+<ul>
+<li><a href="#1java%E7%B1%BB%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%84%E6%88%90%E5%86%85%E5%AE%B9%E4%BF%A1%E6%81%AF%E5%9B%BE%E5%BD%A2%E8%A1%A8%E7%A4%BA">1.Java类的基本组成内容信息图形表示</a></li>
+<li><a href="#structure%E5%B0%8F%E7%AC%A6%E5%8F%B7%E6%84%8F%E4%B9%89">structure小符号意义</a></li>
+<li><a href="#1java%E7%B1%BB%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%84%E6%88%90%E5%86%85%E5%AE%B9%E4%BF%A1%E6%81%AF%E5%9B%BE%E5%BD%A2%E8%A1%A8%E7%A4%BA-2">1.Java类的基本组成内容信息图形表示</a></li>
+<li><a href="#2%E6%89%80%E6%9C%89%E5%9B%BE%E6%A0%87%E7%9A%84%E5%88%86%E7%B1%BB%E8%AF%A6%E8%A7%A3">2.所有图标的分类详解</a>
+<ul>
+<li><a href="#21%E7%B1%BB%E5%9F%BA%E6%9C%AC%E7%BB%84%E6%88%90%E5%86%85%E5%AE%B9">2.1.类基本组成内容</a></li>
+<li><a href="#22%E4%BF%AE%E9%A5%B0%E7%AC%A6">2.2.修饰符</a></li>
+<li><a href="#23%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90">2.3.访问权限</a></li>
+<li><a href="#24%E7%BB%A7%E6%89%BF">2.4继承</a></li>
+</ul>
+</li>
+<li><a href="#3%E5%B7%A5%E5%85%B7%E6%A0%8F%E7%AD%9B%E9%80%89%E9%80%89%E9%A1%B9%E8%AF%A6%E8%A7%A3">3.工具栏筛选选项详解</a>
+<ul>
+<li><a href="#31-%E6%8C%89%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90%E6%8E%92%E5%BA%8F">3.1 按访问权限排序</a></li>
+<li><a href="#32-%E6%8C%89%E5%AD%97%E6%AF%8D%E8%A1%A8%E9%A1%BA%E5%BA%8F%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F">3.2 按字母表顺序进行排序</a></li>
+<li><a href="#33-%E6%96%B9%E6%B3%95%E7%9A%84%E8%A6%86%E7%9B%96%E6%88%96%E5%AE%9E%E7%8E%B0%E5%88%86%E7%BB%84">3.3 方法的覆盖或实现分组</a></li>
+<li><a href="#34-bean%E7%B1%BB%E5%B1%9E%E6%80%A7%E7%9A%84%E5%88%86%E7%BB%84">3.4 bean类属性的分组</a></li>
+<li><a href="#35-%E6%98%BE%E7%A4%BA%E5%AD%97%E6%AE%B5%E9%BB%98%E8%AE%A4%E4%B8%8D%E6%98%BE%E7%A4%BA">3.5 显示字段(默认不显示)</a></li>
+<li><a href="#36-%E6%98%BE%E7%A4%BA%E9%9D%9E%E5%85%AC%E6%9C%89%E5%86%85%E5%AE%B9">3.6 显示非公有内容</a></li>
+<li><a href="#37-%E6%98%BE%E7%A4%BA%E7%BB%A7%E6%89%BF%E7%9A%84%E5%86%85%E5%AE%B9">3.7 显示继承的内容</a></li>
+<li><a href="#38-%E6%98%BE%E7%A4%BA%E5%8C%BF%E5%90%8D%E7%B1%BB">3.8 显示匿名类</a></li>
+<li><a href="#39-%E6%98%BE%E7%A4%BAlambdas%E8%A1%A8%E8%BE%BE%E5%BC%8F">3.9 显示lambdas表达式</a></li>
+<li><a href="#310-%E5%85%A8%E9%83%A8%E5%B1%95%E5%BC%80%E4%B8%8E%E5%85%A8%E9%83%A8%E6%8A%98%E5%8F%A0">3.10 全部展开与全部折叠</a></li>
+<li><a href="#311-%E8%87%AA%E5%8A%A8%E5%AE%9A%E4%BD%8D">3.11 自动定位</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#5%E4%BD%95%E5%BF%AB%E9%80%9F%E6%8A%BD%E7%A6%BB%E5%87%BA%E4%B8%80%E4%B8%AA%E6%96%B9%E6%B3%95">5.何快速抽离出一个方法</a></li>
+<li><a href="#6altenter-%E6%98%BE%E7%A4%BA%E6%8F%90%E7%A4%BA%E6%A1%86">6.Alt+Enter 显示提示框</a></li>
+<li><a href="#7%E5%BF%AB%E9%80%9F%E8%BE%93%E5%85%A5for%E5%BE%AA%E7%8E%AF">7.快速输入for循环</a></li>
+<li><a href="#8%E5%BF%AB%E6%8D%B7%E9%94%AEctrlo%E6%9F%A5%E7%9C%8B%E9%9C%80%E8%A6%81%E9%87%8D%E5%86%99%E7%9A%84%E6%96%B9%E6%B3%95">8.快捷键Ctrl+O查看需要重写的方法</a></li>
+</ul>
+</li>
+<li><a href="#apk%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9">APK文件压缩</a>
+<ul>
+<li><a href="#%E8%A7%A3%E5%86%B3%E6%B7%B7%E6%B7%86%E5%8E%8B%E7%BC%A9%E5%87%BA%E7%8E%B0cannot-fit-requested-classes-in-a-single-dex-file%E7%9A%84%E9%97%AE%E9%A2%98">解决混淆压缩出现“Cannot fit requested classes in a single dex file”的问题</a></li>
+</ul>
+</li>
+<li><a href="#%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3">问题解决</a>
+<ul>
+<li><a href="#1entry-name-rescolormaterial_on_surface_disabledxml-collided">1.Entry name 'res/color/material_on_surface_disabled.xml' collided</a></li>
+<li><a href="#2gradle%E5%91%BD%E4%BB%A4%E9%94%99%E8%AF%AFerrorunable-to-start-the-daemon-process-this-problem-might-be-caused-by-incorrect-configuration-of">2.gradle命令错误——Error:Unable to start the daemon process. This problem might be caused by incorrect configuration of</a></li>
+<li><a href="#3%E8%A7%A3%E5%86%B3-fatal-not-a-git-repository-or-any-of-the-parent-directories-git-%E9%97%AE%E9%A2%98">3解决 fatal: Not a git repository (or any of the parent directories): .git 问题</a></li>
+<li><a href="#4%E6%81%A2%E5%A4%8D%E5%88%A0%E9%99%A4%E7%9A%84%E6%96%87%E4%BB%B6%E6%92%A4%E5%9B%9E%E6%93%8D%E4%BD%9C">4.恢复删除的文件，撤回操作</a></li>
+<li><a href="#5%E8%BF%9C%E7%A8%8B%E4%B8%BB%E6%9C%BA%E5%BC%BA%E8%BF%AB%E5%85%B3%E9%97%AD%E4%BA%86%E4%B8%80%E4%B8%AA%E7%8E%B0%E6%9C%89%E7%9A%84%E8%BF%9E%E6%8E%A5adbexe%E5%B7%B2%E5%81%9C%E6%AD%A2%E5%B7%A5%E4%BD%9C">5.远程主机强迫关闭了一个现有的连接(adb.exe已停止工作)</a></li>
+<li><a href="#6%E8%BF%9E%E7%BB%AD%E7%82%B9%E5%87%BB%E5%87%BA%E7%8E%B0%E5%A4%9A%E4%B8%AAactivity%E7%95%8C%E9%9D%A2">6.连续点击出现多个Activity界面</a>
+<ul>
+<li><a href="#%E4%B8%80-%E9%80%9A%E8%BF%87%E6%97%B6%E9%97%B4%E6%8E%A7%E5%88%B6%E7%82%B9%E5%87%BB%E6%AC%A1%E6%95%B0">一、通过时间控制点击次数：</a></li>
+<li><a href="#%E4%BA%8C-%E9%80%9A%E8%BF%87launchmode%E5%90%AF%E5%8A%A8%E6%A8%A1%E5%BC%8F%E6%8E%A7%E5%88%B6%E5%87%BA%E7%8E%B0%E5%A4%9A%E4%B8%AAactivity%E7%9A%84%E6%96%B9%E5%BC%8F">二、通过launchMode启动模式控制出现多个activity的方式：</a></li>
+<li><a href="#%E4%B8%89-android%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%90%AF%E5%8A%A8%E6%A8%A1%E5%BC%8F">三、android的四种启动模式：</a></li>
+</ul>
+</li>
+<li><a href="#7recyclerview%E9%87%8D%E5%A4%8D%E7%82%B9%E5%87%BB%E9%97%AE%E9%A2%981%E9%87%8D%E5%86%99onitemclicklistener-%E6%9E%84%E9%80%A0%E6%8A%BD%E8%B1%A1%E7%B1%BB-onnodoubleclicklistener-%E5%AE%9E%E7%8E%B0-onitemclicklistener">7.recyclerview重复点击问题</a>
+<ul>
+<li><a href="#1%E9%87%8D%E5%86%99%E7%82%B9%E5%87%BB%E4%BA%8B%E4%BB%B6-%E5%B0%81%E8%A3%85%E4%B8%80%E4%B8%AA%E7%82%B9%E5%87%BB%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E7%82%B9%E5%87%BB%E9%97%B4%E9%9A%94%E5%88%A4%E6%96%AD">1.重写点击事件     ——封装一个点击事件，处理点击间隔判断</a></li>
+<li><a href="#2%E5%88%A9%E7%94%A8%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%97%B4%E5%B7%AE%E6%AF%8F%E4%B8%AA%E6%8C%89%E9%92%AE%E7%82%B9%E5%87%BB%E4%BA%8B%E4%BB%B6%E4%B8%AD%E8%AE%B0%E5%BD%95%E7%82%B9%E5%87%BB%E6%97%B6%E9%97%B4%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E8%B6%85%E8%BF%87%E7%82%B9%E5%87%BB%E6%97%B6%E9%97%B4%E9%97%B4%E9%9A%94">2.利用系统时间差——每个按钮点击事件中，记录点击时间，判断是否超过点击时间间隔</a></li>
+<li><a href="#3%E5%B7%A5%E5%85%B7%E7%B1%BB%E7%94%A8%E4%BA%8E%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E5%BF%AB%E9%80%9F%E7%82%B9%E5%87%BB%E7%8E%B0%E5%9C%A8%E6%83%B3%E6%83%B3%E8%BF%99%E4%B8%AA%E5%A5%BD%E5%83%8F%E4%BC%9A%E7%AE%80%E5%8D%95%E7%82%B9">3.￥￥工具类，用于判断是否快速点击（现在想想这个好像会简单点）</a></li>
+<li><a href="#4%E4%BD%BF%E7%94%A8-rxjava-%E7%9A%84-throttlefirst">4.使用 RxJava 的 throttleFirst()</a><br>
+*
+<ul>
+<li><a href="#%E6%80%9D%E8%80%83%E4%B8%80%E4%B8%8B">思考一下：</a></li>
+</ul>
+</li>
+<li><a href="#5%E5%BC%95%E5%85%A5aop">5.引入AOP</a></li>
+</ul>
+</li>
+<li><a href="#8raw-use-of-parameterized-class-xxxx-%E8%AD%A6%E5%91%8A">8.Raw use of parameterized class 'xxxx' 警告</a>
+<ul>
+<li><a href="#%E6%84%8F%E6%80%9D%E5%8F%82%E6%95%B0%E5%8C%96%E7%B1%BB%E7%9A%84%E5%8E%9F%E5%A7%8B%E4%BD%BF%E7%94%A8">意思：“参数化类的原始使用”</a></li>
+<li><a href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95">解决方法</a></li>
+<li><a href="#%E4%BE%8B%E5%A6%82">例如</a></li>
+<li><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E5%87%BA%E7%8E%B0%E8%BF%99%E4%B8%AA%E8%AD%A6%E5%91%8A">为什么会出现这个警告？</a></li>
+</ul>
+</li>
+<li><a href="#9removeint-is-deprecated%E8%BF%87%E6%97%B6">9.'remove(int)' is deprecated(过时)</a></li>
+</ul>
+</li>
+<li><a href="#%E5%BE%85%E8%A7%A3%E5%86%B3">待解决</a></li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
+  let active = 'active-show', activeClass = 'active-current';
+  let tocWrapper = document.querySelector('#toc_wrapper');
+  let tocContent = tocWrapper.children[0];
+  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
+
+  function addTocNumber(elem, deep) {
+    if (!elem) {
+      return;
+    }
+    let prop = elem.__proto__;
+
+    if (prop === HTMLUListElement.prototype) {
+      for (let i = 0; i < elem.children.length; i++) {
+        addTocNumber(elem.children[i], deep + (i + 1) + '.');
+      }
+    } else if (prop === HTMLLIElement.prototype) {
+      // 保存li元素
+      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
+        lList.push(elem);
+      }
+      for (let i = 0; i < elem.children.length; i++) {
+        let cur = elem.children[i];
+        if (cur.__proto__ === HTMLAnchorElement.prototype) {
+          if (autoNumber) {
+            cur.text = deep + ' ' + cur.text;
+          }
+        } else if (cur.__proto__ === HTMLUListElement.prototype) {
+          addTocNumber(cur, deep);
+        }
+      }
+    }
+  }
+
+  function removeParentActiveClass() {
+    let parents = tocContent.querySelectorAll('.' + active)
+    parents.forEach(function (elem) {
+      elem.classList.remove(active);
+    });
+  }
+
+  function addActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.add(activeClass);
+    }
+  }
+
+  function removeActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.remove(activeClass);
+    }
+  }
+
+  function addActiveLiElemment(elem, parent) {
+    if (!elem || elem === parent) {
+      return;
+    } else {
+      if (elem.__proto__ === HTMLLIElement.prototype) {
+        elem.classList.add(active);
+      }
+      addActiveLiElemment(elem.parentElement, parent);
+    }
+  }
+
+  function showToc() {
+    if (tocWrapper) {
+      postBody = document.querySelector('#post_body');
+      for (let i = 0; i < postBody.children.length; i++) {
+        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+          hList.push(postBody.children[i]);
+        }
+      }
+      if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+      } else if (tocWrapper.classList.contains('no_compress')) {
+        tocContent.classList.add('expanded');
+      } else {
+        if (hList.length > 10) {
+          active = 'active-hidden'
+          tocContent.classList.add('closed');
+        } else {
+          tocContent.classList.add('expanded');
+        }
+      }
+    }
+  }
+
+  (function () {
+    // 处理不是从#一级标题开始目录
+    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
+      let con = tocContent.children[0].children[0];
+      tocContent.innerHTML = con.innerHTML;
+    }
+    let markdownItTOC = document.querySelector('.markdownIt-TOC');
+    let innerHeight = window.innerHeight;
+    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
+    addTocNumber(tocContent, '');
+  })();
+
+  document.addEventListener('scroll', function (e) {
+    if (lList.length <= 0) {
+      return;
+    }
+    let scrollTop = document.scrollingElement.scrollTop + 10;
+    let dir;
+
+    if (lastTop - scrollTop > 0) {
+      dir = 'up';
+    } else {
+      dir = 'down';
+    }
+
+    lastTop = scrollTop;
+    if (scrollTop <= 0) {
+      if (lastIndex >= 0 && lastIndex < hList.length) {
+        lList[lastIndex].classList.remove(activeClass);
+      }
+      return;
+    }
+
+    let current = 0, hasFind = false;
+    for (let i = 0; i < hList.length; i++) {
+      if (hList[i].offsetTop > scrollTop) {
+        current = i;
+        hasFind = true;
+        break;
+      }
+    }
+    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+      current = hList.length - 1;
+    } else {
+      current--;
+    }
+    if (dir === 'down') {
+      if (current > lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex)
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    } else {
+      if (current < lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex);
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    }
+  });
+
+
+  window.addEventListener('load', function () {
+    showToc();
+    document.querySelector('#sidebar').style = 'display: block;';
+    tocWrapper.classList.add('toc-active');
+    setTimeout(function () {
+      if ("createEvent" in document) {
+        let evt = document.createEvent("HTMLEvents");
+        evt.initEvent("scroll", false, true);
+        document.dispatchEvent(evt);
+      }
+      else {
+        document.fireEvent("scroll");
+      }
+    }, 500)
+  })
+
+</script>
+            </div>
+          
         
       </div>
     </div>
@@ -2384,11 +3077,11 @@ adapter.notifyDataSetChanged();
 <p>仍待解决？</p>
 <h1 id="待解决">待解决</h1>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1661022"><label class="task-list-item-label" for="task-item-1661022"> 点击放大了，但是感觉圆角效果还是待改善</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1979782"><label class="task-list-item-label" for="task-item-1979782"> RippleDrawable涟漪效果了解了一些，会了一点点，但是RecyclerView中的图片点击效果还有一点不够完善。——继续学习</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2870298"><label class="task-list-item-label" for="task-item-2870298"> 触发事件功能还要继续琢磨</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9807364"><label class="task-list-item-label" for="task-item-9807364"> 多版本xml文件理解</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5623190"><label class="task-list-item-label" for="task-item-5623190"> context理解</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6232648"><label class="task-list-item-label" for="task-item-6232648"> 点击放大了，但是感觉圆角效果还是待改善</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1514308"><label class="task-list-item-label" for="task-item-1514308"> RippleDrawable涟漪效果了解了一些，会了一点点，但是RecyclerView中的图片点击效果还有一点不够完善。——继续学习</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5285787"><label class="task-list-item-label" for="task-item-5285787"> 触发事件功能还要继续琢磨</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5379076"><label class="task-list-item-label" for="task-item-5379076"> 多版本xml文件理解</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5475403"><label class="task-list-item-label" for="task-item-5475403"> context理解</label></li>
 </ul>
 
             </div>
@@ -2398,7 +3091,7 @@ adapter.notifyDataSetChanged();
   <ul class="post-copyright">
     <li class="post-copyright-author">
       <strong class="language" data-lan="author">本文作者：</strong>
-      
+      我是谁
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
@@ -2471,7 +3164,7 @@ adapter.notifyDataSetChanged();
   </footer>
   
   
-  <div class="pisces back-to-top" id="back_to_top">
+  <div class="gemini back-to-top" id="back_to_top">
     <i class="fa fa-arrow-up"></i>
     
     <span class="scrollpercent">
@@ -2481,12 +3174,6 @@ adapter.notifyDataSetChanged();
   </div>
   
   
-  
-  
-  
-  
-  
-
   
 </div>
 <script>
@@ -2616,7 +3303,7 @@ adapter.notifyDataSetChanged();
   }
 
   // 链接跳转
-  let newWindow = ''
+  let newWindow = 'false'
   if (newWindow === 'true') {
     let links = document.querySelectorAll('.post-body a')
     links.forEach(item => {
@@ -2681,8 +3368,8 @@ adapter.notifyDataSetChanged();
           
         </div>
       </div>
-      <p class="reward-word"></p>
-      <p class="reward-tip"></p>
+      <p class="reward-word">扫码打赏，你说多少就多少</p>
+      <p class="reward-tip">打开微信扫一扫，即可进行扫码打赏哦</p>
     </div>
     <div class="bottom">
       
@@ -2888,6 +3575,2396 @@ adapter.notifyDataSetChanged();
 
   </div>
 </body>
+
+<div class="search-mask" id="search_mask" style="display: none;">
+  <div class="search-box">
+    <div class="search-title">
+      <i class="fa fa-search"></i>
+      <div class="input-box">
+        <input id="search" type="text" class="language" data-lan="search" placeholder="搜索">
+      </div>
+      <i id="close" class="fa fa-times-circle"></i>
+    </div>
+    <div class="stat-box">
+      <span id="stat_count">0</span><span class="language" data-lan="stat">条相关条目，使用了</span><span id="stat_times">0</span><span class="language" data-lan="stat-time">毫秒</span>
+      <hr>
+    </div>
+    <div class="result" id="result">
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://SageRover.github.io/post/android/"" data-c="
+          &lt;h1 id=&#34;android之四大组件-六大布局-五大存储httpswwwcnblogscomtsingkep9007563html&#34;&gt;Android之四大组件、六大布局、五大存储](https://www.cnblogs.com/tsingke/p/9007563.html)&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;SDK＝放着你想要的软件功能的软件包&lt;/p&gt;
+&lt;p&gt;API＝SDK上唯一的接口&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;1项目中的重要文件&#34;&gt;1.项目中的重要文件&lt;/h1&gt;
+&lt;h2 id=&#34;androidmanifestxml文件&#34;&gt;AndroidManifest.xml文件&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;
+&amp;lt;manifest xmlns:android=&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;
+    package=&amp;quot;com.example.himalaya&amp;quot; &amp;gt;
+
+    &amp;lt;application
+        android:allowBackup=&amp;quot;true&amp;quot;			//当allowBackup标志为true时，用户即可通过adb backup和adb restore来进行对应用数据的备份和恢复，这可/能会带来一定的安全风险。阿里聚安全建议将allowBackup属性值显示设置为false：
+        android:icon=&amp;quot;@mipmap/ic_launcher&amp;quot;		//icon：应用图标，一般都是放在以mipmap开头的文件夹内
+        android:label=&amp;quot;@string/app_name&amp;quot;		//label：应用名称
+        android:roundIcon=&amp;quot;@mipmap/ic_launcher_round&amp;quot; //圆形应用图标
+        android:supportsRtl=&amp;quot;true&amp;quot;              //（几乎不可能用到）是否支持从左往右视图
+        android:theme=&amp;quot;@style/AppTheme&amp;quot; &amp;gt;        //（不用管）自动生成基本主题
+        
+        //每多一个activity（活动）和layout都会在这个项目配置文件自动添加以下内容对这个活动进行注册，这段内容对MainActivity这个活动进行注册，没有在AndroidManifest.xml注册的活动是不能使用的。
+        &amp;lt;activity android:name=&amp;quot;.MainActivity&amp;quot; &amp;gt;
+            &amp;lt;intent-filter&amp;gt;
+                &amp;lt;action android:name=&amp;quot;android.intent.action.MAIN&amp;quot; /&amp;gt;				//表示这是项目的主活动
+
+                &amp;lt;category android:name=&amp;quot;android.intent.category.LAUNCHER&amp;quot; /&amp;gt;		//表示这是App应用的启动活动，即点击APP第一个出现的
+            &amp;lt;/intent-filter&amp;gt;
+        &amp;lt;/activity&amp;gt;
+        
+    &amp;lt;/application&amp;gt;
+
+&amp;lt;/manifest&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;安卓各版本对应版本号：&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://gitee.com/sagerover/figurebed/raw/master//img/20201020215153.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;mainactivityjava&#34;&gt;MainActivity.java&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.example.himalaya;
+
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+
+public class MainActivity extends AppCompatActivity {   		
+
+AppCompatActivity（AppCompatActivity是Activity的子类）：Activity 是其它Activity 的基类,包括appcompatactivity.AppCompatActivity默认带标题栏.从字面理解，App兼容Activity，意思是允许我们轻易地将API 21+的特性应用到之前的那些老的，不兼容的Activity上面。例如很容易地将Toolbar添加到Activity上
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {			onCreate：本程序只有一个onCreate方法，这是一个活动被创建时必定要执行的方法
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);						setContentView()方法给当前活动引入了一个叫activity_main的布局文件
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;buildgradle&#34;&gt;build.gradle&lt;/h2&gt;
+&lt;h3 id=&#34;1最外层目录下的buildgradle文件&#34;&gt;1.最外层目录下的build.gradle文件&lt;/h3&gt;
+&lt;p&gt;这些代码都是自动生成的，通常情况下不需要修改，除非你想要添加一些全局项目构建配置&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;// Top-level build file where you can add configuration options common to all sub-projects/modules.
+// 顶级构建文件，您可以在其中添加对所有子项目/模块通用的配置选项。
+
+buildscript {
+    repositories {
+        google()
+        jcenter()		jcenter是一个代码托管仓库。声明jcenter()这行配置，就可以在项目中轻松引用任何jcenter上的开源项目。
+    }
+    dependencies {
+        classpath &amp;quot;com.android.tools.build:gradle:4.10.1&amp;quot;
+        
+        dependencies闭包中使用classpath声明了一个gradle插件。为什么要声明这个插件呢？因为Gradle并不是专门为构建Android项目而开发的, Java、 C+等很多		 种项目都可以使用Gradle来构建。因此如果我们要想使用它来构建Android项目,则需要声明com.android.tools.build:gradle:4.2.0这个插件。其中,最后面的	    部分是插件的版本号,我在写作本书时最新的插件版本是2.2.0。
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+        ////注意：不要将您的应用程序依赖项放在此处；它们属于在各个模块的build.gradle文件中
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;buildscript里的repositories与allprojects里的repositories 区别：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;buildscript里是gradle脚本执行所需依赖，分别是对应的maven库和插件&lt;/li&gt;
+&lt;li&gt;allprojects里是项目本身需要的依赖&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;h1 id=&#34;maven仓库&#34;&gt;&lt;a href=&#34;https://blog.csdn.net/lu_xin_/article/details/51134849&#34;&gt;Maven仓库&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;网络上主要有两种Maven仓库，分别是 &lt;strong&gt;mavenCentral()&lt;/strong&gt;  和 &lt;strong&gt;jcenter()&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;1-maven-central-是由sonatypeorg维护的maven仓库&#34;&gt;1. Maven Central 是由sonatype.org维护的Maven仓库。&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;http://jcenter.bintray.com/&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;2-jcenter是一个由-bintraycom维护的maven仓库&#34;&gt;2. jcenter是一个由 bintray.com维护的Maven仓库。&lt;/h2&gt;
+&lt;p&gt;可以在这里看到整个仓库的内容。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;https://oss.sonatype.org/content/repositories/releases/&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;maven中央仓库已经将内容浏览功能禁掉了，可在这个网站查询。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;http://search.maven.org/&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;但是 jcenter更好，是谷歌默认仓库。&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;JCenter() 与 mavenCenter()在完全不同的服务器上维护，由不同的人提供内容，两者之间毫无关系。在jcenter上有的可能 Maven Central 上没有，反之亦然。&lt;/li&gt;
+&lt;li&gt;Gradle支持从maven中央仓库和JCenter上获取构件。事实上两个仓库都具有相同的使命：&lt;strong&gt;提供Java或者Android library服务&lt;/strong&gt;。上传到哪个（或者都上传）取决于开发者。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;3其他的网络公开仓库&#34;&gt;3.其他的网络公开仓库&lt;/h2&gt;
+&lt;h3 id=&#34;maven仓库列表&#34;&gt;Maven仓库列表&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;仓库名&lt;/th&gt;
+&lt;th&gt;简介&lt;/th&gt;
+&lt;th&gt;实际地址&lt;/th&gt;
+&lt;th&gt;使用地址&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;jcenter&lt;/td&gt;
+&lt;td&gt;JFrog公司提供的仓库&lt;/td&gt;
+&lt;td&gt;http://jcenter.bintray.com&lt;/td&gt;
+&lt;td&gt;https://maven.aliyun.com/repository/jcenter https://maven.aliyun.com/nexus/content/repositories/jcenter&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;mavenLocal&lt;/td&gt;
+&lt;td&gt;本台电脑上的仓库&lt;/td&gt;
+&lt;td&gt;{USER_HOME}/.m2/repository&lt;/td&gt;
+&lt;td&gt;C:/Users/liyujiang/.m2/repository (Windows) /home/liyujiang/.m2/repository (Linux)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;mavenCentral&lt;/td&gt;
+&lt;td&gt;Sonatype公司提供的中央库&lt;/td&gt;
+&lt;td&gt;http://central.maven.org/maven2&lt;/td&gt;
+&lt;td&gt;https://maven.aliyun.com/repository/central https://maven.aliyun.com/nexus/content/repositories/central&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;google&lt;/td&gt;
+&lt;td&gt;Google公司提供的仓库&lt;/td&gt;
+&lt;td&gt;https://maven.google.com&lt;/td&gt;
+&lt;td&gt;https://maven.aliyun.com/repository/google https://maven.aliyun.com/nexus/content/repositories/google https://dl.google.com/dl/android/maven2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;jitpack&lt;/td&gt;
+&lt;td&gt;JitPack提供的仓库&lt;/td&gt;
+&lt;td&gt;https://jitpack.io&lt;/td&gt;
+&lt;td&gt;https://jitpack.io&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;public&lt;/td&gt;
+&lt;td&gt;jcenter和mavenCentral的聚合仓库&lt;/td&gt;
+&lt;td&gt;https://maven.aliyun.com/repository/public https://maven.aliyun.com/nexus/content/groups/public&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;gradle-plugin&lt;/td&gt;
+&lt;td&gt;Gradle插件仓库&lt;/td&gt;
+&lt;td&gt;https://plugins.gradle.org/m2&lt;/td&gt;
+&lt;td&gt;https://maven.aliyun.com/repository/gradle-plugin https://maven.aliyun.com/nexus/content/repositories/gradle-plugin&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;阿里云镜像源配置&#34;&gt;&lt;a href=&#34;https://www.cnblogs.com/xuan52rock/p/12772979.html&#34;&gt;阿里云镜像源配置&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;在项目根目录下的&lt;code&gt;build.gradle&lt;/code&gt;的&lt;code&gt;allprojects.repositories&lt;/code&gt;闭包内的最前面添加阿里云的仓库地址：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;buildscript {
+    repositories {
+        jcenter()
+        google()
+    }
+}
+allprojects {
+    repositories {
+        maven {url &#39;https://maven.aliyun.com/repository/jcenter&#39;}
+        maven {url &#39;https://maven.aliyun.com/repository/central&#39;}
+        maven {url &#39;https://maven.aliyun.com/repository/google&#39;}
+        jcenter()
+        mavenCentral()
+        google()
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;4其他私有仓库&#34;&gt;4.其他私有仓库&lt;/h2&gt;
+&lt;p&gt;如果我们使用的library的作者是把该library放在自己的服务器上，我们还可以自己定义特有的Maven仓库服务器。&lt;/p&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;allprojects {
+    repositories {
+        jcenter()
+		mavenCentral()
+		maven { url &#39;https://maven.fabric.io/public&#39; }
+		maven { url &amp;quot;https://jitpack.io&amp;quot;}
+
+		//引用本地仓库
+		mavenLocal()
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;你必须自己如下定义仓库的url。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;repositories {
+    maven { url &#39;https://maven.fabric.io/public&#39; }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后在里面使用相同的方法获取一个library。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;dependencies {
+    compile &#39;com.crashlytics.sdk.android:crashlytics:2.2.4&#39;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;因此，显而易见。将library上传到标准的服务器更好，如果将我们的library公开，其他开发者除了一行定义依赖名的代码之外不需要定义任何东西。&lt;/strong&gt;&lt;br&gt;
+但现在第三方库基本都是将library上传到自建服务器。&lt;/p&gt;
+&lt;p&gt;Android Studio早期版本使用的是mavenCentral()，后来切换到jcenter()了。&lt;br&gt;
+这是因为jcenter在性能和占存储大小方面比mavenCentral更优：balabala&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;2app目录下的buildgradle文件&#34;&gt;2.app目录下的build.gradle文件&lt;/h3&gt;
+&lt;p&gt;apply plugin&lt;/p&gt;
+&lt;p&gt;android闭包{&lt;/p&gt;
+&lt;p&gt;​		 compileSdkVersion 29&lt;/p&gt;
+&lt;p&gt;​		buildToolsVersion &amp;quot;29.0.3&amp;quot;&lt;/p&gt;
+&lt;p&gt;​		defaultConfig闭包{&lt;/p&gt;
+&lt;p&gt;​		......&lt;/p&gt;
+&lt;p&gt;​		}&lt;/p&gt;
+&lt;p&gt;​		buildTypes闭包 {&lt;/p&gt;
+&lt;p&gt;​		release{&lt;/p&gt;
+&lt;p&gt;​		...&lt;/p&gt;
+&lt;p&gt;​			}&lt;/p&gt;
+&lt;p&gt;​        }&lt;/p&gt;
+&lt;p&gt;}&lt;/p&gt;
+&lt;p&gt;dependencies闭包{&lt;/p&gt;
+&lt;p&gt;......&lt;/p&gt;
+&lt;p&gt;}&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;apply plugin: &#39;com.android.application&#39;		首先第一行应用了一个插件,一般有两种值可选: com.android.application表示这是一个应用程序模块,com. 										android. library表示这是一个库模块。应用程序模块和库模块的最大区别在于,一个是可以直接运行的,一个只											能作为代码库依附于别的应用程序模块来运行。
+
+														
+android {									接下来是一个大的android闭包,在这个闭包中我们可以配置项目构建的各种属性。
+    compileSdkVersion 29					 其中,compilesdkVersion用于指定项目的编译版本,这里指定成24表示使用Android 7.0系统的SDK编译, 
+    buildToolsVersion &amp;quot;29.0.3&amp;quot;				 buildToolsVersion用于指定项目构建工具的版本,目前最新的版本就是24.0.2,如果有更新的版本时, 											   Android Studio会进行提示。
+
+    defaultConfig {							在android闭包中又嵌套了一个defaultConfg闭包, defaultConfig闭包中可以对项目的更多细节进行配置。
+        applicationId &amp;quot;com.example.himalaya&amp;quot;	其中, applicationId用于指定项目的包名,前面我们在创建项目的时候其实已经指定过包名了,如果你想在												后面对其进行修改,那么就是在这里修改的。 改项目包名
+        minSdkVersion 21					minSdkVersion用于指定项目最低兼容的Android系统版本,这里指定成15表示最低兼容到Android 4.0系统
+        targetSdkVersion 29	   （不太会用到）targetSdkVersion指定的值表示你在该目标版本上已经做过了充分的测试,系统将会为你的应用程序启用一些最										     新的功能和特性。比如说Android 6.0系统中引入了运行时权限这个功能,如果你将targetSdkVersion指定成										     23或者更高,那么系统就会为你的程序启用运行时权限功能,而如果你将targetSdkVersion指定成22,那么就说										明你的程序最高只在Android 5.1系统上做过充分的测试, Android 6.0系统中引入的新功能自然就不会启用了。
+        
+        versionCode 1				剩下的两个属性都比较简单, versionCode用于指定项目的版本号, 
+        versionName &amp;quot;1.0&amp;quot;			versionName用于指定项目的版本名,这两个属性在生成安装文件的时候非常重要,我们在后面都会学到。
+
+        testInstrumentationRunner &amp;quot;androidx.test.runner.AndroidJUnitRunner&amp;quot;
+    }
+
+										buildTypes闭包中用于指定生成安装文件的相关配置,通常只会有两个子闭包,一个是debug,一个是release, 										debug闭包用于指定生成测试版安装文件的配置, release闭包用于指定生成正式版安装文件的配置。另外debug闭										  包是可以忽略不写的,因此我们看到上面的代码中就只有一个release闭包。
+    buildTypes {
+        release {
+            minifyEnabled false			  minifyEnabled用于指定是否对项目的代码进行混淆, true表示混淆, false表示不混淆。
+            proguardFiles getDefaultProguardFile(&#39;proguard-android-optimize.txt&#39;), &#39;proguard-rules.pro&#39;
+        }								proguardFiles用于指定混淆时使用的规则文件,这里指定了两个文件,第一个proguard-android.txt是在											   Android SDK目录下的,里面是所有项目通用的混淆规则,第二个proguard-rules.pro是在当前项目的根目录下的,									   里面可以编写当前项目特有的混淆规则。需要注意的是,通过Android Studio直接运行项目生成的都是测试版安装文                                           件,关于如何生成正式版安装文件我们将会在第15章中学习。
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: &amp;quot;libs&amp;quot;, include: [&amp;quot;*.jar&amp;quot;])			第一行的compile fileTree就是一个本地依赖声明,它表示将libs目录下所																	  有.jar后缀的文件都添加到项目的构建路径当中。
+    implementation &#39;androidx.appcompat:appcompat:1.2.0&#39;				而第二行的compile则是远程依赖声明,com. android. support : 																	   appcompat-v7: 24.2.1就是一个标准的远程依赖库格式,其中com. android. 																support是域名部分,用于和其他公司的库做区分; appcompat-v7是组名称,用于和																  同一个公司中不同的库做区分; 24.2.1是版本号,用于和同一个库不同的版本做区																分。加上这句声明后, Gradle在构建项目时会首先检查一下本地是否已经有这个库															  的缓存,如果没有的话则会去自动联网下载,然后再添加到项目的构建路径当中。
+    implementation &#39;androidx.constraintlayout:constraintlayout:2.0.1&#39;
+    testImplementation &#39;junit:junit:4.12&#39;						testCompile是用于声明测试用例库的,这个我们暂时用不到,先忽略它就可以了。
+    androidTestImplementation &#39;androidx.test.ext:junit:1.1.2&#39;
+    androidTestImplementation &#39;androidx.test.espresso:espresso-core:3.3.0&#39;
+
+}
+									dependencies闭包。这个闭包的功能非常强大,它可以指定当前项目所有的依赖关系。通常Android Studio项目一共									有3种依赖方式:本地依赖、库依赖和远程依赖。本地依赖可以对本地的Jar包或目录添加依赖关系,库依赖可以对项目中										的库模块添加依赖关系,远程依赖则可以对jcenter库上的开源项目添加依赖关系。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;r文件&#34;&gt;R文件&lt;/h2&gt;
+&lt;p&gt;存储的都是数值型的东西&lt;/p&gt;
+&lt;h1 id=&#34;2日志工具logcat&#34;&gt;2.日志工具（Logcat）&lt;/h1&gt;
+&lt;p&gt;Android日志工具类Log(android.util.Log)&lt;/p&gt;
+&lt;p&gt;五个方法打印日志&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Log.v()    berbose&lt;/li&gt;
+&lt;li&gt;Log.d()    debug&lt;/li&gt;
+&lt;li&gt;Log.i()     info&lt;/li&gt;
+&lt;li&gt;Log.w()   warn&lt;/li&gt;
+&lt;li&gt;Log.e()    error&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;用于取代 System.out.println();&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;快速打印日志：logd+快捷键TAB补全&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;为了避免总是写TAG，可以在onCreate()方法外面 打上logt+快捷键TAB补全，就会生成&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;private static final String TAG = &amp;quot;MainActivity&amp;quot;;  //MainActivity 为当前类名
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;过滤器&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;3activity&#34;&gt;3.Activity&lt;/h1&gt;
+&lt;h2 id=&#34;1基础&#34;&gt;1.基础&lt;/h2&gt;
+&lt;p&gt;项目中的任何活动都应该重写 Activity 的 onCreate()方法。&lt;br&gt;
+所有的活动都要在 AndroidManifest.xml文件 中进行注册才能生效。&lt;/p&gt;
+&lt;p&gt;​	配置主活动的方法：在 &lt;activity&gt; 标签的内部加入 &lt;intent-filter&gt; 标签，并在这个标签内加两句声明。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;  &amp;lt;intent-filter&amp;gt;
+                &amp;lt;action android:name=&amp;quot;android.intent.action.MAIN&amp;quot; /&amp;gt;				表示这是项目的主活动
+                &amp;lt;category android:name=&amp;quot;android.intent.category.LAUNCHER&amp;quot; /&amp;gt;		表示这是App应用的启动活动，即点击APP第一个出现的
+  &amp;lt;/intent-filter&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;android:label=&amp;quot;笑死我了&amp;quot;  指定活动中标题栏的内容，给主活动添加label标签的同时，应用程序名字也会变&lt;/p&gt;
+&lt;p&gt;举例：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;
+&amp;lt;manifest xmlns:android=&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;
+    package=&amp;quot;com.example.myapplication&amp;quot;&amp;gt;
+
+    &amp;lt;application
+        android:allowBackup=&amp;quot;true&amp;quot;
+        android:icon=&amp;quot;@mipmap/ic_launcher&amp;quot;
+        android:label=&amp;quot;@string/app_name&amp;quot;
+        android:roundIcon=&amp;quot;@mipmap/ic_launcher_round&amp;quot;
+        android:supportsRtl=&amp;quot;true&amp;quot;
+        android:theme=&amp;quot;@style/AppTheme&amp;quot;&amp;gt;
+        &amp;lt;activity android:name=&amp;quot;.MainActivity2&amp;quot; /&amp;gt;
+        &amp;lt;activity android:name=&amp;quot;.MainActivity&amp;quot;
+         android:label=&amp;quot;笑死我了&amp;quot; &amp;gt;
+            &amp;lt;intent-filter&amp;gt;
+                &amp;lt;action android:name=&amp;quot;android.intent.action.MAIN&amp;quot; /&amp;gt;
+
+                &amp;lt;category android:name=&amp;quot;android.intent.category.LAUNCHER&amp;quot; /&amp;gt;
+            &amp;lt;/intent-filter&amp;gt;
+        &amp;lt;/activity&amp;gt;
+    &amp;lt;/application&amp;gt;
+
+&amp;lt;/manifest&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;2设置监听器点击按钮实现toast通知&#34;&gt;2.设置监听器（点击按钮实现Toast通知）&lt;/h2&gt;
+&lt;p&gt;通过调用 setOnClickListener() 方法为按钮注册一个监听器，&lt;br&gt;
+点击按钮就会执行监听器中的 onClick() 方法&lt;/p&gt;
+&lt;p&gt;匿名内部类理解问题很重要&lt;/p&gt;
+&lt;p&gt;1.（推荐）&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;//Toast使用
+Button bt1=findViewById(R.id.button);
+bt1.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+       Toast.makeText(MainActivity.this, &amp;quot;你居然点这个按钮，宝贝！&amp;quot;, Toast.LENGTH_SHORT).show();  //Toast通知——第三个参数有LENGTH_SHORT或LONG
+    }
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;    but = findViewById(R.id.but);   //与布局文件的相关组建关联
+    but.setOnClickListener(new click());     //注册监听接口
+}
+
+class click implements View.OnClickListener {   //定义一个类实现监听的接口
+    public void onClick(View v) {
+        Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+        // 创建好之后就可以通过它启动新的Activity
+        startActivity(intent);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;设置一个按钮的不同点击触发事件&#34;&gt;&lt;a href=&#34;https://www.cnblogs.com/ye34166684/p/5915161.html&#34;&gt;设置一个按钮的不同点击触发事件     &lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;my_day_model = (RelativeLayout) v.findViewById(R.id.my_day_model);
+my_day_pic = (ImageView) v.findViewById(R.id.my_day_pic);
+my_day_text = (TextView) v.findViewById(R.id.my_day_text);
+my_day_model.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        if (flag == 0){   
+　　　　　　　　//点击一次的出发事件
+            my_day_pic.setImageResource(R.drawable.pic_my_day_pic2);
+            my_day_text.setText(R.string.my_day_text2);
+            flag = 1;
+        }else {
+　　　　　　　　//点击两次的触发事件
+            my_day_pic.setImageResource(R.drawable.pic_my_day_pic1);
+            my_day_text.setText(R.string.my_day_text1);
+            flag = 0;
+        }
+    }
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;3menu&#34;&gt;3.Menu&lt;/h2&gt;
+&lt;p&gt;1.先在res文件夹新建一个menu文件夹，再在下面新建一个MenuResourceFile文件&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;
+&amp;lt;menu xmlns:android=&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&amp;gt;
+    &amp;lt;item
+        android:id=&amp;quot;@+id/add_item&amp;quot;
+        android:title=&amp;quot;Add&amp;quot;/&amp;gt;
+    &amp;lt;item
+        android:id=&amp;quot;@+id/remove_item&amp;quot;
+        android:title=&amp;quot;Remove&amp;quot;/&amp;gt;
+&amp;lt;/menu&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;2.重写 onCreateOptionsMenu()  方法，&lt;/p&gt;
+&lt;p&gt;重写方法使用快捷键 CTRL+O&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;//Menu使用
+@Override
+public boolean onCreateOptionsMenu(Menu menu) {
+
+	getMenuInflater().inflate(R.menu.main,menu);
+	
+    return super.onCreateOptionsMenu(menu);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;通过getMenuInflater()方法能够得到MenuInflater对象,再调用它的inflate()方法就可以给当前活动创建菜单了。inflate ()方法接收两个参数,第一个参数用于指定我们通过哪一个资源文件来创建菜单,这里当然传入R. menu.main。第二个参数用于指定我们的菜单项将添加到哪一个Menu对象当中,这里直接使用onCreateOptionsMenu ()方法中传入的menu参数。然后给这个方法返回true,表示允许创建的菜单显示出来,如果返回了false,创建的菜单将无法显示。&lt;/p&gt;
+&lt;p&gt;3.定义菜单响应事件，重写onOptionsItemSelected()方法&lt;/p&gt;
+&lt;p&gt;在onOptionsItemselected()方法中,通过调用item.getItemld()来判断我们点击的是哪一个菜单项,然后给每个菜单项加入自己的逻辑处理,这里我们就活学活用,弹出一个刚刚学会的Toast.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;@Override
+public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+    switch (item.getItemId()){
+        case R.id.add_item:
+            Toast.makeText(MainActivity.this, &amp;quot;你点了Add呢，好棒哦！&amp;quot;, Toast.LENGTH_LONG).show();
+            break;
+        case R.id.remove_item:
+            Toast.makeText(MainActivity.this, &amp;quot;你点了Remove！&amp;quot;, Toast.LENGTH_LONG).show();
+            break;
+        default:
+    }
+    return super.onOptionsItemSelected(item);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;4销毁一个活动&#34;&gt;4.销毁一个活动&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;finish()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;5使用intent意图在活动之间穿梭&#34;&gt;5.使用Intent（意图）在活动之间穿梭&lt;/h2&gt;
+&lt;p&gt;1.显式Intent&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;Intent intent =new Intent(MainActivity.this,MainActivity2.class);
+startActivity(intent);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;2.隐式Intent&lt;/p&gt;
+&lt;p&gt;一般&lt;/p&gt;
+&lt;p&gt;打开内置浏览器打开网页&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public void onClick(View v) {
+    Intent intent =new Intent(Intent.ACTION_VIEW);
+    intent.setData(Uri.parse(&amp;quot;http://www.baidu.com&amp;quot;));
+    startActivity(intent);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;调用系统拨号界面&lt;/p&gt;
+&lt;p&gt;Intent.ACTION_VIEW Android 系统内置动作&lt;/p&gt;
+&lt;h2 id=&#34;6活动之间传递数据&#34;&gt;6.活动之间传递数据&lt;/h2&gt;
+&lt;h2 id=&#34;7活动的生命周期&#34;&gt;7.活动的生命周期&lt;/h2&gt;
+&lt;p&gt;返回栈&lt;/p&gt;
+&lt;h3 id=&#34;1活动状态&#34;&gt;1.活动状态&lt;/h3&gt;
+&lt;p&gt;运行状态——位于返回栈的栈顶&lt;/p&gt;
+&lt;p&gt;暂停状态——可见&lt;/p&gt;
+&lt;p&gt;停止状态——完全不可见&lt;/p&gt;
+&lt;p&gt;销毁状态——从返回栈中移除&lt;/p&gt;
+&lt;h3 id=&#34;2活动的生命周期&#34;&gt;2.活动的生命周期&lt;/h3&gt;
+&lt;h4 id=&#34;activity类中定义的7个回调方法&#34;&gt;activity类中定义的7个回调方法&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;onCreate()									一个活动会在其中完成各种初始化操作。例加载布局、绑定事件&lt;/p&gt;
+&lt;p&gt;​		onStart()							  活动由不可见变为可见的时候调用&lt;/p&gt;
+&lt;p&gt;​				onResume()				准备好进行交互。此时活动位于栈顶，处于运行状态。&lt;/p&gt;
+&lt;p&gt;​				onPause()				   暂停状态，可见&lt;/p&gt;
+&lt;p&gt;​		onStop()							 停止状态，不可见&lt;/p&gt;
+&lt;p&gt;onDestroy()								完成释放内存的操作&lt;/p&gt;
+&lt;p&gt;onRestart()								stop---&amp;gt;start 之前运行&lt;/p&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://i.loli.net/2020/09/29/tS9lOAHd5XgGD42.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;3活动被回收了怎么办&#34;&gt;3.活动被回收了怎么办&lt;/h3&gt;
+&lt;p&gt;onSaveInstanceState()&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+    
+    if (savedInstanceState !=null){
+        String tempData = savedInstanceState.getString(&amp;quot;data_key&amp;quot;);
+        Log.d(TAG,tempData);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Intent 结合 Bundle 一起用于传递数据&lt;/p&gt;
+&lt;p&gt;数据保存在Bundle对象，再将Bundle对象保存在Intent里&lt;/p&gt;
+&lt;h2 id=&#34;8活动的启动模式&#34;&gt;8.活动的启动模式&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;standard
+
+singleTop
+
+singleTask
+
+singleInstance
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;在 AndroidManifest.xml 中给 &lt;activity&gt;标签制定 android:launchMode 属性来选择启动模式。&lt;/p&gt;
+&lt;h3 id=&#34;standard&#34;&gt;standard&lt;/h3&gt;
+&lt;p&gt;活动默认启动模式&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://i.loli.net/2020/09/29/DZqWKf7SUh1d34i.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;singletop&#34;&gt;singleTop&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://i.loli.net/2020/09/29/rnb5W6LTxpqO2aV.png&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;singletask&#34;&gt;singleTask&lt;/h3&gt;
+&lt;p&gt;在启动活动时如果发现返回栈的栈顶已经是该活动，则认为可以直接使用它，不会再创建新的活动实例&lt;img src=&#34;https://i.loli.net/2020/09/29/7SgkzbtW4uXpcUx.png&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;singleinstance&#34;&gt;&lt;a href=&#34;#6.%E8%BF%9E%E7%BB%AD%E7%82%B9%E5%87%BB%E5%87%BA%E7%8E%B0%E5%A4%9A%E4%B8%AAActivity%E7%95%8C%E9%9D%A2&#34;&gt;singleInstance&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;如果启动的Activity不存在就创建一个Activity同时创建一个栈，如果存在就将指定的Activity存在的栈移动到栈顶（&lt;strong&gt;表示这个Activity只能存在于一个独立的任务栈中,同应用的其它Activity与其无关&lt;/strong&gt;）&lt;/p&gt;
+&lt;p&gt;有点复杂，还没有看，回过头需要再看&lt;img src=&#34;https://i.loli.net/2020/09/29/ZMULmV28Ato4OE6.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;9活动最佳实践&#34;&gt;9.活动最佳实践&lt;/h2&gt;
+&lt;p&gt;1.知晓当前是在哪一个活动&lt;/p&gt;
+&lt;p&gt;2.随时随地退出程序&lt;/p&gt;
+&lt;p&gt;退出所有活动再杀掉当前程序进程：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;android .os.Process.killProcess(android.os.Process.myPid());
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;3.启动另一个活动的最佳写法&lt;/p&gt;
+&lt;p&gt;公司合作更方便，以后用到再看&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;4ui&#34;&gt;4.UI&lt;/h1&gt;
+&lt;p&gt;（ViewGroup代表LinearLayout等各种布局控件，View代表TestView等各种控件）&lt;/p&gt;
+&lt;h2 id=&#34;actionbar和toolbar&#34;&gt;ActionBar和ToolBar&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;每个活动最顶部的那个标题栏其实就是 Actionbar，之前我们编写的所有程序里一直都有 Actionbar的身影
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​	Actionbar由于其设计的原因，被限定只能位于活动的顶部，从而不能实现一些 Material&lt;br&gt;
+Design的效果，因此官方现在已经不再建议使用 Actionbar了。那么本书中我也就不准备再介绍&lt;br&gt;
+Action Bar I的用法了，而是直接讲解现在更加推荐使用的 Toolbar&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;推荐使用ToolBar，隐藏ActionBar&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;详细查阅请看 第一行代码P410&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;imageview&#34;&gt;ImageView&lt;/h2&gt;
+&lt;p&gt;图片导入时名字开头必须改为英文&lt;/p&gt;
+&lt;h3 id=&#34;scaletype属性&#34;&gt;&lt;a href=&#34;https://blog.csdn.net/qq_34902522/article/details/76682293&#34;&gt;ScaleType属性&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;ImageView可以设置src和background属性，只有设置了“前景图”src,设置的scalType属性才会生效。&lt;/p&gt;
+&lt;p&gt;scaleType默认值为：centerInside&lt;/p&gt;
+&lt;p&gt;android:scaleType=“center_Inside”&lt;/p&gt;
+&lt;p&gt;​	fit开头的基本都是保持高度占满&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;FIT_CENTER&lt;/strong&gt; 把原图&lt;strong&gt;按照比例&lt;/strong&gt;放大缩小到ImageView的 &lt;strong&gt;&lt;code&gt;宽度&lt;/code&gt;&lt;/strong&gt;，显示在ImageView的center（中部/居中显示）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;FIT_START&lt;/strong&gt; 把原图&lt;strong&gt;按照比例&lt;/strong&gt;放大缩小到ImageView的宽度，显示在ImageView的start（前部/上部）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;FIT_END&lt;/strong&gt;  把原图&lt;strong&gt;按照比例&lt;/strong&gt;放大缩小到ImageView的宽度，显示在ImageVIew的end（后部/尾部/底部）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;.&lt;strong&gt;FIT_XY&lt;/strong&gt; 把图片按照指定的大小在ImageView中显示，拉伸显示图片，&lt;em&gt;&lt;strong&gt;不保持原比例&lt;/strong&gt;&lt;/em&gt;，填满ImageView.——有用&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;CENTER&lt;/strong&gt; 保持原图的大小，显示在ImageView的中心。当原图的size大于ImageView的size时，多出来的部分被截掉.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;CENTER_INSIDE&lt;/strong&gt; 以原图正常显示为目的，如果原图大小大于ImageView的size，就&lt;strong&gt;按比例缩小&lt;/strong&gt;原图的宽高，缩小直到最长边填满，居中显示在ImageView中。如果原图size小于ImageView的size，则不做处理居中显示图片。——&lt;strong&gt;有空出来&lt;/strong&gt; .&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;？CENTER_CROP&lt;/strong&gt; 会***拉伸图片***以原图填满ImageView为目的，如果原图size大于ImageView的size，则与center_inside一样，按比例缩小，&lt;strong&gt;缩小直到宽或高填满&lt;/strong&gt;，居中显示在ImageView上。如果原图size小于ImageView的size，则按比例拉升原图的宽和高，填充ImageView居中显示。——有用&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;**8.**MATRIX 不改变原图的大小，从ImageView的左上角开始绘制，超出部分做剪切处理。如果显示不下会改变显示方向。——没用&lt;/p&gt;
+&lt;img src=&#34;https://gitee.com/sagerover/figurebed/raw/master//img/image-20201112125330296.png&#34; alt=&#34;image-20201112125330296&#34; style=&#34;zoom:80%;&#34; /&gt;
+&lt;h2 id=&#34;修改edittext下划线颜色-隐藏标题栏&#34;&gt;&lt;a href=&#34;https://www.cnblogs.com/hanjun0612/p/10151178.html&#34;&gt;修改EditText下划线颜色 / 隐藏标题栏 &lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;导入svg变成xml的矢量图片&#34;&gt;导入SVG变成XML的矢量图片&lt;/h2&gt;
+&lt;h3 id=&#34;使用原因&#34;&gt;使用原因：&lt;/h3&gt;
+&lt;p&gt;如果使用.png；.jpg。。。这样的图片，一般在资源文件中，都需要准备不同分辨率的图。&lt;/p&gt;
+&lt;p&gt;这样既让apk臃肿，也增加了工作量。&lt;/p&gt;
+&lt;p&gt;于是，矢量图标出现了。只需一张图，&lt;strong&gt;矢量图标会自适应各种分辨率&lt;/strong&gt;，而且节约了空间，还减小了工作量。这就是你选择它的原因。&lt;/p&gt;
+&lt;h3 id=&#34;方法&#34;&gt;方法&lt;/h3&gt;
+&lt;h4 id=&#34;一httpsblogcsdnnetstonewang_larticledetails81516017&#34;&gt;一：https://blog.csdn.net/stoneWang_L/article/details/81516017&lt;/h4&gt;
+&lt;h4 id=&#34;二使用android-studio插件svg2vectordrawable-httpswwwjianshucomp5c171cdccd61utm_campaign&#34;&gt;二：使用Android Studio插件，&lt;strong&gt;SVG2VectorDrawable&lt;/strong&gt;   https://www.jianshu.com/p/5c171cdccd61?utm_campaign&lt;/h4&gt;
+&lt;h2 id=&#34;带清除功能的编辑框clearedittext&#34;&gt;&lt;a href=&#34;https://blog.csdn.net/dianziagen/article/details/71425685&#34;&gt;带清除功能的编辑框（ClearEditText）&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;通过新建一个ClearEditText类继承EditText类实现&lt;/p&gt;
+&lt;h2 id=&#34;简单按钮渐变动画&#34;&gt;&lt;a href=&#34;https://blog.csdn.net/dianziagen/article/details/71425685&#34;&gt;简单按钮渐变动画&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;验证码实现&#34;&gt;&lt;a href=&#34;https://blog.csdn.net/dawn_1108/article/details/108123041?utm_medium=distribute.wap_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.wap_blog_relevant_pic2&amp;amp;depth_1-utm_source=distribute.wap_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.wap_blog_relevant_pic2&#34;&gt;验证码实现&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;android-edittext-禁止换行&#34;&gt;&lt;a href=&#34;https://blog.csdn.net/dianziagen/article/details/71425685&#34;&gt;Android EditText 禁止换行&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;在EditText的xml文件中通过配置android:singleLine=&amp;quot;true&amp;quot;把虚拟键盘上的enter键禁止掉，不会显示。&lt;/p&gt;
+&lt;h2 id=&#34;始终以竖屏显示&#34;&gt;始终以竖屏显示&lt;/h2&gt;
+&lt;p&gt;当在AndroidManifest.xml文件中定义了android:screenOrientation=&amp;quot;portrait&amp;quot;，&lt;br&gt;
+就表示&lt;strong&gt;当我们切换横竖屏的时候，屏幕的内容始终以竖屏显示，而不会根据屏幕的方向来显示内容&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;        &amp;lt;activity
+            android:name=&amp;quot;.CreateActivity&amp;quot;
+            android:screenOrientation=&amp;quot;portrait&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;四大图片缓存imageloaderpicassoglidefresco原理-特性对比&#34;&gt;&lt;a href=&#34;https://www.cnblogs.com/linghu-java/p/5741358.html&#34;&gt;四大图片缓存（Imageloader,Picasso,Glide,Fresco）原理、特性对比&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;recyclerviewlistview的增强版太麻烦了不用&#34;&gt;RecyclerView（Listview的增强版）——太麻烦了不用&lt;/h2&gt;
+&lt;p&gt;我觉得最好的理解文章——https://www.sunofbeach.net/a/1302501683145740288&lt;/p&gt;
+&lt;h3 id=&#34;1-是什么&#34;&gt;1. 是什么&lt;/h3&gt;
+&lt;p&gt;Adapter是连接后端数据和前端显示的适配器接口，是数据和UI（View）之间一个重要的纽带。在常见的View(ListView,GridView)等地方都需要用到Adapter。如下图直观的表达了Data、Adapter、View三者的关系：&lt;br&gt;
+&lt;img src=&#34;https://img-blog.csdn.net/20180906163844265?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzExNTQ0MA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70&#34; alt=&#34;这里写图片描述&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+adapter可以把获得的数据装配到View上。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://gitee.com/sagerover/figurebed/raw/master//img/image-20201022154142489.png&#34; alt=&#34;image-20201022154142489&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;控制其显示的方式，请通过布局管理器LayoutManager&lt;/li&gt;
+&lt;li&gt;控制Item间的间隔（可绘制），请通过ItemDecoration&lt;/li&gt;
+&lt;li&gt;控制Item增删的动画，请通过ItemAnimator&lt;/li&gt;
+&lt;li&gt;控制点击、长按事件（暂不支持）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;		//设置布局管理器 
+        recyclerview.setLayoutManager(new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL));
+        //设置Item增加、移除动画
+        recyclerview.setItemAnimator(new DefaultItemAnimator());
+/*        //添加分割线
+        recyclerview.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.HORIZONTAL_LIST));*/
+        // recyclerview.addItemDecoration();//设置分割线
+		// 设置adapter
+		recyclerview.setAdapter(mAdapter);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.liaoxuefeng.com/wiki/1252599548343744/1265102638843296&#34;&gt;Java泛型理解&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;2-适配器adapter和-viewholder&#34;&gt;2. &lt;a href=&#34;https://www.jianshu.com/p/a14feb480804&#34;&gt;适配器Adapter和 ViewHolder&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id=&#34;adapter-的理解&#34;&gt;Adapter 的理解&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Adapter ：适配器，因为 ListView 是一个 View ，不能添加子项，因此在呈现数据的时候就需要某种工具将数据呈现在 ListView 上，而 Adapter 就能充当此角色。常用的 Adapter：ArrayAdapter、BaseAdapter等。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;viewholder-的理解&#34;&gt;ViewHolder 的理解&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;要想使用 ListView 就需要编写一个 Adapter 将数据适配到 ListView上，而为了节省资源提高运行效率，&lt;strong&gt;一般自定义类 ViewHolder 来减少 findViewById() 的使用以及避免过多地 inflate(填充) view，从而实现目标&lt;/strong&gt;。ViewHolder的出现就是为了保存View引用的容器类，减少重复findViewById次数。相当于一个辅助工具&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;adapter的定义&#34;&gt;Adapter的定义&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;继承 BaseAdapter (可在继承的时候指定泛型，扩展使用);&lt;/li&gt;
+&lt;li&gt;重写四个基本方法：&lt;br&gt;
+getCount()：获取数据的总的数量，返回 int 类型的结果；&lt;br&gt;
+getItem(int position) ：获取指定位置的数据，返回该数据；&lt;br&gt;
+getItemId(int position)：获取指定位置数据的id，返回该数据的id，一般以数据所在的位置作为它的id；&lt;br&gt;
+getView(int position,View convertView,ViewGroup parent)：关键方法，用于确定列表项&lt;/li&gt;
+&lt;li&gt;创建 ViewHolder （包含列表项的控件。）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;代码展示部分&#34;&gt;代码展示（部分）&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class RecyclerviewAdapter extends RecyclerView.Adapter&amp;lt;RecyclerviewAdapter.ViewHolder&amp;gt; {
+ 
+    private Context context;
+    private List&amp;lt;String&amp;gt; data;
+ 
+    public RecyclerviewAdapter(Context context,List&amp;lt;String&amp;gt; data){
+        this.context = context;
+        this.data = data;
+ 
+    }
+ 
+    @Override
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(context).inflate(R.layout.item_recyclerview,parent,false);
+        return new ViewHolder(view);
+    }
+ 
+    @Override
+    public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
+        holder.name.setText(data.get(position));
+ 
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.e(&amp;quot;这里是点击每一行item的响应事件&amp;quot;,&amp;quot;&amp;quot;+position+item);
+            }
+        });
+ 
+    }
+ 
+    @Override
+    public int getItemCount() {
+        return data.size();
+    }
+ 
+    public class ViewHolder extends RecyclerView.ViewHolder{
+ 
+        private TextView name;
+ 
+        public ViewHolder(View itemView) {
+            super(itemView);
+            name = itemView.findViewById(R.id.name);
+ 
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;适配器模式android列表视图控件设计方式&#34;&gt;&lt;a href=&#34;https://www.jianshu.com/p/d5dc1450ab7b&#34;&gt;适配器模式——Android列表视图控件设计方式&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;android源码中的设计模式-recyclerview&#34;&gt;&lt;a href=&#34;https://www.jianshu.com/p/b35d0294e707&#34;&gt;Android源码中的设计模式 —— RecyclerView&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;recyclerview-中的设计模式&#34;&gt;&lt;a href=&#34;https://conorlee.top/2019/05/30/RecyclerView-Design-Pattern/&#34;&gt;RecyclerView 中的设计模式&lt;/a&gt;——通俗易懂&lt;/h4&gt;
+&lt;p&gt;RecyclerView提供自己的adapter：RecyclerView.Adapter，该适配器已经集成了ViewHolder类，只需要实现里面的onCreateViewHolder、onBindViewHolder抽象方法，具体使用如下：&lt;/p&gt;
+&lt;p&gt;getItemCount()：获取数据的总的数量，返回 int 类型的结果；&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.lzy.host.perfect.adapter;
+ 
+import android.content.Context;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+ 
+import com.lzy.host.perfect.R;
+ 
+import java.util.List;
+ 
+/**
+ * RecyclerViewAdapter
+ *
+ * @author linzhiyong
+ * @time 2017年2月8日15:17:41
+ * @email wflinzhiyong@163.com
+ * @desc
+ */
+public class RecyclerViewAdapter extends RecyclerView.Adapter&amp;lt;RecyclerViewAdapter.MyViewHolder&amp;gt; {
+ 
+    private Context context;
+ 
+    private List&amp;lt;Integer&amp;gt; data;
+ 
+    public RecyclerViewAdapter(Context context, List&amp;lt;Integer&amp;gt; data) {
+        this.context = context;
+        this.data = data;
+    }
+ 
+    @Override
+    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        MyViewHolder holder = new MyViewHolder(LayoutInflater.from(context).inflate(R.layout.item_recyclerview, parent, false));
+        return holder;
+    }
+ 
+    @Override
+    public void onBindViewHolder(MyViewHolder holder, int position) {
+        holder.imageView.setImageResource(this.data.get(position));
+        if (position % 2 == 0) {
+            holder.imageView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 300));
+        } else {
+            holder.imageView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 400));
+        }
+    }
+ 
+    @Override
+    public int getItemCount() {
+        return this.data.size();
+    }
+ 
+    class MyViewHolder extends RecyclerView.ViewHolder {
+ 
+        private ImageView imageView;
+ 
+        public MyViewHolder(View itemView) {
+            super(itemView);
+            this.imageView = (ImageView) itemView.findViewById(R.id.imageView1);
+        }
+    }
+ 
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;3-使用方法&#34;&gt;3. 使用方法&lt;/h3&gt;
+&lt;h4 id=&#34;1activity&#34;&gt;1.activity&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;private MyRecyclerAdapter adapter;   //声明自定义类 MyRecyclerAdapter 的变量 adapter
+@BindView(R.id.recyclerview)
+RecyclerView recyclerview;			//声明 RecyclerView类 的变量 recyclerview，并用牛油刀绑定布局文件上的id
+
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    ......
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;        //设置布局管理器 
+        recyclerview.setLayoutManager(new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL));  //设置2列交错式网格布局
+        //设置Item增加、移除动画
+        recyclerview.setItemAnimator(new DefaultItemAnimator());
+
+/*       
+        //设置recyclerview的内边距
+        //recyclerview.setPadding(8,8,8,8);
+*/
+/*       
+        //添加Android自带的分割线
+        recyclerview.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL));     //垂直分割线
+        recyclerview.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.HORIZONTAL));	//水平分割线
+*/
+        //设置适配器 
+        adapter = new MyRecyclerAdapter(this, createData());                 //利用自定义类 MyRecyclerAdapter 构造一个新对象 传入 adapter
+        recyclerview.setAdapter(adapter);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;下面这个对应的是上面输入的参数createData()，这个根据自己写，不一样的&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;  public class HomeActivity extends AppCompatActivity {
+    protected void onCreate(Bundle savedInstanceState) { 
+        ...
+    }
+
+	private List&amp;lt;Integer&amp;gt; createData() {
+        	List&amp;lt;Integer&amp;gt; data = new ArrayList&amp;lt;Integer&amp;gt;();
+        	for (int i = 0; i &amp;lt; 100; i++) {
+            	if (i % 2 == 0) {
+                	data.add(R.mipmap.ic_launcher);
+            	} else {
+                	data.add(R.mipmap.ic_launcher_round);
+            	}
+        	}
+        	return data;
+    	}
+	}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;2myrecycleradapter&#34;&gt;2.MyRecyclerAdapter&lt;/h4&gt;
+&lt;p&gt;自定义类 MyRecyclerAdapter ，即我们造的 适配器adapter&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.example.myapplication;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.List;
+
+/**
+ * RecyclerViewAdapter
+ */
+//MyRecyclerAdapter继承自RecyclerView.Adapter （因为RecyclerView自带 Adapter 和 ViewHolder），？并且泛型为MyRecyclerAdapter.MyViewHolder
+public class MyRecyclerAdapter extends RecyclerView.Adapter&amp;lt;MyRecyclerAdapter.MyViewHolder&amp;gt; { 
+
+    private Context context;      //context、data 由下面的构造函数中的参数获取
+
+    private List&amp;lt;Integer&amp;gt; data;
+    
+	//MyRecyclerAdapter 的构造方法，参数为Context类型（使用时输入this）和整型列表List
+    public MyRecyclerAdapter(Context context, List&amp;lt;Integer&amp;gt; data) {
+        this.context = context;
+        this.data = data;
+    }
+
+    @Override
+    //重载方法onCreateViewHolder，返回类型为本类MyRecyclerAdapter的自构内部类 MyViewHolder。参数为 ViewGroup类型 和 int类型 
+    //用于生成一个 已经填充的 MyViewHolder
+    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        MyViewHolder holder = new MyViewHolder(LayoutInflater.from(context).inflate(R.layout.item_recyclerview, parent, false));
+        return holder;				//返回了一个填充 R.layout.item_recyclerview 的 名为holder 的 MyViewHolder 对象
+    }
+
+//重载方法onBindViewHolder，无返回值。参数为 MyViewHolder类型 和 int类型 
+//用于将 源数据 传入 填充了 item_recyclerview 的 MyViewHolder 里————即为绑定bind 。同时设置显示高度
+    @Override
+    public void onBindViewHolder(MyViewHolder holder, int position) {
+        holder.imageView.setImageResource(this.data.get(position)); //找到data中位置为position的数据（资源ID）传入holder的imageview的资源id来源设置
+        
+        if (position % 2 == 0) {   								 //位置参数position为偶数则设置高度为300
+            holder.imageView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 300));
+        } else {											   //位置参数position为奇数则设置高度为400
+            holder.imageView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 400));
+        }
+    }
+
+    //用于获取数据大小长度
+    @Override
+    public int getItemCount() {
+        return this.data.size();
+    }
+
+    //内部自定义类 MyViewHolder ，继承自 RecyclerView.ViewHolder。（好像这个类也可以分离出去单独成为一个文件我记得？）
+    class MyViewHolder extends RecyclerView.ViewHolder {
+
+        private ImageView imageView;			//声明ImageView类型的 变量名imageView
+
+        public MyViewHolder(View itemView) {
+            super(itemView);					//实现父类的构造方法，再将imageView1控件传入imageView
+            this.imageView = (ImageView) itemView.findViewById(R.id.imageView1);
+        }
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;4分割线&#34;&gt;4.分割线&lt;/h3&gt;
+&lt;h4 id=&#34;1自带分割线&#34;&gt;1.自带分割线&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;//添加Android自带的分割线
+recyclerview.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL));     //垂直分割线
+recyclerview.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.HORIZONTAL));	//水平分割线
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;交错式网格布局用分割线不好看&lt;/p&gt;
+&lt;img src=&#34;https://gitee.com/sagerover/figurebed/raw/master//img/image-20201023000957471.png&#34; alt=&#34;image-20201023000957471&#34; style=&#34;zoom:80%;&#34; /&gt;
+&lt;h4 id=&#34;2自定义分割线以下还未看&#34;&gt;2.自定义分割线（以下还未看）&lt;/h4&gt;
+&lt;p&gt;有时候默认的浅灰色的分割线并不能满足我们的要求，这时我们就需要自己“写”一条分割线了，那应该怎么写呢？打开&lt;code&gt;DividerItemDecoration&lt;/code&gt;看看它的源码，有这么一个函数：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;    public void setDrawable(@NonNull Drawable drawable) {
+        if (drawable == null) {
+            throw new IllegalArgumentException(&amp;quot;Drawable cannot be null.&amp;quot;);
+        }
+        mDivider = drawable;
+    }123456
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;我们只需要调用这个方法，然后传入一个Drawable函数对象就可以了。现在可以用shape来编写一个分割线样式:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;
+&amp;lt;shape xmlns:android=&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;
+    android:shape=&amp;quot;rectangle&amp;quot;&amp;gt;
+
+    &amp;lt;gradient
+        android:centerColor=&amp;quot;#ff00ff00&amp;quot; //绿色
+        android:endColor=&amp;quot;#ff0000ff&amp;quot;    //蓝色
+        android:startColor=&amp;quot;#ffff0000&amp;quot;  //红色
+        android:type=&amp;quot;linear&amp;quot; /&amp;gt;
+    &amp;lt;size android:height=&amp;quot;3dp&amp;quot; /&amp;gt;
+
+&amp;lt;/shape&amp;gt;123456789101112
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;我这里弄的是一条骚气的渐变色分割线。然后添加分割线的代码改为如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;        //添加自定义分割线
+        DividerItemDecoration divider = new DividerItemDecoration(this,DividerItemDecoration.VERTICAL);
+        divider.setDrawable(ContextCompat.getDrawable(this,R.drawable.custom_divider));
+        recyclerView.addItemDecoration(divider);1234
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;跑起来之后，就可以看到一条多彩的分割线了：&lt;/p&gt;
+&lt;img src=&#34;https://gitee.com/sagerover/figurebed/raw/master//img/20170802201856319&#34; alt=&#34;自定义分割线&#34; style=&#34;zoom:33%;&#34; /&gt;
+&lt;p&gt;这样一来使用范围就广很多了，比如item之间需要一定的间隔，那么我们就可以加一条透明的分割线。&lt;/p&gt;
+&lt;h3 id=&#34;5图片自适应高度不推荐使用还是固定高度靠谱&#34;&gt;5.&lt;a href=&#34;https://blog.csdn.net/qq_31390699/article/details/53465671&#34;&gt;图片自适应高度&lt;/a&gt;（不推荐使用，还是固定高度靠谱）&lt;/h3&gt;
+&lt;h4 id=&#34;1设置item-布局宽高&#34;&gt;1.设置item 布局宽高&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://gitee.com/sagerover/figurebed/raw/master//img/image-20201023003545828.png&#34; alt=&#34;image-20201023003545828&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;2onbindviewholder&#34;&gt;2.onBindViewHolder&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;//获取item宽度，计算图片等比例缩放后的高度，为 lmagevlew设置参数
+Linearlayout. Layoutparams layoutparams=(Linearlayout. Layoutparams )holder. imageview getlayoutparams()
+float itemwidth =(Screenutils getscreenwidth(holder. itemview getcontext()-8*3)/2
+layoutparams. width =(int) itemwidth
+float scale -(itemwidth+0f)/book width;
+layoutparams. height=(int)(book. height&amp;quot;scale);
+holder. imageview. setlayoutparams(layoutparams);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;6点击触发事件&#34;&gt;6.点击触发事件&lt;/h3&gt;
+&lt;h4 id=&#34;1activity-2&#34;&gt;1.activity&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;//以下为设置监听
+adapter.setOnClickListener(new MyRecyclerAdapter.OnItemClickListener() {
+    @Override
+
+    public void ItemClickListener(View view, int postion) {
+        Toast.makeText(HomeActivity.this,&amp;quot;点击了：&amp;quot;+postion,Toast.LENGTH_SHORT).show();
+    }
+    @Override
+    public void ItemLongClickListener(View view, int postion) {
+        //长按删除
+        lists.remove(postion);
+        adapter.notifyItemRemoved(postion);
+    }
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;2myrecycleradapter-2&#34;&gt;2.MyRecyclerAdapter&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt; @Override
+    public void onBindViewHolder(MyViewHolder holder, int position) {
+        
+		......
+            
+        //以下为设置监听
+        if(mListener!=null){//如果设置了监听那么它就不为空，然后回调相应的方法
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int pos = holder.getLayoutPosition();//得到当前点击item的位置pos
+                    mListener.ItemClickListener(holder.itemView,pos);//把事件交给我们实现的接口那里处理
+                }
+            });
+            holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+                    int pos = holder.getLayoutPosition();//得到当前点击item的位置pos
+                    mListener.ItemLongClickListener(holder.itemView,pos);//把事件交给我们实现的接口那里处理
+                    return true;
+                }
+            });
+        }
+    }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;7baserecyclerviewadapterhelper-开源库&#34;&gt;*****7.&lt;strong&gt;BaseRecyclerViewAdapterHelper&lt;/strong&gt; &lt;a href=&#34;https://github.com/CymChad/BaseRecyclerViewAdapterHelper/blob/master/readme/0-BaseRecyclerViewAdapterHelper.md&#34;&gt;开源库&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id=&#34;1使用&#34;&gt;1.&lt;a href=&#34;https://www.jianshu.com/p/1e20f301272e&#34;&gt;使用&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;BRVAH例子测试项目（用来理解参考）：C:\Users\Sage\AndroidStudioProjects\BRVAHTest&lt;/p&gt;
+&lt;h5 id=&#34;1框架引入&#34;&gt;1.框架引入&lt;/h5&gt;
+&lt;p&gt;先在 build.gradle(Project:XXXX) 的 repositories 添加:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;allprojects {
+    repositories {
+        ...
+        maven { url &#39;https://jitpack.io&#39; }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后在 build.gradle(Module:app) 的 dependencies 添加:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;dependencies {
+    implementation &#39;com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4&#39;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;更新说明：&lt;a href=&#34;https://links.jianshu.com/go?to=https%3A%2F%2Fgithub.com%2FCymChad%2FBaseRecyclerViewAdapterHelper%2Freleases&#34;&gt;https://github.com/CymChad/BaseRecyclerViewAdapterHelper/releases&lt;/a&gt;&lt;/p&gt;
+&lt;h5 id=&#34;2使用adapter&#34;&gt;2.使用Adapter&lt;/h5&gt;
+&lt;img src=&#34;https://gitee.com/sagerover/figurebed/raw/master//img/4406596-9d61743dda214de8.png&#34; alt=&#34;img&#34; style=&#34;zoom: 50%;&#34; /&gt;
+&lt;ul&gt;
+&lt;li&gt;第一步：在布局文件中引入RecyclerView 大视图——容纳所有小东西&lt;br&gt;
+*&lt;strong&gt;activity_main.xml*&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;
+&amp;lt;RelativeLayout xmlns:android=&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;
+    android:layout_width=&amp;quot;match_parent&amp;quot;
+    android:layout_height=&amp;quot;match_parent&amp;quot;&amp;gt;
+
+    &amp;lt;androidx.recyclerview.widget.RecyclerView
+        android:id=&amp;quot;@+id/recyclerview&amp;quot;
+        android:layout_width=&amp;quot;match_parent&amp;quot;
+        android:layout_height=&amp;quot;wrap_content&amp;quot; /&amp;gt;
+
+&amp;lt;/RelativeLayout&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;第二步：编写条目布局文件&lt;strong&gt;R.layout.item_rv&lt;/strong&gt;——每一个小块，并不一定是具体的实例，可以相当于一个模板，要显示什么类型，就添加相应控件&lt;br&gt;
+*&lt;strong&gt;item_rv.xml*&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;
+&amp;lt;RelativeLayout xmlns:android=&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;
+    android:layout_width=&amp;quot;match_parent&amp;quot;
+    android:layout_height=&amp;quot;wrap_content&amp;quot;
+    android:padding=&amp;quot;5dp&amp;quot;&amp;gt;
+
+    &amp;lt;ImageView
+        android:id=&amp;quot;@+id/iv_img&amp;quot;
+        android:layout_width=&amp;quot;150dp&amp;quot;
+        android:layout_height=&amp;quot;80dp&amp;quot; /&amp;gt;
+
+    &amp;lt;TextView
+        android:id=&amp;quot;@+id/tv_title&amp;quot;
+        android:layout_width=&amp;quot;wrap_content&amp;quot;
+        android:layout_height=&amp;quot;wrap_content&amp;quot;
+        android:layout_gravity=&amp;quot;center_vertical&amp;quot;
+        android:layout_marginLeft=&amp;quot;10dp&amp;quot;
+        android:layout_marginTop=&amp;quot;10dp&amp;quot;
+        android:layout_toRightOf=&amp;quot;@+id/iv_img&amp;quot;
+        android:text=&amp;quot;我是标题&amp;quot;
+        android:textColor=&amp;quot;#f00&amp;quot;
+        android:textSize=&amp;quot;20sp&amp;quot; /&amp;gt;
+
+    &amp;lt;TextView
+        android:id=&amp;quot;@+id/tv_content&amp;quot;
+        android:layout_width=&amp;quot;wrap_content&amp;quot;
+        android:layout_height=&amp;quot;wrap_content&amp;quot;
+        android:layout_below=&amp;quot;@+id/tv_title&amp;quot;
+        android:layout_marginLeft=&amp;quot;10dp&amp;quot;
+        android:layout_marginTop=&amp;quot;10dp&amp;quot;
+        android:layout_toRightOf=&amp;quot;@id/iv_img&amp;quot;
+        android:text=&amp;quot;我是描述&amp;quot; /&amp;gt;
+&amp;lt;/RelativeLayout&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;第三步：编写自定义数据实体类型（如果仅仅是显示普通的文字、图片不用定义这个类）&lt;/p&gt;
+&lt;p&gt;——&lt;strong&gt;&lt;code&gt;数据实体类&lt;/code&gt;与&lt;code&gt;条目布局文件&lt;/code&gt;对应，都是用来作为模板，动态显示。（数据实体包括多种属性，用来显示多种类型数据的）&lt;/strong&gt;&lt;br&gt;
+*&lt;strong&gt;Model.java*&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-tsx&#34;&gt;public class Model {
+    private String title;
+    private String content;
+    private String imgUrl;
+
+    //生成set、get方法
+    ......
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;第四步：编写适配器&lt;br&gt;
+*&lt;strong&gt;MyAdapter.java*&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class MyAdapter extends BaseQuickAdapter&amp;lt;Model, BaseViewHolder&amp;gt; {
+	//左边参数@LayoutRes int layoutResId用于传入小条目布局文件的int型资源ID（即为R.layout.item_rv），
+    //右边传入的是 数据实体类型 的链表，用于存每一个条目的数据。——测试传入的都是模拟数据，实际上都是网络上获取的数据。
+    public MyAdapter(@LayoutRes int layoutResId, @Nullable List&amp;lt;Model&amp;gt; data) {  		
+        
+        super(layoutResId, data);
+    }.
+
+    @Override
+    //左边参数默认不用改，右边参数中的 Model 是自定义实体数据类型，也可以填int（只显示数字）、String（只显示文字），自定义数据类型才能显示多种东西
+    protected void convert(BaseViewHolder helper, Model item) {
+        //可链式调用赋值——相当于替换，将左边的替换成右边的。每一句话代表设置布局文件中控件的属性
+        helper.setText(R.id.tv_title, item.getTitle())
+                .setText(R.id.tv_content, item.getContent())
+                .setImageResource(R.id.iv_img, R.mipmap.ic_launcher);//将R.id.iv_img控件的ImageResource改为R.mipmap.ic_launcher
+
+        //获取当前条目position
+        //int position = helper.getLayoutPosition();
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;最后一步：在Activity中使用该适配器&lt;br&gt;
+*&lt;strong&gt;MainActivity.java*&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class MainActivity extends AppCompatActivity {
+
+    private RecyclerView recyclerView;
+    private List&amp;lt;Model&amp;gt; datas;
+    private MyAdapter adapter;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        //初始化RecyclerView
+        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+
+        //模拟的数据（实际开发中一般是从网络获取的）
+        datas = new ArrayList&amp;lt;&amp;gt;();
+        Model model;
+        for (int i = 0; i &amp;lt; 15; i++) {
+            model = new Model();
+            model.setTitle(&amp;quot;我是第&amp;quot; + i + &amp;quot;条标题&amp;quot;);
+            model.setContent(&amp;quot;第&amp;quot; + i + &amp;quot;条内容&amp;quot;);
+            datas.add(model);
+        }
+
+        //创建布局管理
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        recyclerView.setLayoutManager(layoutManager);
+
+        //创建适配器
+        adapter = new MyAdapter(R.layout.item_rv, datas);
+
+        //给RecyclerView设置适配器
+        recyclerView.setAdapter(adapter);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;OK，运行，得到的效果就是上述的效果。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;2点击事件&#34;&gt;2.点击事件&lt;/h4&gt;
+&lt;h5 id=&#34;1-条目事件&#34;&gt;1 条目事件&lt;/h5&gt;
+&lt;h6 id=&#34;item的点击事件&#34;&gt;Item的点击事件&lt;/h6&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;        //条目点击事件
+        adapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+
+                Toast.makeText(MainActivity.this, &amp;quot;点击了第&amp;quot; + (position + 1) + &amp;quot;条条目&amp;quot;, Toast.LENGTH_SHORT).show();
+            }
+        });
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h6 id=&#34;item的长按事件&#34;&gt;Item的长按事件&lt;/h6&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;        //条目长按事件
+        adapter.setOnItemLongClickListener(new BaseQuickAdapter.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(BaseQuickAdapter adapter, View view, int position) {
+			   adapter.remove(position);   //长按删除
+                Toast.makeText(MainActivity.this, &amp;quot;长按了第&amp;quot; + (position + 1) + &amp;quot;条条目&amp;quot;, Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h6 id=&#34;item的长按删除&#34;&gt;Item的长按删除&lt;/h6&gt;
+&lt;p&gt;adapter.remove(position);   //长按删除&lt;/p&gt;
+&lt;h6 id=&#34;注意事项&#34;&gt;注意事项&lt;/h6&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;在嵌套recycleView的情况下需要使用你使用 adapter. setOnItemClickListener 来设置点击事件,如果使用recycleView.addOnItemTouchListener会累计添加的。&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;glide&#34;&gt;Glide&lt;/h2&gt;
+&lt;h3 id=&#34;一-简介&#34;&gt;一、简介&lt;/h3&gt;
+&lt;p&gt;Glide，一个被google所推荐的图片加载库，作者是bumptech。这个库被广泛运用在google的开源项目中，包括2014年的google I/O大会上发布的官方app。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;使用简单&lt;/li&gt;
+&lt;li&gt;可配置度高，自适应程度高&lt;/li&gt;
+&lt;li&gt;支持常见图片格式 Jpg png gif webp&lt;/li&gt;
+&lt;li&gt;支持多种数据源 网络、本地、资源、Assets 等&lt;/li&gt;
+&lt;li&gt;高效缓存策略 支持Memory和Disk图片缓存 默认Bitmap格式采用RGB_565内存使用至少减少一半&lt;/li&gt;
+&lt;li&gt;生命周期集成 根据Activity/Fragment生命周期自动管理请求&lt;/li&gt;
+&lt;li&gt;高效处理Bitmap 使用Bitmap Pool使Bitmap复用，主动调用recycle回收需要回收的Bitmap，减小系统回收压力.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;二-使用&#34;&gt;二、使用&lt;/h3&gt;
+&lt;h4 id=&#34;1导入库添加依赖&#34;&gt;&lt;a href=&#34;https://github.com/bumptech/glide&#34;&gt;1.导入库（添加依赖）&lt;/a&gt;&lt;/h4&gt;
+&lt;h5 id=&#34;project目录下的buildgradle文件&#34;&gt;Project目录下的build.gradle文件&lt;/h5&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;repositories {
+    google()
+    //or maven { url &#39;https://maven.google.com&#39; }
+    jcenter()
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;app目录下的buildgradle文件&#34;&gt;APP目录下的build.gradle文件&lt;/h5&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;dependencies {
+           /*Glide加载库*/
+        implementation &#39;com.github.bumptech.glide:glide:4.11.0&#39;
+        annotationProcessor &#39;com.github.bumptech.glide:compiler:4.11.0&#39;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;    /**
+     * 在此方法中设置item数据
+     */
+    @Override
+    protected void convert(@NotNull BaseViewHolder helper, @NotNull Integer item) {
+        //Glide加载应用资源图片
+        Glide.with(getContext())
+                .load(item)
+                .into((ImageView) helper.getView(imageView1));  //是将资源加载到holder上的imageView1中，而不是直接加载到imageView1中
+//        helper.setImageResource(imageView1,item);             //BRVAH自带设置图片
+
+    }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;2圆角图片显示实测嵌套在recyclerview内没有用&#34;&gt;2.&lt;a href=&#34;https://www.jianshu.com/p/91161f458cd8&#34;&gt;圆角图片显示&lt;/a&gt;——实测嵌套在recyclerview内没有用&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class MainActivity extends AppCompatActivity {
+    ImageView circle, round1, round2;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        initView();
+    }
+
+    private void initView() {
+        circle = findViewById(R.id.circle);
+        round1 = findViewById(R.id.round1);
+        round2 = findViewById(R.id.round2);
+
+        Glide.with(this)
+                .load(&amp;quot;http://img5.duitang.com/uploads/item/201506/07/20150607110911_kY5cP.jpeg&amp;quot;)
+                .apply(RequestOptions.bitmapTransform(new CircleCrop()))
+                .into(circle);
+
+        Glide.with(this)
+                .load(&amp;quot;http://img.jiuzheng.com/memberlogo/s/57/0a/570af0f48f1e0327178b468d.jpg&amp;quot;)
+                .apply(RequestOptions.bitmapTransform(new RoundedCorners(20)))//圆角半径
+                .into(round1);
+
+        Glide.with(this)
+                .load(&amp;quot;http://img.jiuzheng.com/memberlogo/s/57/0a/570af0f48f1e0327178b468d.jpg&amp;quot;)
+                .apply(RequestOptions.bitmapTransform(new RoundedCorners(60)))//圆角半径
+                .into(round2);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;photoview的使用&#34;&gt;PhotoView的使用&lt;/h2&gt;
+&lt;p&gt;第三方库：PhotoView旨在帮助生成一个易于使用的缩放Android ImageView的实现。&lt;/p&gt;
+&lt;p&gt;这是一个图片查看库，实现图片浏览功能，支持pinch（捏合）手势或者点击放大缩小。支持在View Pager中翻页浏览图片。&lt;br&gt;
+PhotoView 是一款扩展自Android ImageView，支持通过单点/多点触摸来进行图片缩放的智能控件。功能实用和强大。&lt;/p&gt;
+&lt;p&gt;PhotoView 的功能：&lt;/p&gt;
+&lt;p&gt;· 图片浏览查看&lt;br&gt;
+· 双指缩放&lt;br&gt;
+· 单点触摸缩放&lt;br&gt;
+· 图片缩放模式设置&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;图片缩放库--PhotoView的基本使用_dpl12的博客-CSDN博客&lt;br&gt;
+https://blog.csdn.net/dpl12/article/details/78160993&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;实现点击图片大图浏览&#34;&gt;实现点击图片大图浏览&lt;/h2&gt;
+&lt;h3 id=&#34;1自己实现&#34;&gt;1.自己实现&lt;/h3&gt;
+&lt;h4 id=&#34;1通过-intent-传送参数到新的-activity&#34;&gt;1.通过 Intent 传送参数到新的 Activity&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;参考链接&lt;br&gt;
+&lt;a href=&#34;https://www.jb51.net/article/82361.htm&#34;&gt;Android仿微信图片点击全屏效果&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://blog.csdn.net/u011324501/article/details/52686117&#34;&gt;android 仿微信点击图片放大效果实现&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;            //大图预览
+            Intent intent = new Intent(HomeActivity.this,PictureDisplayActivity.class);
+            intent.putExtra(&amp;quot;position&amp;quot;,position);
+            intent.putIntegerArrayListExtra(&amp;quot;enlargeImage&amp;quot;, (ArrayList&amp;lt;Integer&amp;gt;) createImageIDData());
+            intent.putStringArrayListExtra(&amp;quot;enlargeImage&amp;quot;,imgUrl);
+            startActivity(intent);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;链接：&lt;a href=&#34;https://blog.csdn.net/lonelyroamer/article/details/25497737&#34;&gt;Android浏览图片，点击放大至全屏效果&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://gitee.com/sagerover/figurebed/raw/master//img/20201115205447.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;我不知道QQ那个是怎么做的，我的思路如下：&lt;/p&gt;
+&lt;p&gt;首先，从图片缩略界面跳转到图片详情页面，应该是从一个Activity跳转到另外一个Activity，应该图片详情页面也有很多操作，用View或者Dialog不是很好。所以现在难点就是，如何使得前一个界面的ImageView在另外一个界面做缩放切割动画。&lt;/p&gt;
+&lt;p&gt;一般缩略界面的ImageView的是如上图所示的正方形的，并且是CENTER_CROP缩放属性的。CENTER_CROP属性会导致ImageView中显示的Bitmap有被切割达到填充的效果。&lt;/p&gt;
+&lt;p&gt;而详情页面的ImageView一般都是FIT_CENTER的缩放属性。所以要保证这个跳转动画的流畅，要做如下的变化：&lt;/p&gt;
+&lt;p&gt;1、Bitmap的缩放，因为缩略图和详情图的缩放比例肯定不一样&lt;/p&gt;
+&lt;p&gt;2、Bitmap位置的平移，因为缩略图的位置是不确定的，我们要使他平移到中间&lt;/p&gt;
+&lt;p&gt;3、Bitmap的切割，因为CENTER_CROP是切割过得，而FIT_CENTER是没有切割的，那么两幅图显示的内容区域是不同的，所以也要显示区域的平滑变换。&lt;/p&gt;
+&lt;p&gt;要完成上面的效果，如果单单是指对ImageView做一个动画变换，我觉得是完成不了这个要求的。所以自己重写了ImageView来完成上述的变换。&lt;/p&gt;
+&lt;img src=&#34;https://img-blog.csdn.net/20140510230150187&#34; alt=&#34;img&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;2dialog点击图片后创建dialog用dialog承载-展示当前所点击的图片大图&#34;&gt;2.dialog——点击图片后创建dialog用dialog承载 展示当前所点击的图片大图&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;参考链接&lt;br&gt;
+&lt;a href=&#34;https://blog.csdn.net/weixin_37722900/article/details/79140701?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param&amp;amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param&#34;&gt;安卓图片（ImageView）：展示大图、双击放大、触摸放大缩小、滑动切换、长按保存等&lt;/a&gt;——主要就是依赖photoView开源代码&lt;br&gt;
+&lt;a href=&#34;https://www.jianshu.com/p/629300228921&#34;&gt;PhotoView+Glide+Dialog+ViewPager:打造轻量级的图片浏览方案&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;3缩放-matrix&#34;&gt;3.缩放 Matrix&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jianshu.com/p/ce26854b3283&#34;&gt;Android实现图片查看 - 简书&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://blog.csdn.net/wuyou1336/article/details/55106665&#34;&gt;android 图片点击一下就放大到全屏,再点一下就回到原界面&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;4viewpager结合photoview&#34;&gt;4.ViewPager结合PhotoView&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.cnblogs.com/hehe520/p/6329957.html&#34;&gt;Android 使用ViewPager结合PhotoView开源组件实现网络图片在线浏览功能 &lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;4使用第三方图片浏览框架&#34;&gt;4.使用第三方图片浏览框架&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/maning0303/MNImageBrowser&#34;&gt;MNImageBrowser&lt;/a&gt;&lt;br&gt;
+一个图片浏览框架,支持AndroidX,支持Fresco,类似微信图片浏览,手势向下滑动关闭,图片加载引擎自定义,支持长按,单击监听,切换监听,自定义任意的遮罩层，实现各种效果,支持横竖屏切换,简单方便。 可以自定义使用图片加载引擎（Fresco、Glide、Picasso），效果较好，接近我想要的效果。但是代码说明有点问题，使用有点麻烦好像。内部使用了&lt;a href=&#34;https://github.com/chrisbanes/PhotoView&#34;&gt;PhotoView&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;参考链接&lt;br&gt;
+&lt;a href=&#34;https://www.pianshen.com/article/78901156650/&#34;&gt;MNImageBrowser图片浏览框架，向下滑动关闭&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;2超级强大的第三方库xpopup推荐使用&#34;&gt;2.超级强大的第三方库——XPopup（推荐使用）&lt;/h3&gt;
+&lt;h4 id=&#34;1显示内部资源&#34;&gt;1.显示内部资源&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;    public void XPopup(int position, BaseQuickAdapter adapter) {
+        // 图片加载器，XPopup不负责加载图片，需要你实现一个图片加载器传给我，这里以Glide为例（可直接复制到项目中）:
+        class ImageLoader implements XPopupImageLoader {
+            @Override
+            public void loadImage(int position, @NonNull Object url, @NonNull ImageView imageView) {
+                //必须指定Target.SIZE_ORIGINAL，否则无法拿到原图，就无法享用天衣无缝的动画
+                Glide.with(imageView).load(url).apply(new RequestOptions().override(Target.SIZE_ORIGINAL)).into(imageView);
+            }
+
+            //必须实现这个方法，返回uri对应的缓存文件，可参照下面的实现，内部保存图片会用到。如果你不需要保存图片这个功能，可以返回null。
+            @Override
+            public File getImageFile(@NonNull Context context, @NonNull Object uri) {
+                try {
+                    return Glide.with(context).downloadOnly().load(uri).submit().get();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                return null;
+            }
+        }
+
+        //当你点击图片的时候执行以下代码：
+        // 多图片场景（你有多张图片需要浏览）
+        //srcView参数表示你点击的那个ImageView，动画从它开始，结束时回到它的位置。
+        new XPopup.Builder(this).asImageViewer((ImageView) adapter.getViewByPosition(position, R.id.Recycler_item_imageView), position, (ArrayList) createImageIDData(), new OnSrcViewUpdateListener() {
+            @Override
+            public void onSrcViewUpdate(ImageViewerPopupView popupView, int position) {
+                // 作用是当Pager切换了图片，需要更新源View
+                popupView.updateSrcView((ImageView) adapter.getViewByPosition(position,  R.id.Recycler_item_imageView));
+            }
+        }, new ImageLoader())
+                .show();
+
+//        // 单张图片场景
+//        new XPopup.Builder(this)
+//                .asImageViewer(null, createImageIDData().get(position), new ImageLoader())
+//                .show();
+
+
+    }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;2显示网络图片&#34;&gt;2.显示网络图片&lt;/h4&gt;
+&lt;h1 id=&#34;5广播机制&#34;&gt;5.广播机制&lt;/h1&gt;
+&lt;h1 id=&#34;6数据存储&#34;&gt;6.数据存储&lt;/h1&gt;
+&lt;h1 id=&#34;5后端连接开发&#34;&gt;5.后端连接开发&lt;/h1&gt;
+&lt;h2 id=&#34;移动数据库&#34;&gt;移动数据库&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jianshu.com/p/37af717761cc&#34;&gt;Realm&lt;/a&gt; 是一个移动数据库，可运行于手机、平板和可穿戴设备之上。可以让你的应用更快速，带来难以想象的体验。其目标是为了代替 CoreData 和 SQLite 数据库。&lt;/p&gt;
+&lt;p&gt;opensource:&lt;br&gt;
+PostgreSQL,MySQL,&lt;br&gt;
+Firebird,SQLLite,&lt;br&gt;
+Berkele,Derby,Db4o&lt;br&gt;
+other:&lt;br&gt;
+sybase&lt;/p&gt;
+&lt;h1 id=&#34;7内容提供器&#34;&gt;7.内容提供器&lt;/h1&gt;
+&lt;h1 id=&#34;9网络技术&#34;&gt;9.网络技术&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;h2 id=&#34;android通过php服务器实现登录&#34;&gt;&lt;a href=&#34;https://www.cnblogs.com/kangyaping/p/5467863.html&#34;&gt;Android通过PHP服务器实现登录 &lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Android客户端和PHP、MySQL搭建的服务器之间的简单交互，实现登录功能 。&lt;/p&gt;
+&lt;p&gt;实现原理图：&lt;img src=&#34;https://gitee.com/sagerover/figurebed/raw/master//img/image-20201019212045331.png&#34; alt=&#34;image-20201019212045331&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;91webview控件的用法&#34;&gt;9.1WebView控件的用法&lt;/h2&gt;
+&lt;p&gt;作用：用于在app内展示网页。&lt;br&gt;
+&lt;img src=&#34;https://gitee.com/sagerover/figurebed/raw/master//img/20201122205945.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;WebView 已经在后台帮我们处理好了发送&lt;strong&gt;HTTP请求、接收服务响应、解析返回数据&lt;/strong&gt;，以及最终的页面展示这几步工作，不过由于它封装得实在是太好了，反而使得我们不能那么直观地看出HTTP协议到底是如何工作的。因此接下来就让我们通过手动发送HTTP请求的方式，来更加深入地理解一下这个过程。&lt;/p&gt;
+&lt;h2 id=&#34;92使用http协议访问网络&#34;&gt;9.2使用HTTP协议访问网络&lt;/h2&gt;
+&lt;p&gt;工作原理：&lt;br&gt;
+客户端向服务器发送一条HTTP请求，服务器收到请求之后会返回一些数据给客服端，最后客户端对数据进行解析和处理。&lt;/p&gt;
+&lt;h3 id=&#34;http请求工具&#34;&gt;Http请求工具&lt;/h3&gt;
+&lt;p&gt;Google开发的Volley，loopj的Android Async Http，Square开源的OkHttp或者&lt;strong&gt;Retrofit&lt;/strong&gt;等。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h2 id=&#34;1-历史上http请求库优缺点&#34;&gt;1. 历史上Http请求库优缺点&lt;/h2&gt;
+&lt;p&gt;在讲述OkHttp之前, 我们看下没有OkHttp的时代, 我们是如何完成http请求的.&lt;br&gt;
+在没有OkHttp的日子, 我们使用&lt;code&gt;HttpURLConnection&lt;/code&gt;或者&lt;code&gt;HttpClient&lt;/code&gt;. 那么这两者都有什么优缺点呢? 为什么不在继续使用下去呢?&lt;br&gt;
+&lt;code&gt;HttpClient&lt;/code&gt;是Apache基金会的一个开源网络库, 功能十分强大, API数量众多, 但是正是由于庞大的API数量使得我们很难在不破坏兼容性的情况下对它进行升级和扩展, 所以Android团队在提升和优化HttpClient方面的工作态度并不积极.&lt;br&gt;
+&lt;code&gt;HttpURLConnection&lt;/code&gt;是一种多用途, 轻量极的HTTP客户端, 提供的API比较简单, 可以容易地去使用和扩展. 不过在Android 2.2版本之前, &lt;code&gt;HttpURLConnection&lt;/code&gt;一直存在着一些令人厌烦的bug. 比如说对一个可读的InputStream调用close()方法时，就有可能会导致连接池失效了。那么我们通常的解决办法就是直接禁用掉连接池的功能：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;private void disableConnectionReuseIfNecessary() {    
+    // 这是一个2.2版本之前的bug    
+    if (Integer.parseInt(Build.VERSION.SDK) &amp;lt; Build.VERSION_CODES.FROYO) {    
+        System.setProperty(&amp;quot;http.keepAlive&amp;quot;, &amp;quot;false&amp;quot;);    
+    }    
+}    
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;因此, 一般的推荐是在2.2之前, 使用&lt;code&gt;HttpClient&lt;/code&gt;, 因为其bug较少. 在2.2之后, 推荐使用&lt;code&gt;HttpURLConnection&lt;/code&gt;, 因为API简单, 体积小, 并且有压缩和缓存机制, 并且Android团队后续会继续优化&lt;code&gt;HttpURLConnection&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;但是, 上面两个类库和&lt;code&gt;OkHttp&lt;/code&gt;比起来就弱爆了, 因为OkHttp不仅具有高效的请求效率, 并且提供了很多开箱即用的网络疑难杂症解决方案.&lt;br&gt;
+- 支持HTTP/2, HTTP/2通过使用多路复用技术在一个单独的TCP连接上支持并发, 通过在一个连接上一次性发送多个请求来发送或接收数据&lt;br&gt;
+- 如果HTTP/2不可用, 连接池复用技术也可以极大减少延时&lt;br&gt;
+- 支持GZIP, 可以压缩下载体积&lt;br&gt;
+- 响应缓存可以直接避免重复请求&lt;br&gt;
+- 会从很多常用的连接问题中自动恢复&lt;br&gt;
+- 如果您的服务器配置了多个IP地址, 当第一个IP连接失败的时候, OkHttp会自动尝试下一个IP&lt;br&gt;
+- OkHttp还处理了代理服务器问题和SSL握手失败问题&lt;/p&gt;
+&lt;p&gt;使用 OkHttp 无需重写您程序中的网络代码。OkHttp实现了几乎和java.net.HttpURLConnection一样的API。如果你用了 Apache HttpClient，则OkHttp也提供了一个对应的okhttp-apache 模块。&lt;/p&gt;
+&lt;p&gt;还有一个好消息, 从Android 4.4起, 其&lt;code&gt;HttpURLConnection&lt;/code&gt;的内部实现已经变为&lt;code&gt;OkHttp&lt;/code&gt;, 您可以参考这两个网页:&lt;a href=&#34;http://stackoverflow.com/questions/26000027/does-android-use-okhttp-internally&#34;&gt;爆栈网&lt;/a&gt;和&lt;a href=&#34;https://twitter.com/JakeWharton/status/482563299511250944&#34;&gt;Twitter&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;1原生网络通信库httpurlconnection&#34;&gt;1.原生网络通信库HttpURLConnection&lt;/h3&gt;
+&lt;h3 id=&#34;2开源的受欢迎的网络请求框架okhttpokhttp使用完全教程超级推荐看这个&#34;&gt;2.开源的受欢迎的网络请求框架&lt;a href=&#34;https://github.com/square/okhttp&#34;&gt;OkHttp&lt;/a&gt;——&lt;a href=&#34;https://www.jianshu.com/p/ca8a982a116b&#34;&gt;OkHttp使用完全教程（￥超级推荐看这个）&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;由Square公司开发，该公司还开发了Picasso、Retrofit&lt;/p&gt;
+&lt;p&gt;教程：https://www.jianshu.com/p/9aa969dd1b4d	https://blog.csdn.net/u013651026/article/details/79738059&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h2 id=&#34;get-a-url&#34;&gt;Get a URL&lt;/h2&gt;
+&lt;p&gt;This program downloads a URL and prints its contents as a string. &lt;a href=&#34;https://raw.github.com/square/okhttp/master/samples/guide/src/main/java/okhttp3/guide/GetExample.java&#34;&gt;Full source&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;OkHttpClient client = new OkHttpClient();
+
+String run(String url) throws IOException {
+  Request request = new Request.Builder()
+      .url(url)
+      .build();
+
+  try (Response response = client.newCall(request).execute()) {
+    return response.body().string();
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;post-to-a-server&#34;&gt;Post to a Server&lt;/h2&gt;
+&lt;p&gt;This program posts data to a service. &lt;a href=&#34;https://raw.github.com/square/okhttp/master/samples/guide/src/main/java/okhttp3/guide/PostExample.java&#34;&gt;Full source&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;public static final MediaType JSON
+    = MediaType.get(&amp;quot;application/json; charset=utf-8&amp;quot;);
+
+OkHttpClient client = new OkHttpClient();
+
+String post(String url, String json) throws IOException {
+  RequestBody body = RequestBody.create(json, JSON);
+  Request request = new Request.Builder()
+      .url(url)
+      .post(body)
+      .build();
+  try (Response response = client.newCall(request).execute()) {
+    return response.body().string();
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Further examples are on the &lt;a href=&#34;http://square.github.io/okhttp/recipes/&#34;&gt;OkHttp Recipes page&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;1使用-2&#34;&gt;1.使用&lt;/h4&gt;
+&lt;p&gt;创建一个OkHttpClient实例&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;OkHttpClient client = new OkHttpClient();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;创建Request对象&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;String url=&amp;quot;https://gank.io/api/v2/categories/Girl&amp;quot;;
+Request request = new Request.Builder()
+        .url(url)
+        .build();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;93解析xml格式数据&#34;&gt;9.3解析XML格式数据&lt;/h2&gt;
+&lt;p&gt;Pull解析&lt;/p&gt;
+&lt;p&gt;SAX解析&lt;/p&gt;
+&lt;p&gt;DOM解析（可以不用理解）&lt;/p&gt;
+&lt;h2 id=&#34;94-解析json格式数据推荐&#34;&gt;9.4 ￥解析JSON格式数据（推荐）&lt;/h2&gt;
+&lt;p&gt;JSON相比于XML优势在于&lt;strong&gt;体积小，更省流量&lt;/strong&gt;。缺点：语义性较差，不如XML直观。&lt;/p&gt;
+&lt;h3 id=&#34;1官方提供的jsonobject&#34;&gt;1.官方提供的JSONObject&lt;/h3&gt;
+&lt;h3 id=&#34;2gson推荐&#34;&gt;2.&lt;a href=&#34;https://github.com/google/gson/&#34;&gt;GSON&lt;/a&gt;（推荐）&lt;/h3&gt;
+&lt;p&gt;Gson是谷歌官方推出的支持 &lt;code&gt;JSON -- Java Object&lt;/code&gt; 相互转换的 Java&lt;code&gt;序列化/反序列化&lt;/code&gt; 库&lt;/p&gt;
+&lt;h2 id=&#34;retrofit&#34;&gt;Retrofit&lt;/h2&gt;
+&lt;h3 id=&#34;1retrofit2的简述&#34;&gt;1.Retrofit2的简述&lt;/h3&gt;
+&lt;p&gt;Retrofit其实我们可以理解为OkHttp的加强版，它也是一个网络加载框架。&lt;br&gt;
+底层是使用OKHttp封装的。准确来说,网络请求的工作本质上是OkHttp完成，&lt;br&gt;
+而 Retrofit 仅负责网络请求接口的封装。它的一个特点是包含了特别多注解，&lt;br&gt;
+方便简化你的代码量。并且还支持很多的开源库(著名例子：Retrofit + RxJava)。&lt;br&gt;
+Retrofit和OkHttp都是square公司写的.&lt;/p&gt;
+&lt;h1 id=&#34;10服务&#34;&gt;10.服务&lt;/h1&gt;
+&lt;p&gt;10.1 服务&lt;/p&gt;
+&lt;p&gt;10.2 多线程编程&lt;/p&gt;
+&lt;h3 id=&#34;rxjava&#34;&gt;&lt;a href=&#34;https://gank.io/post/560e15be2dca930e00da1083&#34;&gt;RxJava&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;AsyncTask&lt;/code&gt; 和&lt;code&gt;Handler&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;10.3 服务的基本用法&lt;/p&gt;
+&lt;p&gt;10.4 服务的生命周期&lt;/p&gt;
+&lt;p&gt;10.5&lt;/p&gt;
+&lt;h1 id=&#34;11依赖库&#34;&gt;11.依赖库&lt;/h1&gt;
+&lt;h2 id=&#34;依赖库&#34;&gt;依赖库：&lt;/h2&gt;
+&lt;h6 id=&#34;注解框架-butterknife&#34;&gt;注解框架 &lt;a href=&#34;https://github.com/JakeWharton/butterknife&#34;&gt;butterknife&lt;/a&gt;&lt;/h6&gt;
+&lt;h6 id=&#34;json解析-gson&#34;&gt;Json解析 &lt;a href=&#34;https://github.com/google/gson&#34;&gt;Gson&lt;/a&gt;&lt;/h6&gt;
+&lt;h6 id=&#34;解析html-jsoup&#34;&gt;解析Html &lt;a href=&#34;https://github.com/jhy/jsoup&#34;&gt;jsoup&lt;/a&gt;&lt;/h6&gt;
+&lt;h6 id=&#34;网络框架-retrofit-okhttp&#34;&gt;网络框架 &lt;a href=&#34;https://github.com/square/retrofit&#34;&gt;retrofit&lt;/a&gt; &lt;a href=&#34;https://github.com/square/okhttp&#34;&gt;okhttp&lt;/a&gt;&lt;/h6&gt;
+&lt;h6 id=&#34;打印日志框架-klog&#34;&gt;打印日志框架 &lt;a href=&#34;https://github.com/ZhaoKaiQiang/KLog&#34;&gt;klog&lt;/a&gt;&lt;/h6&gt;
+&lt;h6 id=&#34;图片加载-glide&#34;&gt;图片加载 &lt;a href=&#34;https://github.com/bumptech/glide&#34;&gt;glide&lt;/a&gt;&lt;/h6&gt;
+&lt;h6 id=&#34;刷新框架-swipetoloadlayout&#34;&gt;刷新框架 &lt;a href=&#34;https://github.com/Aspsine/SwipeToLoadLayout&#34;&gt;SwipeToLoadLayout&lt;/a&gt;&lt;/h6&gt;
+&lt;h6 id=&#34;权限管理库-andpermission&#34;&gt;权限管理库 &lt;a href=&#34;https://github.com/yanzhenjie/AndPermission&#34;&gt;AndPermission&lt;/a&gt;&lt;/h6&gt;
+&lt;h6 id=&#34;提示框-material-dialogs-android-svprogresshud&#34;&gt;提示框 &lt;a href=&#34;https://github.com/afollestad/material-dialogs&#34;&gt;material-dialogs&lt;/a&gt; &lt;a href=&#34;https://github.com/saiwu-bigkoo/Android-SVProgressHUD&#34;&gt;Android-SVProgressHUD&lt;/a&gt;&lt;/h6&gt;
+&lt;h6 id=&#34;recycleview分割线-recyclerview-flexibledivider&#34;&gt;RecycleView分割线 &lt;a href=&#34;https://github.com/yqritc/RecyclerView-FlexibleDivider&#34;&gt;RecyclerView-FlexibleDivider&lt;/a&gt;&lt;/h6&gt;
+&lt;h6 id=&#34;viewpager的标题控件-smarttablayout&#34;&gt;ViewPager的标题控件 &lt;a href=&#34;https://github.com/ogaclejapan/SmartTabLayout&#34;&gt;smarttablayout&lt;/a&gt;&lt;/h6&gt;
+&lt;h6 id=&#34;广告轮播控件-switcherview&#34;&gt;广告轮播控件 &lt;a href=&#34;https://github.com/maning0303/SwitcherView&#34;&gt;SwitcherView&lt;/a&gt;&lt;/h6&gt;
+&lt;h6 id=&#34;收藏按钮-thumbup&#34;&gt;收藏按钮 &lt;a href=&#34;https://github.com/ldoublem/ThumbUp&#34;&gt;ThumbUp&lt;/a&gt;&lt;/h6&gt;
+&lt;h6 id=&#34;模糊控件-blurry&#34;&gt;模糊控件 &lt;a href=&#34;https://github.com/wasabeef/Blurry&#34;&gt;Blurry&lt;/a&gt;&lt;/h6&gt;
+&lt;h6 id=&#34;网络请求监控-chuck&#34;&gt;网络请求监控 &lt;a href=&#34;https://github.com/jgilfelt/chuck&#34;&gt;chuck&lt;/a&gt;&lt;/h6&gt;
+&lt;h6 id=&#34;表格控件-scrollablepanel&#34;&gt;表格控件 &lt;a href=&#34;https://github.com/Kelin-Hong/ScrollablePanel&#34;&gt;scrollablepanel&lt;/a&gt;&lt;/h6&gt;
+&lt;h6 id=&#34;可以展开的文字-expandabletextview&#34;&gt;可以展开的文字 &lt;a href=&#34;https://github.com/Manabu-GT/ExpandableTextView&#34;&gt;expandableTextView&lt;/a&gt;&lt;/h6&gt;
+&lt;h6 id=&#34;自定义日历控件-mncalendar&#34;&gt;自定义日历控件 &lt;a href=&#34;https://github.com/maning0303/MNCalendar&#34;&gt;MNCalendar&lt;/a&gt;&lt;/h6&gt;
+&lt;h6 id=&#34;日志监听-mncrashmonitor&#34;&gt;日志监听 &lt;a href=&#34;https://github.com/maning0303/MNCrashMonitor&#34;&gt;MNCrashMonitor&lt;/a&gt;&lt;/h6&gt;
+&lt;h6 id=&#34;图片缩放-photoview&#34;&gt;图片缩放 &lt;a href=&#34;https://github.com/chrisbanes/PhotoView&#34;&gt;PhotoView&lt;/a&gt;&lt;/h6&gt;
+&lt;h6 id=&#34;apk升级安装-mnupdateapk&#34;&gt;APK升级安装 &lt;a href=&#34;https://github.com/maning0303/MNUpdateAPK&#34;&gt;MNUpdateAPK&lt;/a&gt;&lt;/h6&gt;
+&lt;h6 id=&#34;夜间模式-mnchangeskin&#34;&gt;夜间模式 &lt;a href=&#34;https://github.com/maning0303/MNChangeSkin&#34;&gt;MNChangeSkin&lt;/a&gt;&lt;/h6&gt;
+&lt;h6 id=&#34;图片浏览-mnimagebrowser&#34;&gt;图片浏览 &lt;a href=&#34;https://github.com/maning0303/MNImageBrowser&#34;&gt;MNImageBrowser&lt;/a&gt;&lt;/h6&gt;
+&lt;h6 id=&#34;汉字转拼音-tinypinyin&#34;&gt;汉字转拼音 &lt;a href=&#34;https://github.com/promeG/TinyPinyin&#34;&gt;TinyPinyin&lt;/a&gt;&lt;/h6&gt;
+&lt;h6 id=&#34;快速跳跃分组的侧边栏控件-wavesidebar&#34;&gt;快速跳跃分组的侧边栏控件 &lt;a href=&#34;https://github.com/Solartisan/WaveSideBar&#34;&gt;WaveSideBar&lt;/a&gt;&lt;/h6&gt;
+&lt;h6 id=&#34;背景可以移动的view-kenburnsview&#34;&gt;背景可以移动的View &lt;a href=&#34;https://github.com/flavioarfaria/KenBurnsView&#34;&gt;KenBurnsView&lt;/a&gt;&lt;/h6&gt;
+&lt;h6 id=&#34;圆形图片-circleimageview&#34;&gt;圆形图片 &lt;a href=&#34;https://github.com/hdodenhof/CircleImageView&#34;&gt;CircleImageView&lt;/a&gt;&lt;/h6&gt;
+&lt;h6 id=&#34;滚轮选择器-android-pickerview&#34;&gt;滚轮选择器 &lt;a href=&#34;https://github.com/Bigkoo/Android-PickerView&#34;&gt;Android-PickerView&lt;/a&gt;&lt;/h6&gt;
+&lt;h6 id=&#34;图片选择器-pictureselector&#34;&gt;图片选择器 &lt;a href=&#34;https://github.com/LuckSiege/PictureSelector&#34;&gt;PictureSelector&lt;/a&gt;&lt;/h6&gt;
+&lt;h1 id=&#34;&#34;&gt;&lt;a href=&#34;imooc.com/article/256735&#34;&gt;&lt;strong&gt;吐血整理，Android常用库和插件，避免重复造轮子&lt;/strong&gt;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;干货集中营（&lt;a href=&#34;http://gank.io/&#34;&gt;gank.io&lt;/a&gt;）福利图&lt;/p&gt;
+&lt;p&gt;技术栈：RecyclerView + Glide + OkHttp + Gson + Retrofit&lt;/p&gt;
+&lt;p&gt;开发环境： Windows 10 + Android Studio 2.3.2&lt;/p&gt;
+&lt;p&gt;兼容 Android 4.0 ~ 7.0&lt;/p&gt;
+&lt;p&gt;主界面展示妹子缩略图列表，下拉刷新，上拉加载更多， 点击图片可以查看大图，长按大图可以保存到本地。文件管理器打开存储，在Pictures/GankBeauty目录里面。&lt;/p&gt;
+&lt;p&gt;使用Glide保存图片，代码中有两种方式，其中使用bitmap的方式会造成图片比在电脑让下载的原图体积变大，而使用downloadOnly的方式实现的，保存的图片大小与从电脑上下载的图片对比，大小一致，md5也一致。因此bitmap方式的代码注释掉了，推荐使用&lt;strong&gt;downloadOnly&lt;/strong&gt;的方式&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;12material-design质感设计android50以后&#34;&gt;12.Material Design（&lt;strong&gt;质感设计&lt;/strong&gt;）（Android5.0以后）&lt;/h1&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;img src=&#34;https://gitee.com/sagerover/figurebed/raw/master//img/uisdc-yk-20181104-27.jpg&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;toolbar&#34;&gt;Toolbar&lt;/h2&gt;
+&lt;h2 id=&#34;rippledrawable涟漪效果_水波纹涟漪触摸反馈&#34;&gt;&lt;a href=&#34;https://cloud.tencent.com/developer/article/1339151&#34;&gt;RippleDrawable涟漪效果_水波纹/涟漪——触摸反馈&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;​	涟漪效果是Android5.0以后的新特性，只有api&amp;gt;=21才能使用ripple效果。为了兼容性，建议新建drawable-v21文件夹来存放RippleDrawable，drawable文件夹下也要放相应的适配图片。（这里可以安装一个AndroidSelector插件，具体的可以参考https://blog.csdn.net/oqihaogongyuan/article/details/53102615的第三部分）&lt;/p&gt;
+&lt;p&gt;涟漪动画主要是对于ripple标签的使用。，其中ripple节点的，必须要设置color属性。这里根节点的设置的color就是涟漪效果的波纹颜色。子节点的item设置的drawable是涟漪效果的背景（也可以认为是涟漪效果的展示范围）。&lt;/p&gt;
+&lt;p&gt;​	Android中Button控件是有点击效果的，但是像TextView、ImageView、各种Layout是没有点击效果的，给TextView设置点击事件后，加个点击效果用户触控反馈会好一点；&lt;/p&gt;
+&lt;h3 id=&#34;第一种material自带水波纹最简单的默认点击效果&#34;&gt;第一种：Material自带水波纹（最简单的默认点击效果）&lt;/h3&gt;
+&lt;p&gt;通过如下代码设置波纹的背景：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;android:background=&amp;quot;?android:attr/selectableItemBackground&amp;quot;波纹有边界
+android:background=&amp;quot;?android:attr/selectableItemBackgroundBorderless&amp;quot;波纹超出边界
+//android:clickable=&amp;quot;true&amp;quot;
+//android:focusable=&amp;quot;true&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果该空间已经有背景色了，可以设置前景色&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;android:foreground=&amp;quot;?android:attr/selectableItemBackground&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;为view添加波纹效果：
+&amp;lt;RelativeLayout
+                android:id=&amp;quot;@+id/user_info_layout&amp;quot;
+                android:layout_width=&amp;quot;match_parent&amp;quot;
+                android:layout_height=&amp;quot;wrap_content&amp;quot;
+                android:clickable=&amp;quot;true&amp;quot;
+                android:background=&amp;quot;?android:attr/selectableItemBackground&amp;quot;
+             &amp;gt;
+                &amp;lt;ImageView
+                    android:layout_width=&amp;quot;wrap_content&amp;quot;
+                    android:layout_height=&amp;quot;wrap_content&amp;quot;
+                    android:layout_alignParentRight=&amp;quot;true&amp;quot;
+                    android:layout_centerInParent=&amp;quot;true&amp;quot;
+                    android:contentDescription=&amp;quot;@null&amp;quot;
+                    android:paddingRight=&amp;quot;15dip&amp;quot;
+                     /&amp;gt;
+            &amp;lt;/RelativeLayout&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;注意&#34;&gt;注意：&lt;/h4&gt;
+&lt;p&gt;如果设置后点击没有效果 ， 请看一下是否给该控件设置了点击事件 、 并 android:clickable=&amp;quot;true&amp;quot;&lt;/p&gt;
+&lt;p&gt;前景色：foreground属性只能给控件和帧布局设置，其它的布局设置无效果，具体看Android源码；&lt;/p&gt;
+&lt;p&gt;或者有兼容低版本的同资源也要修改添加效果。&lt;/p&gt;
+&lt;h3 id=&#34;第二种方法&#34;&gt;第二种方法&lt;/h3&gt;
+&lt;h4 id=&#34;21-添加一个普通的-ripple_bg_drawablexml-背景文件&#34;&gt;2.1 添加一个普通的 ripple_bg_drawable.xml 背景文件&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;
+&amp;lt;shape xmlns:android=&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;
+    android:shape=&amp;quot;rectangle&amp;quot;&amp;gt;
+    &amp;lt;solid android:color=&amp;quot;#8cc476&amp;quot; /&amp;gt;
+    &amp;lt;corners android:radius=&amp;quot;0dp&amp;quot; /&amp;gt;
+&amp;lt;/shape&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;22添加带波纹效果的背景文件-ripple_bgxml&#34;&gt;2.2添加带波纹效果的背景文件 ripple_bg.xml&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;
+&amp;lt;ripple xmlns:android=&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;
+    android:color=&amp;quot;#FF21272B&amp;quot;&amp;gt;
+    &amp;lt;item android:drawable=&amp;quot;@drawable/ripple_bg_drawable&amp;quot; /&amp;gt;
+&amp;lt;/ripple&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;cardview卡片式布局&#34;&gt;CardView（卡片式布局）&lt;/h2&gt;
+&lt;p&gt;​	CardView是&lt;strong&gt;Android5.0之后新增的卡片式控件&lt;/strong&gt;，以往，我们需要自定义Shape来实现&lt;strong&gt;圆角和阴影效果&lt;/strong&gt;；现在，这些效果集成到了CardView的属性里。 实际上，&lt;strong&gt;CardView也可以看做是一个FrameLayout&lt;/strong&gt;，&lt;strong&gt;继承自FrameLayout，&lt;strong&gt;方便&lt;/strong&gt;作为其他控件容器&lt;/strong&gt;，提供了圆角和阴影等效果，看上去有立体的感觉。&lt;/p&gt;
+&lt;h1 id=&#34;13点击事件&#34;&gt;13.点击事件&lt;/h1&gt;
+&lt;h2 id=&#34;1屏幕单点多点触控&#34;&gt;1.屏幕单点/多点触控&lt;/h2&gt;
+&lt;h3 id=&#34;设置单点触控splitmotionevents&#34;&gt;设置单点触控splitMotionEvents&lt;/h3&gt;
+&lt;p&gt;一、全局单点触控，在application引用的Theme主题中添加以下内容，整个应用只能单点触控：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;item name=&amp;quot;android:splitMotionEvents&amp;quot;&amp;gt;false&amp;lt;/item&amp;gt;
+&amp;lt;item name=&amp;quot;android:splitMotionEvents&amp;quot;&amp;gt;false&amp;lt;/item&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;二、某个界面需要单点触控的话，直接在需屏蔽布局的父布局xml文件中设置：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;android:splitMotionEvents=&amp;quot;false&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;多点触控问题解决windowenablesplittouch-splitmotionevents&#34;&gt;&lt;a href=&#34;https://blog.csdn.net/yztbydh/article/details/82734884&#34;&gt;多点触控问题解决(windowEnableSplitTouch, splitMotionEvents)&lt;/a&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;2屏幕点击事件理解抽象类及其继承理解理解防止recyclerview-item重复点击&#34;&gt;2.屏幕点击事件理解（抽象类及其继承理解理解)——&lt;a href=&#34;#7.%5Brecyclerview%E9%87%8D%E5%A4%8D%E7%82%B9%E5%87%BB%E9%97%AE%E9%A2%98%5D()&#34;&gt;防止recyclerview item重复点击&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;抽象类如果通过匿名内部实例化 ，则抽象类中的抽象方法必须被重载，抽象类中的其他普通方法则也必须会被实现&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;2020.11.21的recyclerview的防止重复点击有助于理解。&lt;/p&gt;
+&lt;h3 id=&#34;1重写onitemclicklistener-构造抽象类-onnodoubleclicklistener-实现-onitemclicklistener&#34;&gt;1.重写OnItemClickListener ，构造抽象类 OnNoDoubleClickListener 实现 OnItemClickListener&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public abstract class OnNoDoubleClickListener implements OnItemClickListener {
+    // 0.9秒内防止多次点击
+    public static final int MIN_CLICK_DELAY_TIME = 900;
+    private long lastClickTime = 0;
+
+    public void onItemClick(@NonNull BaseQuickAdapter&amp;lt;?, ?&amp;gt; adapter, @NonNull View view, int position) {
+        long currentTime = Calendar.getInstance().getTimeInMillis();
+        if (currentTime - lastClickTime &amp;gt; MIN_CLICK_DELAY_TIME) {
+            lastClickTime = currentTime;
+            onNoDoubleClick(adapter, view, position);
+        }
+    }
+
+    // 用户需要进一步实现
+    protected abstract void onNoDoubleClick(@NonNull BaseQuickAdapter&amp;lt;?, ?&amp;gt; adapter, @NonNull View view, int position);
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public interface OnItemClickListener {
+    /**
+     * Callback method to be invoked when an item in this RecyclerView has
+     * been clicked.
+     *
+     * @param adapter  the adapter
+     * @param view     The itemView within the RecyclerView that was clicked (this
+     *                 will be a view provided by the adapter)
+     * @param position The position of the view in the adapter.
+     */
+    void onItemClick(@NonNull BaseQuickAdapter&amp;lt;?,?&amp;gt; adapter, @NonNull View view, int position);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;2点击实现理解时注意看一下代码区别&#34;&gt;2.点击实现（理解时注意看一下代码区别）&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;        //条目点击事件
+        adapter.setOnItemClickListener(new OnNoDoubleClickListener() {
+            @Override
+            public void onNoDoubleClick(BaseQuickAdapter adapter, View view, int position) {
+                Log.d(TAG, &amp;quot;onItemClick: &amp;quot;);
+                Toast.makeText(HomeActivity.this, &amp;quot;点击了第&amp;quot; + (position + 1) + &amp;quot;条条目&amp;quot;, Toast.LENGTH_SHORT).show();
+                XPopup(position, adapter);
+            }
+        });
+
+        //条目长按事件
+        adapter.setOnItemLongClickListener(new OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(BaseQuickAdapter adapter, View view, int position) {
+                Log.d(TAG, &amp;quot;onItemLongClick: &amp;quot;);
+                adapter.remove(position);
+                Toast.makeText(HomeActivity.this, &amp;quot;长按了第&amp;quot; + (position + 1) + &amp;quot;条条目&amp;quot;, Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
+    }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;gradle命令gradlew打包签名等&#34;&gt;gradle命令——gradlew（打包签名等）&lt;/h1&gt;
+&lt;h2 id=&#34;android-studio-gradle-命令行&#34;&gt;android studio gradle 命令行&lt;/h2&gt;
+&lt;p&gt;在windows的cmd窗口或者powershell窗口可以使用gradlew命令，但是要在前面加上 &lt;strong&gt;&lt;code&gt;.\gradlew&lt;/code&gt;&lt;/strong&gt;&lt;br&gt;
+或者在Android Studio的Terminal上输入，但是要在前面加上 &lt;code&gt;gradlew&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;gradlew tasks&lt;br&gt;
+显示可用的命令&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h2 id=&#34;install-tasks&#34;&gt;Install tasks&lt;/h2&gt;
+&lt;p&gt;installDebug - Installs the Debug build.&lt;br&gt;
+installDebugAndroidTest - Installs the android (on device) tests for the Debug build.&lt;br&gt;
+uninstallAll - Uninstall all applications.&lt;br&gt;
+uninstallDebug - Uninstalls the Debug build.&lt;br&gt;
+uninstallDebugAndroidTest - Uninstalls the android (on device) tests for the Debug build.&lt;br&gt;
+uninstallRelease - Uninstalls the Release build.&lt;/p&gt;
+&lt;p&gt;安装任务&lt;/p&gt;
+&lt;p&gt;-------------&lt;/p&gt;
+&lt;p&gt;installDebug—安装调试版本。&lt;/p&gt;
+&lt;p&gt;installDebugAndroidTest——为调试版本安装android(在设备上)测试。&lt;/p&gt;
+&lt;p&gt;卸载-卸载所有应用程序。&lt;/p&gt;
+&lt;p&gt;uninstallDebug—卸载调试版本。&lt;/p&gt;
+&lt;p&gt;uninstallDebugAndroidTest -卸载调试版本的android(在设备上)测试。&lt;/p&gt;
+&lt;p&gt;uninstallRelease——卸载发布版本。&lt;/p&gt;
+&lt;h2 id=&#34;build-tasks&#34;&gt;Build tasks&lt;/h2&gt;
+&lt;p&gt;assemble - Assemble main outputs for all the variants.&lt;br&gt;
+assembleAndroidTest - Assembles all the Test applications.&lt;br&gt;
+build - Assembles and tests this project.&lt;br&gt;
+buildDependents - Assembles and tests this project and all projects that depend on it.&lt;br&gt;
+buildNeeded - Assembles and tests this project and all projects it depends on.&lt;br&gt;
+bundle - Assemble bundles for all the variants.&lt;br&gt;
+clean - Deletes the build directory.&lt;br&gt;
+cleanBuildCache - Deletes the build cache directory.&lt;br&gt;
+compileDebugAndroidTestSources&lt;br&gt;
+compileDebugSources&lt;br&gt;
+compileDebugUnitTestSources&lt;br&gt;
+compileReleaseSources&lt;br&gt;
+compileReleaseUnitTestSources&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;1、gradlew -v 查看当前项目所用的Gradle版本&lt;br&gt;
+2、gradlew clean 清除9GAG/app目录下的build文件夹&lt;br&gt;
+3、gradlew build 编译项目并生成相应的apk文件&lt;br&gt;
+4、gradlew assembleDebug 编译并打Debug包&lt;br&gt;
+5、gradlew assembleRelease 编译并打Release的包&lt;br&gt;
+6、gradlew installRelease Release 模式打包并安装&lt;br&gt;
+7、gradlew uninstallRelease 卸载Release模式包&lt;br&gt;
+使用gradlew命令行，更加容易操作，而且容易找出error，还可以更新或者下载配置好编译环境，如gradle的版本更新之类&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;context&#34;&gt;&lt;a href=&#34;https://www.jianshu.com/p/94e0f9ab3f1d&#34;&gt;Context&lt;/a&gt;&lt;/h1&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;android-studio快捷键&#34;&gt;Android Studio快捷键&lt;/h1&gt;
+&lt;h2 id=&#34;注释代码&#34;&gt;注释代码&lt;/h2&gt;
+&lt;p&gt;选中一行或几行代码，按“Ctrl + Shift+/”可以给将代码块注释在“/&lt;em&gt;”和“&lt;/em&gt;/”中。&lt;/p&gt;
+&lt;p&gt;再次按“Ctrl + Shift+/”可以取消注释。&lt;/p&gt;
+&lt;h2 id=&#34;批量替换&#34;&gt;批量替换&lt;/h2&gt;
+&lt;p&gt;Shift+F6&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;插件的使用&#34;&gt;插件的使用&lt;/h1&gt;
+&lt;h2 id=&#34;1butterknife插件使用&#34;&gt;1.ButterKnife插件使用&lt;/h2&gt;
+&lt;p&gt;注解框架 &lt;a href=&#34;https://github.com/JakeWharton/butterknife&#34;&gt;butterknife&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;1.在项目的bulid.gradle中添加依赖，如下图所示：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;classpath &#39;com.jakewharton:butterknife-gradle-plugin:10.2.3&#39; 	//butterknife插件,加入对应最新版本
+&lt;/code&gt;&lt;/pre&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;img src=&#34;https://gitee.com/sagerover/figurebed/raw/master//img/image-20201020234733471.png&#34; alt=&#34;image-20201020234733471&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;在APP的bulid.gradle中添加依赖：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;dependencies {
+//ButterKnife插件使用
+implementation &#39;com.jakewharton:butterknife:10.2.3&#39;
+annotationProcessor &#39;com.jakewharton:butterknife-compiler:10.2.3&#39;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;3.在 Activity 的 onCreate 方法中间 加入 ButterKnife.bind(this);&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;protected void onCreate(Bundle savedInstanceState) {
+    Bmob.initialize(this, &amp;quot;d26004a40bcb7e3f58360c2a17332282&amp;quot;);
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_register);
+    ButterKnife.bind(this);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;2simpleuml&#34;&gt;2.simpleUML&lt;/h2&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;9&#34;&gt;&lt;img src=&#34;https://gitee.com/sagerover/figurebed/raw/master//img/image-20201106155316170.png&#34; alt=&#34;image-20201106155316170&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;生成的UML图默认只有聚合类型的线条，可选中一个类图右键-Add某种关系，或者右键-Dependencies添加全部关系。  或者Alt+A全部选中，执行上述操作。左边有两栏操作按钮，都很简单：导入UML图、导出UML图、俯瞰图。&lt;/p&gt;
+&lt;p&gt;共有六中关系，从上到下依次为：泛化（继承）、实现、聚合、内部类、依赖、组合。再往下就是自动排列图形。&lt;/p&gt;
+&lt;p&gt;关于导出UML图，有六种格式可选择：BMP、GIF、JPEG、JPG、PNG、WBMP。缩放比例最大可调至400。关于六种格式，简单介绍下：　　BMP:Bitmap（位图格式），不压缩，容量大。在window环境最不容易出问题，使用广泛，适合单机使用。　　GIF:失真有损压缩格式。压缩时保证像素资料，丢失色彩资料。广泛应用。　　JPEG:有损高压缩的图像压缩格式。部分细节会被删除，不适合放大看。原图大小情况下，肉眼看没差边。　　PNG:为WEB图像订制的格式。与GIF相似，但色彩数要多很多。&lt;/p&gt;
+&lt;h1 id=&#34;注释规约阿里巴巴&#34;&gt;注释规约（阿里巴巴）&lt;/h1&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;10&#34;&gt;&lt;img src=&#34;https://gitee.com/sagerover/figurebed/raw/master//img/2020031923555056.jpg&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h1 id=&#34;如何从github下载项目的源代码包含git客户端直接下载vs下载&#34;&gt;&lt;a href=&#34;https://www.cnblogs.com/dathlin/p/9287777.html&#34;&gt;如何从github下载项目的源代码，包含git客户端，直接下载，vs下载&lt;/a&gt;&lt;/h1&gt;
+&lt;h2 id=&#34;1直接下载&#34;&gt;1.直接下载：&lt;/h2&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;11&#34;&gt;&lt;img src=&#34;https://gitee.com/sagerover/figurebed/raw/master//img/1203682-20180710101108753-1273498304.png&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;点击Download ZIP按钮，即可以实现下载源代码，解压，即可。这种方式比较简单直接，不需要你的电脑安装其他东西。&lt;/p&gt;
+&lt;h2 id=&#34;2使用git&#34;&gt;2.使用git&lt;/h2&gt;
+&lt;h3 id=&#34;1git-gui-here&#34;&gt;1.GIT GUI here&lt;/h3&gt;
+&lt;h3 id=&#34;2使用git命令git-bash-here从github上clone项目&#34;&gt;2.使用git命令（GIT Bash here）从github上clone项目&lt;/h3&gt;
+&lt;p&gt;首先创建本地仓库（实际上就是创建一个文件夹，放项目代码），然后cd进文件夹，&lt;/p&gt;
+&lt;p&gt;初始化空的git仓库&lt;/p&gt;
+&lt;p&gt;注意：这里不初始化也是可以clone的&lt;/p&gt;
+&lt;p&gt;然后git clone url（url表示项目网址）&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;12&#34;&gt;&lt;img src=&#34;https://gitee.com/sagerover/figurebed/raw/master//img/1121288-20180510170525781-847570201.png&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;然后就可以了，如果中途中断clone，文件夹不会显示任何文件。&lt;/p&gt;
+&lt;h2 id=&#34;3github-desktop下载httpsdesktopgithubcom&#34;&gt;3.GitHub Desktop下载:https://desktop.github.com/&lt;/h2&gt;
+&lt;h2 id=&#34;4软件内自带vcs下载&#34;&gt;4.软件内自带VCS下载&lt;/h2&gt;
+&lt;h1 id=&#34;android-studio使用&#34;&gt;Android Studio使用&lt;/h1&gt;
+&lt;p&gt;不用急着更新新版本，以后晚一点更新Android Studio，等插件都更新了才好&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://jingyan.baidu.com/article/95c9d20d63031fec4e7561eb.html&#34;&gt;挺好用的快捷键&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;1打开project-structurectrlaltshifts&#34;&gt;1.打开Project Structure（Ctrl+Alt+Shift+S）&lt;/h2&gt;
+&lt;p&gt;用于管理添加依赖&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;13&#34;&gt;&lt;img src=&#34;https://gitee.com/sagerover/figurebed/raw/master//img/image-20201108202529527.png&#34; alt=&#34;image-20201108202529527&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;2快速收起打开代码&#34;&gt;2.快速收起/打开代码&lt;/h2&gt;
+&lt;p&gt;windows下 ctrl+shift+（小键盘上的减号 -）&lt;br&gt;
+ctrl+shift+（小键盘上的减号 +）&lt;/p&gt;
+&lt;h2 id=&#34;3gradle下载慢或者失败&#34;&gt;&lt;a href=&#34;https://blog.csdn.net/l1692704089/article/details/107449527&#34;&gt;3.Gradle下载慢或者失败&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;查看gradle版本方法：&lt;/p&gt;
+&lt;p&gt;1.打开gradle-wrapper.properties 中的最后一行就是gradle版本&lt;br&gt;
+&lt;img src=&#34;https://gitee.com/sagerover/figurebed/raw/master//img/2020071919005453.png&#34; alt=&#34;在这里插入图片描述&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;2.ctrl+alt+shift+s打开项目结构&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;14&#34;&gt;&lt;img src=&#34;https://gitee.com/sagerover/figurebed/raw/master//img/20200719190109495.png&#34; alt=&#34;在这里插入图片描述&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;下载网址https://services.gradle.org/distributions/    	找到对应的版本进行下载&lt;/p&gt;
+&lt;p&gt;我的gradle地址为	C:\Users\Sage.gradle\wrapper\dists\gradle-6.5-bin.zip&lt;/p&gt;
+&lt;p&gt;将下载后的gradle版本和之前的gradle进行替换之后&lt;/p&gt;
+&lt;p&gt;手动修改gradle-wrapper.properties中的gradle路径问本地路径：&lt;img src=&#34;https://gitee.com/sagerover/figurebed/raw/master//img/image-20201106195727418.png&#34; alt=&#34;image-20201106195727418&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;重启AndroidStdio就OK了&lt;/p&gt;
+&lt;h2 id=&#34;4类结构查看工具structure详解&#34;&gt;4.&lt;a href=&#34;https://blog.csdn.net/pigdreams/article/details/83182082&#34;&gt;类结构查看工具Structure详解&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;1java类的基本组成内容信息图形表示&#34;&gt;1.Java类的基本组成内容信息图形表示&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;TextView一个方法的表示&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;15&#34;&gt;&lt;img src=&#34;https://gitee.com/sagerover/figurebed/raw/master//img/image-20201105230134579.png&#34; alt=&#34;image-20201105230134579&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;structure小符号意义&#34;&gt;structure小符号意义&lt;/h3&gt;
+&lt;p&gt;1.C——class&lt;br&gt;
+2.f——fields 字段，属性，域，变量&lt;br&gt;
+3.m——meth member function成员函数&lt;br&gt;
+4.I——interface接口&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://gitee.com/sagerover/figurebed/raw/master//img/image-20201105224852541.png&#34; alt=&#34;image-20201105224852541&#34; style=&#34;zoom:200%;&#34; /&gt;&lt;/th&gt;
+&lt;th&gt;public&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://gitee.com/sagerover/figurebed/raw/master//img/image-20201105224940726.png&#34; alt=&#34;image-20201105224940726&#34; style=&#34;zoom:200%;&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;private&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;TextView的类结构信息如下图(筛选全选)&lt;br&gt;
+&lt;img src=&#34;https://img-blog.csdn.net/20181019141452263?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BpZ2RyZWFtcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70&#34; alt=&#34;在这里插入图片描述&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;1java类的基本组成内容信息图形表示-2&#34;&gt;1.Java类的基本组成内容信息图形表示&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;TextView一个方法的表示&lt;br&gt;
+&lt;img src=&#34;https://img-blog.csdn.net/20181019141532307?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BpZ2RyZWFtcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70&#34; alt=&#34;在这里插入图片描述&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;TextView一个字段的表示&lt;br&gt;
+&lt;img src=&#34;https://img-blog.csdn.net/20181019141557554?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BpZ2RyZWFtcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70&#34; alt=&#34;在这里插入图片描述&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2所有图标的分类详解&#34;&gt;2.所有图标的分类详解&lt;/h3&gt;
+&lt;h4 id=&#34;21类基本组成内容&#34;&gt;2.1.类基本组成内容&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;类型&lt;/th&gt;
+&lt;th&gt;图标&lt;/th&gt;
+&lt;th&gt;示例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;类-Class-C&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://img-blog.csdn.net/20181019141702678?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BpZ2RyZWFtcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70&#34; alt=&#34;在这里插入图片描述&#34; loading=&#34;lazy&#34;&gt;&lt;/td&gt;
+&lt;td&gt;public class TextView extends View&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;接口-interface-I&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://img-blog.csdn.net/2018101914172953?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BpZ2RyZWFtcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70&#34; alt=&#34;在这里插入图片描述&#34; loading=&#34;lazy&#34;&gt;&lt;/td&gt;
+&lt;td&gt;public interface OnEditorActionListener&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;注解-annotation-@&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://img-blog.csdn.net/20181019141747217?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BpZ2RyZWFtcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70&#34; alt=&#34;在这里插入图片描述&#34; loading=&#34;lazy&#34;&gt;&lt;/td&gt;
+&lt;td&gt;public @interface AutoSizeTextType&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;枚举-enum-E&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://img-blog.csdn.net/20181019141803540?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BpZ2RyZWFtcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70&#34; alt=&#34;在这里插入图片描述&#34; loading=&#34;lazy&#34;&gt;&lt;/td&gt;
+&lt;td&gt;public enum BufferType&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;方法-Method-m&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://img-blog.csdn.net/20181019141819219?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BpZ2RyZWFtcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70&#34; alt=&#34;在这里插入图片描述&#34; loading=&#34;lazy&#34;&gt;&lt;/td&gt;
+&lt;td&gt;public TextView(Context context)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;字段-Field-f&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://img-blog.csdn.net/20181019141833847?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BpZ2RyZWFtcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70&#34; alt=&#34;在这里插入图片描述&#34; loading=&#34;lazy&#34;&gt;&lt;/td&gt;
+&lt;td&gt;private CharSequence mText;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;22修饰符&#34;&gt;2.2.修饰符&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;类型&lt;/th&gt;
+&lt;th&gt;图标&lt;/th&gt;
+&lt;th&gt;示例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;static&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://img-blog.csdn.net/20181019142018563?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BpZ2RyZWFtcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70&#34; alt=&#34;在这里插入图片描述&#34; loading=&#34;lazy&#34;&gt;&lt;/td&gt;
+&lt;td&gt;static long sLastCutCopyOrTextChangedTime;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;final&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://img-blog.csdn.net/20181019142031742?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BpZ2RyZWFtcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70&#34; alt=&#34;在这里插入图片描述&#34; loading=&#34;lazy&#34;&gt;&lt;/td&gt;
+&lt;td&gt;private final TextPaint mTextPaint;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;23访问权限&#34;&gt;2.3.访问权限&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;类型&lt;/th&gt;
+&lt;th&gt;图标&lt;/th&gt;
+&lt;th&gt;示例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;公共-public&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://img-blog.csdn.net/2018101914185383?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BpZ2RyZWFtcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70&#34; alt=&#34;在这里插入图片描述&#34; loading=&#34;lazy&#34;&gt;&lt;/td&gt;
+&lt;td&gt;public boolean onDragEvent(DragEvent event)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;保护-protected&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://img-blog.csdn.net/20181019141905857?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BpZ2RyZWFtcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70&#34; alt=&#34;在这里插入图片描述&#34; loading=&#34;lazy&#34;&gt;&lt;/td&gt;
+&lt;td&gt;@Override protected void onAttachedToWindow()&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;默认(包访问)-default&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://img-blog.csdn.net/20181019141922343?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BpZ2RyZWFtcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70&#34; alt=&#34;在这里插入图片描述&#34; loading=&#34;lazy&#34;&gt;&lt;/td&gt;
+&lt;td&gt;int mCursorDrawableRes;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;私有-private&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://img-blog.csdn.net/20181019142002903?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BpZ2RyZWFtcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70&#34; alt=&#34;在这里插入图片描述&#34; loading=&#34;lazy&#34;&gt;&lt;/td&gt;
+&lt;td&gt;private CharSequence mText;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;24继承&#34;&gt;2.4继承&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;类型&lt;/th&gt;
+&lt;th&gt;图标&lt;/th&gt;
+&lt;th&gt;示例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;实现-implements&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://gitee.com/sagerover/figurebed/raw/master//img/image-20201105232129861.png&#34; alt=&#34;image-20201105232129861&#34; loading=&#34;lazy&#34;&gt;&lt;img src=&#34;https://gitee.com/sagerover/figurebed/raw/master//img/image-20201105232326085.png&#34; alt=&#34;image-20201105232326085&#34; loading=&#34;lazy&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://gitee.com/sagerover/figurebed/raw/master//img/image-20201105232620568.png&#34; alt=&#34;image-20201105232620568&#34; loading=&#34;lazy&#34;&gt;@Override&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;被实现-implemented&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://gitee.com/sagerover/figurebed/raw/master//img/image-20201105232453283.png&#34; alt=&#34;image-20201105232453283&#34; loading=&#34;lazy&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://gitee.com/sagerover/figurebed/raw/master//img/image-20201105232654303.png&#34; alt=&#34;image-20201105232654303&#34; loading=&#34;lazy&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;3工具栏筛选选项详解&#34;&gt;3.工具栏筛选选项详解&lt;/h3&gt;
+&lt;p&gt;当所有的筛选选项都不选择时，类信息的排序默认是按照在文件中的顺序进行排列，默认不显示字段内容，并且只显示public权限的内容。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;工具栏筛选都不选的情况下TextView显示信息&lt;br&gt;
+&lt;img src=&#34;https://img-blog.csdn.net/20181019142053486?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BpZ2RyZWFtcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70&#34; alt=&#34;在这里插入图片描述&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;31-按访问权限排序&#34;&gt;3.1 按访问权限排序&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://img-blog.csdn.net/20181019142110937?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BpZ2RyZWFtcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70&#34; alt=&#34;在这里插入图片描述&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;strong&gt;sort by visibility&lt;/strong&gt;&lt;br&gt;
+按照对外可见性的权限大小进行排序，public-&amp;gt;protect-&amp;gt;default-&amp;gt;private&lt;/p&gt;
+&lt;h4 id=&#34;32-按字母表顺序进行排序&#34;&gt;3.2 按字母表顺序进行排序&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://img-blog.csdn.net/20181019142123938?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BpZ2RyZWFtcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70&#34; alt=&#34;在这里插入图片描述&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;strong&gt;Sort Alphabetically&lt;/strong&gt;&lt;br&gt;
+按照字母表A-&amp;gt;Z的顺序大小进行排序，选中后，Textview结构图示例如下&lt;br&gt;
+&lt;img src=&#34;https://img-blog.csdn.net/20181019142138226?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BpZ2RyZWFtcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70&#34; alt=&#34;在这里插入图片描述&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+可以看到排列顺序是分不同组别的，非方法与非字段的其它内容一组，方法一组，字段一组,同组之间的内容排序才是按照字母表顺序进行的。&lt;/p&gt;
+&lt;h4 id=&#34;33-方法的覆盖或实现分组&#34;&gt;3.3 方法的覆盖或实现分组&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://img-blog.csdn.net/20181019142305235?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BpZ2RyZWFtcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70&#34; alt=&#34;在这里插入图片描述&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;strong&gt;Group Methods by Defining type&lt;/strong&gt;&lt;br&gt;
+选中后，将会把类中实现的接口或者覆盖的父类方法放在同一个组中，便于查阅。&lt;/p&gt;
+&lt;h4 id=&#34;34-bean类属性的分组&#34;&gt;3.4 bean类属性的分组&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://img-blog.csdn.net/20181019142343688?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BpZ2RyZWFtcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70&#34; alt=&#34;在这里插入图片描述&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;strong&gt;Show Propertied&lt;/strong&gt;&lt;br&gt;
+选中后，会将类中的所有bean属性变量单独分组，带有getter或者setter方法。如下图&lt;br&gt;
+&lt;img src=&#34;https://img-blog.csdn.net/20181019142357348?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BpZ2RyZWFtcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70&#34; alt=&#34;在这里插入图片描述&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;35-显示字段默认不显示&#34;&gt;3.5 显示字段(默认不显示)&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://img-blog.csdn.net/20181019142423769?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BpZ2RyZWFtcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70&#34; alt=&#34;在这里插入图片描述&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;strong&gt;Show Fields&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;36-显示非公有内容&#34;&gt;3.6 显示非公有内容&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://img-blog.csdn.net/20181019142455264?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BpZ2RyZWFtcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70&#34; alt=&#34;在这里插入图片描述&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;strong&gt;Show no-Public&lt;/strong&gt;&lt;br&gt;
+选中后，会将所有的非公有内容都显示出来，包括内部类，字段，方法等。&lt;/p&gt;
+&lt;h4 id=&#34;37-显示继承的内容&#34;&gt;3.7 显示继承的内容&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://img-blog.csdn.net/20181019142522457?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BpZ2RyZWFtcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70&#34; alt=&#34;在这里插入图片描述&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;strong&gt;Show Inherited&lt;/strong&gt;&lt;br&gt;
+选中后会将父类所拥有的属性或者方法(主要是public,protected权限)都显示出来&lt;br&gt;
+inherited——继承&lt;/p&gt;
+&lt;h4 id=&#34;38-显示匿名类&#34;&gt;3.8 显示匿名类&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://img-blog.csdn.net/20181019142614731?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BpZ2RyZWFtcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70&#34; alt=&#34;在这里插入图片描述&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;strong&gt;Show anonymous Classes&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;39-显示lambdas表达式&#34;&gt;3.9 显示lambdas表达式&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://img-blog.csdn.net/20181019142627205?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BpZ2RyZWFtcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70&#34; alt=&#34;在这里插入图片描述&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;strong&gt;Show lambdas&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;310-全部展开与全部折叠&#34;&gt;3.10 全部展开与全部折叠&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://img-blog.csdn.net/20181019142640448?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BpZ2RyZWFtcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70&#34; alt=&#34;在这里插入图片描述&#34; loading=&#34;lazy&#34;&gt;展开expand all&lt;br&gt;
+&lt;img src=&#34;https://img-blog.csdn.net/2018101914265291?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BpZ2RyZWFtcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70&#34; alt=&#34;在这里插入图片描述&#34; loading=&#34;lazy&#34;&gt;展开collapse all&lt;/p&gt;
+&lt;h4 id=&#34;311-自动定位&#34;&gt;3.11 自动定位&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://img-blog.csdn.net/20181019142701820?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BpZ2RyZWFtcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70&#34; alt=&#34;在这里插入图片描述&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+左侧选择方法等内容右侧源码自动定位 AutoScroll to source&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img-blog.csdn.net/20181019142710927?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BpZ2RyZWFtcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70&#34; alt=&#34;在这里插入图片描述&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+右侧选择源码左侧内容自动定位 AutoScroll from source&lt;/p&gt;
+&lt;h2 id=&#34;5何快速抽离出一个方法&#34;&gt;5.&lt;a href=&#34;https://jingyan.baidu.com/article/948f5924fa8049d80ef5f94a.html&#34;&gt;何快速抽离出一个方法&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;6altenter-显示提示框&#34;&gt;6.Alt+Enter 显示提示框&lt;/h2&gt;
+&lt;h2 id=&#34;7快速输入for循环&#34;&gt;7.快速输入for循环&lt;/h2&gt;
+&lt;p&gt;fori	或者	输入for，Alt+Shift+Enter&lt;/p&gt;
+&lt;h2 id=&#34;8快捷键ctrlo查看需要重写的方法&#34;&gt;8.快捷键Ctrl+O查看需要重写的方法&lt;/h2&gt;
+&lt;h1 id=&#34;apk文件压缩&#34;&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/25865835&#34;&gt;APK文件压缩&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;一般说来，classes.dex, 它包含了我们所写的Java代码经过编译后class文件；resources.arsc 包含了预编译之后的资源文件（比如values文件，XML drawables 文件等。）。&lt;/p&gt;
+&lt;h2 id=&#34;解决混淆压缩出现cannot-fit-requested-classes-in-a-single-dex-file的问题&#34;&gt;&lt;a href=&#34;https://blog.csdn.net/MRYZJ/article/details/103463212&#34;&gt;解决混淆压缩出现“Cannot fit requested classes in a single dex file”的问题&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;问题描述&lt;/p&gt;
+&lt;p&gt;编译时出现&lt;code&gt;Cannot fit requested classes in a single dex file (# methods: 73436 &amp;gt; 65536)&lt;/code&gt;的问题。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：项目貌似有点大，已经超过65k个方法。一个dex已经装不下了，需要个多个dex，也就是multidex ，因为Android系统定义总方法数是一个short int，short int 最大值为65536。&lt;/p&gt;
+&lt;h1 id=&#34;问题解决&#34;&gt;问题解决&lt;/h1&gt;
+&lt;h2 id=&#34;1entry-name-rescolormaterial_on_surface_disabledxml-collided&#34;&gt;1.Entry name &#39;res/color/material_on_surface_disabled.xml&#39; collided&lt;/h2&gt;
+&lt;p&gt;点build，clean project清除一下缓存就好了&lt;/p&gt;
+&lt;h2 id=&#34;2gradle命令错误errorunable-to-start-the-daemon-process-this-problem-might-be-caused-by-incorrect-configuration-of&#34;&gt;2.gradle命令错误——Error:Unable to start the daemon process. This problem might be caused by incorrect configuration of&lt;/h2&gt;
+&lt;p&gt;找到工程文件下的gradle.properties文件，修改其中 org.gradle.jvmargs s的值&lt;br&gt;
+org.gradle.jvmargs=-Xmx1024m&lt;/p&gt;
+&lt;h2 id=&#34;3解决-fatal-not-a-git-repository-or-any-of-the-parent-directories-git-问题&#34;&gt;3解决 fatal: Not a git repository (or any of the parent directories): .git 问题&lt;/h2&gt;
+&lt;p&gt;git init&lt;/p&gt;
+&lt;h2 id=&#34;4恢复删除的文件撤回操作&#34;&gt;4.恢复删除的文件，撤回操作&lt;/h2&gt;
+&lt;p&gt;项目名右键——Local History——Show History&lt;/p&gt;
+&lt;img src=&#34;https://gitee.com/sagerover/figurebed/raw/master//img/image-20201115220523662.png&#34; alt=&#34;image-20201115220523662&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h2 id=&#34;5远程主机强迫关闭了一个现有的连接adbexe已停止工作&#34;&gt;5.远程主机强迫关闭了一个现有的连接(adb.exe已停止工作)&lt;/h2&gt;
+&lt;p&gt;adb.exe的端口被占用了。&lt;/p&gt;
+&lt;p&gt;可以先试试用adb kill-server 和 adb start-server试试能不能解决，如果不能解决&lt;/p&gt;
+&lt;p&gt;1、开始-运行-cmd 或者 Android Studio下的 terminal 打开终端窗口。输入 netstat -aon|findstr &amp;quot;5037&amp;quot; 查看5037端口都有哪些进程，如下图：&lt;/p&gt;
+&lt;p&gt;2、然后在根据其PID进程号来找出该进程（上图中的最后一行）。&lt;/p&gt;
+&lt;p&gt;如上图可以发现5037端口被PID为5884的进程占用，输入  tasklist|findstr &amp;quot;2748&amp;quot; ，找出该进程，如下图：&lt;/p&gt;
+&lt;p&gt;3、这里studio64.exe是正常的，如果你的是其他进程的话，就要结束它了（taskkill /f /pid 459616）。&lt;/p&gt;
+&lt;p&gt;上述无法解决，执行以下cmd命令&lt;/p&gt;
+&lt;p&gt;3.adb nodaemon server&lt;/p&gt;
+&lt;h2 id=&#34;6连续点击出现多个activity界面&#34;&gt;6.连续点击出现多个Activity界面&lt;/h2&gt;
+&lt;p&gt;复习一下activity的[启动模式](# 8.活动的启动模式)。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;前言&lt;/strong&gt;&lt;br&gt;
+开始始学习android，对android的启动模式没有什么了解，就使用了时间判断是否重复点击了两次按钮，启动另外的activity界面，这样的控制方法，有时候会失效，比如，两秒钟还未启动另外的activity，那么又可以重复点击。所以，就调整为android的启动模式来控制重复出现多个acitvity。&lt;/p&gt;
+&lt;h3 id=&#34;一-通过时间控制点击次数&#34;&gt;一、通过时间控制点击次数：&lt;/h3&gt;
+&lt;p&gt;这种方式对应控制网络请求不错。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;public class NoDoubleClickUtil {
+    private static long lastClickTime;
+    private final static int SPACE_TIME =2000;
+
+    public static void initLastClickTime() {
+        lastClickTime = 0;
+    }
+
+    public synchronized static boolean isDoubleClick() {
+        long currentTime = System.currentTimeMillis();
+        boolean isClickDouble;
+        if (currentTime - lastClickTime &amp;gt;
+                SPACE_TIME) {
+            isClickDouble = false;
+        } else {
+            isClickDouble = true;
+        }
+        lastClickTime = currentTime;
+        return isClickDouble;
+    }
+}123456789101112131415161718192021
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;二-通过launchmode启动模式控制出现多个activity的方式&#34;&gt;二、通过launchMode启动模式控制出现多个activity的方式：&lt;/h3&gt;
+&lt;p&gt;这种方式真正意义上杜绝了同时出现相同的多个activity。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;    &amp;lt;activity android:name=&amp;quot;.InternetHospital.InternetHospitalInquiryCallUI&amp;quot;
+            android:launchMode=&amp;quot;singleInstance&amp;quot;/&amp;gt;12
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;或者在代码中设置：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;Intent intent = new Intent();
+intent.setClass(getApplicationContext(), TargetActivity.class);
+intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+startActivity(intent);1234
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;h3 id=&#34;三-android的四种启动模式&#34;&gt;三、android的四种启动模式：&lt;/h3&gt;
+&lt;p&gt;1、standard模式：每次调用startActivity()启动时都会创建一个新的Activity放在栈顶（&lt;strong&gt;默认都是这个模式&lt;/strong&gt;）&lt;br&gt;
+2、singleTop模式：启动Activity时，指定Activity不在栈顶就创建，如在栈顶，则不再创建（&lt;strong&gt;不会出现两个相同的Activity相邻&lt;/strong&gt;）&lt;br&gt;
+3、singleTask模式：如果启动的Activity不存在就创建Activity，如果存在直接跳转到指定的Activity所在位置（&lt;strong&gt;在其上面的Activity会被移出栈,也就是一个栈中不能有重复的Activity&lt;/strong&gt;）&lt;br&gt;
+4、singleInstance模式：如果启动的Activity不存在就创建一个Activity同时创建一个栈，如果存在就将指定的Activity存在的栈移动到栈顶（&lt;strong&gt;表示这个Activity只能存在于一个独立的任务栈中,同应用的其它Activity与其无关&lt;/strong&gt;）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;recyclerview可以通过xml文件中添加 android:splitMotionEvents=&amp;quot;false&amp;quot; 属性&lt;/p&gt;
+&lt;p&gt;android:splitMotionEvents：定义布局是否传递触摸事件（touch）到子布局，true表示传递给子布局，false表示不传递。&lt;br&gt;
+例如：在你的Activity页面中有一个ImageView控件，这时你做一个滑动屏幕跳转页面和滑动ImageView切换图片，如果你将android:splitMotionEvents设置为false，你的切换图片功能将会无法实现，因为图片属于子布局，且他接收不到父布局传递过来的触摸事件。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;7recyclerview重复点击问题1重写onitemclicklistener-构造抽象类-onnodoubleclicklistener-实现-onitemclicklistener&#34;&gt;7.[recyclerview重复点击问题](#1.重写OnItemClickListener ，构造抽象类 OnNoDoubleClickListener 实现 OnItemClickListener)&lt;/h2&gt;
+&lt;h3 id=&#34;1重写点击事件-封装一个点击事件处理点击间隔判断&#34;&gt;1.重写点击事件     ——封装一个点击事件，处理点击间隔判断&lt;/h3&gt;
+&lt;p&gt;缺点：相比于第2种方式，这种方法将重复点击的判断封装在CustomClickListener内部，外部无需处理时间判断，只需要实现点击方法即可。&lt;/p&gt;
+&lt;h3 id=&#34;2利用系统时间差每个按钮点击事件中记录点击时间判断是否超过点击时间间隔&#34;&gt;2.利用系统时间差——每个按钮点击事件中，记录点击时间，判断是否超过点击时间间隔&lt;/h3&gt;
+&lt;p&gt;缺点：这种方式，每个点击事件都需要写一个时间判断，重复代码很多。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;    //全局定义
+    private long lastClickTime = 0L;
+    // 两次点击间隔不能少于1000ms
+    private static final int FAST_CLICK_DELAY_TIME = 1000; 
+
+    //在设置Item的监听时
+    item.setOnItemClickListener(xxx){
+       if (System.currentTimeMillis() - lastClickTime &amp;gt;= FAST_CLICK_DELAY_TIME) {
+            //下面进行其他操作，比如跳转等
+            XXX
+            lastClickTime = System.currentTimeMillis();
+        }  
+    }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;3工具类用于判断是否快速点击现在想想这个好像会简单点&#34;&gt;3.￥￥工具类，用于判断是否快速点击（现在想想这个好像会简单点）&lt;/h3&gt;
+&lt;p&gt;该方法与方法 2 的原理类似：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;    // 两次点击间隔不能少于1000ms
+    private static final int FAST_CLICK_DELAY_TIME = 1000; 
+    private static long lastClickTime;
+
+    public static boolean isFastClick() {
+        boolean flag = true;
+        long currentClickTime = System.currentTimeMillis();
+        if ((currentClickTime - lastClickTime) &amp;gt;= FAST_CLICK_DELAY_TIME ) {
+            flag = false;
+        }
+        lastClickTime = currentClickTime;
+        return flag;
+    }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Utils.isFastClick()) {
+                    // 进行点击事件后的逻辑操作
+                }
+            }
+        });
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;4使用-rxjava-的-throttlefirst&#34;&gt;&lt;a href=&#34;https://blog.csdn.net/hust_twj/article/details/78742453&#34;&gt;4.使用 RxJava 的 throttleFirst()&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;响应式地处理按钮点击，利用rxjava的操作符，来防止重复点击，相较于第1,2方案来说，此方法更为优雅一些。&lt;/p&gt;
+&lt;h5 id=&#34;思考一下&#34;&gt;思考一下：&lt;/h5&gt;
+&lt;p&gt;这三种方法，不论哪一种，都对原有点击事件有很大的侵入性，要么你需要往Click事件中加方法，要么你需要替换整个Click事件，那么，有没有一种方式，可以在不改动原有逻辑的情况下，又能很好地处理按钮的重复点击呢？&lt;/p&gt;
+&lt;h3 id=&#34;5引入aop&#34;&gt;&lt;a href=&#34;https://juejin.cn/post/6844903816131772423&#34;&gt;5.引入AOP&lt;/a&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;8raw-use-of-parameterized-class-xxxx-警告&#34;&gt;8.Raw use of parameterized class &#39;xxxx&#39; 警告&lt;/h2&gt;
+&lt;h3 id=&#34;意思参数化类的原始使用&#34;&gt;意思：“参数化类的原始使用”&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;泛型不要使用原生态类型 会导致&lt;/strong&gt; 丢失类型安全性&lt;/p&gt;
+&lt;h3 id=&#34;解决方法&#34;&gt;解决方法&lt;/h3&gt;
+&lt;p&gt;意思是这个类要使用泛型 在类后面加上，&amp;lt;&amp;gt; 对应泛型&lt;/p&gt;
+&lt;h3 id=&#34;例如&#34;&gt;例如&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;FilterRegistrationBean
+FilterRegistrationBean&amp;lt;HeaderFilter&amp;gt;  // HeaderFilter 自定义的过滤器
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;为什么会出现这个警告&#34;&gt;为什么会出现这个警告？&lt;/h3&gt;
+&lt;p&gt;因为 FilterRegistrationBean 是一个泛型类&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;FilterRegistrationBean&amp;lt;T extends Filter&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;9removeint-is-deprecated过时&#34;&gt;9.&#39;remove(int)&#39; is deprecated(过时)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;adapter.remove(position);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;尝试了以下这种解决方法，但事实上根本不行&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;adapter.removeAt(position);
+adapter.notifyDataSetChanged();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;仍待解决？&lt;/p&gt;
+&lt;h1 id=&#34;待解决&#34;&gt;待解决&lt;/h1&gt;
+&lt;ul class=&#34;contains-task-list&#34;&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input class=&#34;task-list-item-checkbox&#34; disabled=&#34;&#34; type=&#34;checkbox&#34; id=&#34;task-item-6232648&#34;&gt;&lt;label class=&#34;task-list-item-label&#34; for=&#34;task-item-6232648&#34;&gt; 点击放大了，但是感觉圆角效果还是待改善&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input class=&#34;task-list-item-checkbox&#34; disabled=&#34;&#34; type=&#34;checkbox&#34; id=&#34;task-item-1514308&#34;&gt;&lt;label class=&#34;task-list-item-label&#34; for=&#34;task-item-1514308&#34;&gt; RippleDrawable涟漪效果了解了一些，会了一点点，但是RecyclerView中的图片点击效果还有一点不够完善。——继续学习&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input class=&#34;task-list-item-checkbox&#34; disabled=&#34;&#34; type=&#34;checkbox&#34; id=&#34;task-item-5285787&#34;&gt;&lt;label class=&#34;task-list-item-label&#34; for=&#34;task-item-5285787&#34;&gt; 触发事件功能还要继续琢磨&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input class=&#34;task-list-item-checkbox&#34; disabled=&#34;&#34; type=&#34;checkbox&#34; id=&#34;task-item-5379076&#34;&gt;&lt;label class=&#34;task-list-item-label&#34; for=&#34;task-item-5379076&#34;&gt; 多版本xml文件理解&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input class=&#34;task-list-item-checkbox&#34; disabled=&#34;&#34; type=&#34;checkbox&#34; id=&#34;task-item-5475403&#34;&gt;&lt;label class=&#34;task-list-item-label&#34; for=&#34;task-item-5475403&#34;&gt; context理解&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;
+">Android</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://SageRover.github.io/post/success/"" data-c="
+          &lt;p&gt;simple和paper主题不错。simple细节稍差。&lt;br&gt;
+&lt;img src=&#34;https://SageRover.github.io/post-images/1627870509474.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+好看的有：clean，paper，pure，nederburg&lt;/p&gt;
+">Success</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://SageRover.github.io/post/cheng-xu-yuan-ji-chu/"" data-c="
+          &lt;h1 id=&#34;字符编码问题&#34;&gt;&lt;a href=&#34;https://www.cnblogs.com/geogre123/p/10060605.html&#34;&gt;字符编码问题&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;一旦走上了编程之路，如果你不把编码问题搞清楚，那么他将像幽灵一样纠缠你的整个职业生涯，各种灵异事件接踵而至，挥之不去。只有充分发挥程序员死磕到底的精神，你猜有可能彻底摆脱编码问题带来的烦恼。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ASCII                  占1个字节，只支持英文
+ANSI
+
+GB2312                 占2个字节，支持6700+中文
+GBK                    GB2312的升级版，支持21000+汉字
+
+shift-JIS              日本字符
+
+ks_c_5601-1987         韩国编码
+
+TIS-620                泰国编码
+
+unicode
+UTF-8
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;由于每个国家都有自己的字符，所以其对应关系也涵盖了自己国家的字符，但是以上编码都存在局限性，应运而生，出现了万国码，它涵盖了全球所有的文字和二进制的对应关系。&lt;/p&gt;
+&lt;p&gt;unicode 2-4字节，已经收录136690个字符，并还在一致不断扩张中...&lt;/p&gt;
+&lt;p&gt;unicode解决了字符和二进制的对应关系，但是使用unicode表示一个字符，太浪费空间，例如：利用unicode表示&amp;quot;Python&amp;quot;需要12个字节，比原来的ASCII增加了一倍！&lt;/p&gt;
+&lt;p&gt;为了解决存储和网络传输的问题，出现了Unicode Transformation Format ,学术名：UTF。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;UTF-8  :使用1,2,3,4个字节表示所有字符，优先使用1个字符，无法满足则增加一个字节，最多4个         【英文占1个，欧洲语系占2个，东亚占3个，其他及特殊字符占4个】
+
+UTF-16 :使用2,4个字节表示所有字符，优先使用2个字节，否则使用4个。
+
+UTF-32 :使用4个字节表示所有字符。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;总结：UTF是为unicode编码涉及的一种在存储和传输时节省空间的编码方案。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;字符在硬盘上的存储&#34;&gt;&lt;strong&gt;字符在硬盘上的存储：&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;无论以什么编码在内存里显示字符，存到硬盘上都是二进制。要注意的是，存到硬盘上时是以何种编码存的，再从硬盘上读取出来时，就必须以何种编码读。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;虽然国际语言是英语，但是大家在自己的国家依然说自己的语言，不过出了国，你就得学会英语，编码也一样，虽然有了UTF-8，但是由于历史原因，各个国家依然在大量使用自己的编码，         比如中国的Windows，默认编码依然是GBK，而不是UTF-8&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;编码转换过程&#34;&gt;编码转换过程：&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://img2018.cnblogs.com/blog/1373275/201812/1373275-20181204102533132-966118881.png&#34;&gt;&lt;img src=&#34;https://gitee.com/sagerover/figurebed/raw/master//img/20210802034357.png&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;实际代码演练中，在py3上，把你的代码以utf-8编写，保存，然后再Windows上执行。&lt;/p&gt;
+&lt;p&gt;so一切都很美好，到这里，我们关于编码的学习按说就可以结束了。&lt;/p&gt;
+&lt;p&gt;但是，如生活一样，美好的表面下，总是隐藏着不进入人意，上面的UTF-8编码之所以能在Windows GBK的终端下显示正常，是因为到了内存里python解释器吧utf-8转成了unicode，单这只是Python3，并不是所有的编程语言在内存里默认编码都是unicode，比如万恶的Python2就不是，他的默认编码是ASCII，想写中文就必须声明文件头的coding为gbk或者UTF-8，声明之后，python2解释器仅以文件头生命的编码去解释你的代码，加载到内存后，并不会主动帮你转成Unicode，也就是说你的文件编码是UTF-8加载到内存里，你的变量字符串就也是UTF-8，这意味着什么你知道吗？&lt;/p&gt;
+&lt;p&gt;意味着你以UTF-8编码的文件，在Windows是乱码。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://gitee.com/sagerover/figurebed/raw/master//img/image-20210802031947524.png&#34; alt=&#34;image-202108020319475246&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;乱是正常的，不乱才不正常，因为只有两种情况，你的Windows上显示才不会乱。&lt;/p&gt;
+&lt;p&gt;1.字符串以GBK格式显示&lt;/p&gt;
+&lt;p&gt;2.字符串是unicode编码&lt;/p&gt;
+&lt;p&gt;既然Python2并不会自动的把文件编码转换为unicode存在内存里，那就只能使出最后一招了，你自己人肉转。Py3自动把文件编码转为unicode必定是调用了什么方法，这个方法就是，decode(解码)&lt;/p&gt;
+&lt;p&gt;和encode(编码)。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;UTF-8  ---&amp;gt;  decode解码 ---&amp;gt; Unicode
+Unicode ---&amp;gt;  encode编码---&amp;gt;GBK/UTF-8
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;decode实例：&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;a href=&#34;https://img2018.cnblogs.com/blog/1373275/201812/1373275-20181204112710708-1348355890.png&#34;&gt;&lt;img src=&#34;https://gitee.com/sagerover/figurebed/raw/master//img/20210802034744.png&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;p&gt;encode实例：&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;a href=&#34;https://img2018.cnblogs.com/blog/1373275/201812/1373275-20181204113007867-1385459295.png&#34;&gt;&lt;img src=&#34;https://gitee.com/sagerover/figurebed/raw/master//img/20210802035000.png&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;p&gt;记住下图规则：&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;a href=&#34;https://img2018.cnblogs.com/blog/1373275/201812/1373275-20181204113300426-448572925.png&#34;&gt;&lt;img src=&#34;https://gitee.com/sagerover/figurebed/raw/master//img/1373275-20181204113300426-448572925.png&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;p&gt;一般UTF-8一个中文占三个字节，GBK一个占2个字节。&lt;/p&gt;
+&lt;h2 id=&#34;python-bytes类型&#34;&gt;Python bytes类型&lt;/h2&gt;
+&lt;p&gt;在python2上写字符串。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;a href=&#34;https://img2018.cnblogs.com/blog/1373275/201812/1373275-20181204113834762-701867038.png&#34;&gt;&lt;img src=&#34;https://gitee.com/sagerover/figurebed/raw/master//img/20210802035101.png&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;p&gt;虽说打印的是路飞，但是直接调用变量s.看到的却是一个个的16进制表示的二进制字节，我们怎么称呼这样的数据呢？直接叫二进制么？也可以，但相比于010101，这个数据穿在表示形式上又把2进制转成了16进制来表示，这是为什么呢？哈，为的就是让人们看起来更可读，我们称之为bytes类型，即字节类型，他把8个二进制一组称为一个byte,用16进制来表示。&lt;/p&gt;
+&lt;p&gt;想告诉你一个事实，Python2里面bytes == str，其实这是一回事，除此之外，python2里面还有个单独的类型是unicode，把字符串解码后，就会变成unicode。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;a href=&#34;https://img2018.cnblogs.com/blog/1373275/201812/1373275-20181204114814699-1897337592.png&#34;&gt;&lt;img src=&#34;https://gitee.com/sagerover/figurebed/raw/master//img/20210802035052.png&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;a href=&#34;https://img2018.cnblogs.com/blog/1373275/201812/1373275-20181204114849432-1802759709.png&#34;&gt;&lt;img src=&#34;https://gitee.com/sagerover/figurebed/raw/master//img/20210802035044.png&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;p&gt;python的发展越来越快，已经不能再修修补补。Python3横空出世，&lt;/p&gt;
+&lt;p&gt;python3除了把字符串的编码改成了unicode，还把str和bytes做了明确的区分，str就是unicode格式的字符，bytes就是单纯的二进制了。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;img src=&#34;https://gitee.com/sagerover/figurebed/raw/master//img/20210802035017.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;python只要出现了各种编码问题，无非是哪里的编码设置错了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;常见编码错误的原因：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Python解释器的默认编码&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Python源文件编码&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Terminal使用的编码&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;操作系统的语言设置，掌握了编码之前的关系后，挨个排错就好了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;vmware-hostdexe-占用443端口导致某些应用加速无法正常启动&#34;&gt;vmware-hostd.exe 占用443端口导致某些应用加速无法正常启动？&lt;/h1&gt;
+&lt;p&gt;如果我们的电脑既安装了VMware虚拟机软件，又安装了XAMPP，启动XAMPP的时候，经常会报错。&lt;br&gt;
+提示信息说明： 443号端口被vmware-hostd.exe进程占用了，导致Apache无法启动。&lt;/p&gt;
+&lt;p&gt;这是因为vmware-hostd.exe默认是使用443号端口的，而它又是默认自动启动的。&lt;/p&gt;
+&lt;p&gt;我们知道，Apache 的 httpd 服务默认是使用80端口的，而 httpd-ssl 默认是使用443端口的。这就导致了443号端口的冲突。&lt;/p&gt;
+&lt;p&gt;一般来说，解决方法有两种：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;修改 httpd-ssl.conf 配置文件，将443端口改为其他空闲的端口（如4430）。&lt;/li&gt;
+&lt;li&gt;将 vmware-hostd.exe 的自动启动改为手动启动并将其停止。在桌面的计算机图标点击鼠标右键，选择 “管理→服务和应用程序→服务”，将显示名称为“VMware Workstation Server”的服务的启动类型改为手动，并停止该服务即可。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;说明： 上面两种方法中的任何一种都可以。第二种方法一般也不会影响VMware的正常使用。VMware Workstation Server 服务的描述信息为“Remote access service for registration and management of virtual machines.”，也就是说它与远程管理VMware有关。而我们一般也不会使用到VMvare的远程访问功能，所以第二种方法基本没有影响。&lt;/p&gt;
+">程序员基础</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://SageRover.github.io/post/about/"" data-c="
+          &lt;blockquote&gt;
+&lt;p&gt;欢迎来到我的小站呀，很高兴遇见你！🤝&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;关于本站&#34;&gt;🏠 关于本站&lt;/h2&gt;
+&lt;h2 id=&#34;博主是谁-sage&#34;&gt;👨‍💻 博主是谁                                                              Sage&lt;/h2&gt;
+&lt;h2 id=&#34;兴趣爱好&#34;&gt;⛹ 兴趣爱好&lt;/h2&gt;
+&lt;h2 id=&#34;联系我呀&#34;&gt;📬 联系我呀&lt;/h2&gt;
+">关于</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://SageRover.github.io/post/hello-gridea/"" data-c="
+          &lt;p&gt;👏  欢迎使用 &lt;strong&gt;Gridea&lt;/strong&gt; ！&lt;br&gt;
+✍️  &lt;strong&gt;Gridea&lt;/strong&gt; 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/getgridea/gridea&#34;&gt;Github&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://gridea.dev/&#34;&gt;Gridea 主页&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;http://fehey.com/&#34;&gt;示例网站&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;特性&#34;&gt;特性👇&lt;/h2&gt;
+&lt;p&gt;📝  你可以使用最酷的 &lt;strong&gt;Markdown&lt;/strong&gt; 语法，进行快速创作&lt;/p&gt;
+&lt;p&gt;🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片&lt;/p&gt;
+&lt;p&gt;🏷️  你可以对文章进行标签分组&lt;/p&gt;
+&lt;p&gt;📋  你可以自定义菜单，甚至可以创建外部链接菜单&lt;/p&gt;
+&lt;p&gt;💻  你可以在 &lt;strong&gt;Windows&lt;/strong&gt;，&lt;strong&gt;MacOS&lt;/strong&gt; 或 &lt;strong&gt;Linux&lt;/strong&gt; 设备上使用此客户端&lt;/p&gt;
+&lt;p&gt;🌎  你可以使用 &lt;strong&gt;𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌&lt;/strong&gt; 或 &lt;strong&gt;Coding Pages&lt;/strong&gt; 向世界展示，未来将支持更多平台&lt;/p&gt;
+&lt;p&gt;💬  你可以进行简单的配置，接入 &lt;a href=&#34;https://github.com/gitalk/gitalk&#34;&gt;Gitalk&lt;/a&gt; 或 &lt;a href=&#34;https://github.com/SukkaW/DisqusJS&#34;&gt;DisqusJS&lt;/a&gt; 评论系统&lt;/p&gt;
+&lt;p&gt;🇬🇧  你可以使用&lt;strong&gt;中文简体&lt;/strong&gt;或&lt;strong&gt;英语&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力&lt;/p&gt;
+&lt;p&gt;🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步&lt;/p&gt;
+&lt;p&gt;🌱 当然 &lt;strong&gt;Gridea&lt;/strong&gt; 还很年轻，有很多不足，但请相信，它会不停向前 🏃&lt;/p&gt;
+&lt;p&gt;未来，它一定会成为你离不开的伙伴&lt;/p&gt;
+&lt;p&gt;尽情发挥你的才华吧！&lt;/p&gt;
+&lt;p&gt;😘 Enjoy~&lt;/p&gt;
+">Hello Gridea</a>
+      </div>
+      
+    </div>
+    <div class="page">
+      <div id="page_ul"></div>
+    </div>
+  </div>
+</div>
+<script>
+  !function () {
+    let searchMask = document.querySelector('#search_mask');
+    let result = document.querySelector('#result');
+    let items = document.querySelectorAll('.item');
+    let searchBox = document.querySelector('#search');
+    let statCount = document.querySelector('#stat_count');
+    let statTimes = document.querySelector('#stat_times');
+    let pageUl = document.querySelector('#page_ul');
+    let close = document.querySelector('#close');
+    
+    close.addEventListener('click', function() {
+      searchMask.style = 'display: none;'
+    })
+
+    let finds = [];
+    let contents = [];
+    let pageSize = 10;
+    items.forEach(item => {
+      let a = item.querySelector('a');
+      contents.push({
+        title: a.innerText,
+        details: a.dataset.c,
+        link: a.href
+      })
+      item.remove();
+    })
+
+    function insertStr(soure, start, count) {
+      let newStr = soure.substr(start, count);
+      return soure.slice(0, start) + '<em>' + newStr + '</em>' + soure.slice(start + count);
+    }
+
+    pageUl.addEventListener('click', function(event) {
+      let target = event.target;
+      if (target.__proto__ === HTMLSpanElement.prototype) {
+        appendResults(parseInt(target.dataset.i));
+      }
+    })
+
+    function appendResults(index) {
+      let htmlResult = '';
+      let start = index || 0;
+      let end = Math.min(start + pageSize, finds.length);
+      for (let i = start; i < end; i++) {
+        const current = finds[i];
+        let html = current.title;
+        let sum = 0;
+        let positions = current.positions;
+        positions.forEach(position => {
+          html = insertStr(html, position.start + sum, position.count);
+          sum += 9;
+        })
+        htmlResult += `<div class="item"><a class="result-title" href="${current.link}">${html}</a></div>`;
+      }
+      result.innerHTML = htmlResult;
+      pageUl.innerHTML = '';
+      let count = finds.length / pageSize;
+      let lis = '';
+      if (start !== 0) {
+        lis += `<span class="fa fa-angle-left" data-i='${start - 1}'></span>`;
+      }
+      for (let i = 0; i < count; i++) {
+        lis += `<span class='${i === start?'current':''}' data-i='${i}'>${i+1}</span>`;     
+      }
+      if (start+1 < count) {
+        lis += `<span class="fa fa-angle-right" data-i='${start+1}'></span>`;  
+      }
+      pageUl.innerHTML = lis;
+    }
+
+    function search(delay) {
+      let timer = null
+      return function () {
+        clearTimeout(timer)
+        timer = setTimeout(() => {
+          let start = Date.now();
+          let segments = searchBox.value.split(' ').filter(c => c != '');
+          if (segments.length <= 0) {
+            return;
+          }
+          finds = [];
+          let htmlResult = '';
+          contents.forEach(content => {
+            let title = content.title;
+            let positions = [];
+            let find = false;
+            segments.forEach((segment) => {
+              if (content.title.includes(segment)) {
+                find = true;
+                positions.push({
+                  start: content.title.indexOf(segment),
+                  count: segment.length
+                })
+              } else if (content.details.includes(segment)) {
+                find = true;
+              }
+            });
+            if (find) {
+              finds.push({
+                title: content.title,
+                link: content.link,
+                positions
+              });
+            }
+          })
+          appendResults(0);
+          statCount.textContent = finds.length;
+          statTimes.textContent = Date.now() - start;
+        }, delay)
+      }
+    }
+    searchBox.addEventListener('input', search(200));
+  }()
+</script>
 
 <input hidden id="copy" />
 <script>

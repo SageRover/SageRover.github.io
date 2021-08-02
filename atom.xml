@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://SageRover.github.io</id>
     <title>Sage&apos;s Blog</title>
-    <updated>2021-08-02T07:36:49.982Z</updated>
+    <updated>2021-08-02T07:37:41.799Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://SageRover.github.io"/>
     <link rel="self" href="https://SageRover.github.io/atom.xml"/>
@@ -2117,11 +2117,11 @@ adapter.notifyDataSetChanged();
 <p>仍待解决？</p>
 <h1 id="待解决">待解决</h1>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8786190"><label class="task-list-item-label" for="task-item-8786190"> 点击放大了，但是感觉圆角效果还是待改善</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7208295"><label class="task-list-item-label" for="task-item-7208295"> RippleDrawable涟漪效果了解了一些，会了一点点，但是RecyclerView中的图片点击效果还有一点不够完善。——继续学习</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1622087"><label class="task-list-item-label" for="task-item-1622087"> 触发事件功能还要继续琢磨</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1518177"><label class="task-list-item-label" for="task-item-1518177"> 多版本xml文件理解</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8366058"><label class="task-list-item-label" for="task-item-8366058"> context理解</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9668511"><label class="task-list-item-label" for="task-item-9668511"> 点击放大了，但是感觉圆角效果还是待改善</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-641460"><label class="task-list-item-label" for="task-item-641460"> RippleDrawable涟漪效果了解了一些，会了一点点，但是RecyclerView中的图片点击效果还有一点不够完善。——继续学习</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5803059"><label class="task-list-item-label" for="task-item-5803059"> 触发事件功能还要继续琢磨</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1151391"><label class="task-list-item-label" for="task-item-1151391"> 多版本xml文件理解</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6488684"><label class="task-list-item-label" for="task-item-6488684"> context理解</label></li>
 </ul>
 ]]></content>
     </entry>
